@@ -70,7 +70,7 @@
         #T1{
             position: absolute;
             top: 640px;
-            right: 330px;
+            right: 320px;
         }
         #IMG1{
             position: absolute;
@@ -98,6 +98,6 @@
             </button> <br>
             <hr>
         </form>
-        <h4 id="T1">@ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h4>
+        <h4 id="T1">©ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h4>
     </body>
 </html>
