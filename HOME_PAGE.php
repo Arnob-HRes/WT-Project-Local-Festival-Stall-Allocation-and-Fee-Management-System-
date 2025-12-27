@@ -90,7 +90,7 @@
         </div>
         <form id="F1">
             <hr>
-            <button id="B1">
+            <button id="B1" onclick="LOGIN_PAGE.php">
                 LOGIN
             </button>
             <button id="B2">
