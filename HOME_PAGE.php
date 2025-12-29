@@ -69,17 +69,35 @@
         }
         #T1{
             position: absolute;
-            top: 640px;
-            right: 270px;
+            top: 660px;
+            right: 190px;
         }
-        .DIV{
+        #d4{
             position: absolute;
             top: 700px;
+        }
+        #d5{
+            position: absolute;
+            top: 1050px;
+        }
+        #d6{
+            position: absolute;
+            top: 1400px;
+        }
+        #d7{
+            position: absolute;
+            top: 1750px;
+        }
+        #d3{
+            position: absolute;
+            top: 2100px;
+        }
+        .DIV{
             margin: 50px 0px;
             background-color: white;
-            border: 4px solid black;
+            border: 3px solid black;
             border-radius: 20px;
-            width: 1300px;
+            width: 1350px;
             height: 300px;
         }
     </style>
