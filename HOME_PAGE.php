@@ -127,6 +127,7 @@
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
             z-index: 1;
+            overflow: hidden;
         }
         #B3{
             position: absolute;
@@ -159,11 +160,22 @@
             background-color: royalblue;
             color: white;
         }
+        #img1{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            transform: rotate(-90deg);
+        }
     </style>
     <body>
         <header id="Head">
             <input type="button" value="LOGIN" id="B3" onclick="window.location.href='LOGIN_PAGE.php'">
             <input type="button" value="SINUP" id="B4" onclick="window.location.href='LOGIN_PAGE.php'">
+            <img src="confetti-sticker.gif" alt="Star falling not found" id="img1">
         </header>
         <div id="D3"></div>
         <div id="D1">
