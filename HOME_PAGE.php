@@ -9,7 +9,7 @@
         #F1{
             position: absolute;
             top: 280px;
-            right: 150px;
+            right: 100px;
             width: 500px;
             height: auto;
             text-align: center;
@@ -44,15 +44,15 @@
         #D1{
             position: absolute;
             top:50px;
-            right: 190px;
+            right: 140px;
             background-color: white;
             width: auto;
             height: auto;
         }
         #D2{
             position: absolute;
-            top:120px;
-            right: 210px;
+            top:90px;
+            right: 190px;
             background-color: white;
             width: auto;
             height: auto;
@@ -70,17 +70,20 @@
         #T1{
             position: absolute;
             top: 640px;
-            right: 320px;
+            right: 270px;
         }
-        #IMG1{
+        .DIV{
             position: absolute;
-            top: 0px;
-            left: 0px;
-            z-index: -1;
+            top: 700px;
+            margin: 50px 0px;
+            background-color: white;
+            border: 4px solid black;
+            border-radius: 20px;
+            width: 1300px;
+            height: 300px;
         }
     </style>
     <body>
-        <img src="—Pngtree—geometric pattern white gold minimalist_1575961.png" alt="Background" id="IMG1">
         <div id="D3"></div>
         <div id="D1">
             <h1 style="font-size: 35px;">Local Festival Stall Allocation</h1>
@@ -99,5 +102,10 @@
             <hr>
         </form>
         <h4 id="T1">©ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h4>
+        <div id="d3" class="DIV"></div>
+        <div id="d4" class="DIV"></div>
+        <div id="d5" class="DIV"></div>
+        <div id="d6" class="DIV"></div>
+        <div id="d7" class="DIV"></div>
     </body>
 </html>
