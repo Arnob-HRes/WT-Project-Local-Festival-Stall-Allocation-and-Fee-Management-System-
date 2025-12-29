@@ -93,6 +93,7 @@
             top: 2100px;
         }
         .DIV{
+            position: relative;
             margin: 50px 0px;
             background-color: white;
             border: 3px solid black;
@@ -100,8 +101,27 @@
             width: 1350px;
             height: 300px;
         }
+        .d-sub{
+            width: 400px;
+            height: 260px;
+            margin: 20px;
+            background-color: blue;
+            border-radius: 10px;
+        }
+        #d5-sub{
+            position: absolute;
+            right: 0px;
+        }
+        #d7-sub{
+            position: absolute;
+            right: 0px;
+        }
     </style>
     <body>
+        <header id="Head">
+            <input type="button" value="LOGIN" id="B3" onclick="window.location.href='LOGIN_PAGE.php'">
+            <input type="button" value="SINUP" id="B4" onclick="window.location.href='LOGIN_PAGE.php'">
+        </header>
         <div id="D3"></div>
         <div id="D1">
             <h1 style="font-size: 35px;">Local Festival Stall Allocation</h1>
@@ -111,19 +131,15 @@
         </div>
         <form id="F1">
             <hr>
-            <button id="B1" onclick="LOGIN_PAGE.php">
-                LOGIN
-            </button>
-            <button id="B2">
-                SIN UP
-            </button> <br>
+            <input type="button" value="LOGIN" id="B1" onclick="window.location.href='LOGIN_PAGE.php'">
+            <input type="button" value="SINUP" id="B2" onclick="window.location.href='LOGIN_PAGE.php'"><br>
             <hr>
         </form>
         <h4 id="T1">©ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h4>
-        <div id="d3" class="DIV"></div>
-        <div id="d4" class="DIV"></div>
-        <div id="d5" class="DIV"></div>
-        <div id="d6" class="DIV"></div>
-        <div id="d7" class="DIV"></div>
+        <div id="d3" class="DIV"><div id="d3-sub" class="d-sub">></div></div>
+        <div id="d4" class="DIV"><div id="d4-sub" class="d-sub">></div></div>
+        <div id="d5" class="DIV"><div id="d5-sub" class="d-sub">></div></div>
+        <div id="d6" class="DIV"><div id="d6-sub" class="d-sub">></div></div>
+        <div id="d7" class="DIV"><div id="d7-sub" class="d-sub">></div></div>
     </body>
 </html>
