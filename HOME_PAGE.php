@@ -8,7 +8,7 @@
     <style>
         #F1{
             position: absolute;
-            top: 280px;
+            top: 430px;
             right: 100px;
             width: 500px;
             height: auto;
@@ -43,7 +43,7 @@
         }
         #D1{
             position: absolute;
-            top:50px;
+            top:200px;
             right: 140px;
             background-color: white;
             width: auto;
@@ -51,7 +51,7 @@
         }
         #D2{
             position: absolute;
-            top:90px;
+            top:240px;
             right: 190px;
             background-color: white;
             width: auto;
@@ -59,7 +59,7 @@
         }
         #D3{
             position: absolute;
-            top: 0px;
+            top: 145px;
             left: 0px;
             background-color: blue;
             border-radius: 20px;
@@ -69,28 +69,28 @@
         }
         #T1{
             position: absolute;
-            top: 660px;
+            top: 810px;
             right: 190px;
         }
         #d4{
             position: absolute;
-            top: 700px;
+            top: 850px;
         }
         #d5{
             position: absolute;
-            top: 1050px;
+            top: 1200px;
         }
         #d6{
             position: absolute;
-            top: 1400px;
+            top: 1550px;
         }
         #d7{
             position: absolute;
-            top: 1750px;
+            top: 1900px;
         }
         #d3{
             position: absolute;
-            top: 2100px;
+            top: 2250px;
         }
         .DIV{
             position: relative;
@@ -115,6 +115,49 @@
         #d7-sub{
             position: absolute;
             right: 0px;
+        }
+        #Head{
+            position: fixed;
+            top: 0px;
+            left: 1px;
+            width: 1510px;
+            height: 100px;
+            margin: 0px 1px 1px 1px;
+            background-color: lightblue;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            z-index: 1;
+        }
+        #B3{
+            position: absolute;
+            right: 210px;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            color: white;
+            background-color: blue;
+            border: 1px solid blue;
+            border-radius: 10px;
+            margin:25px 10px 25px 0px;
+        }
+        #B3:hover{
+            background-color: royalblue;
+        }
+        #B4{
+            position: absolute;
+            right: 0px;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            color: blue;
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            margin:25px 10px 25px 0px;
+        }
+        #B4:hover{
+            background-color: royalblue;
+            color: white;
         }
     </style>
     <body>
