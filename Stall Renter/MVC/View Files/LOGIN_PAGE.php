@@ -15,18 +15,20 @@
     <body>
         <img src="../Images/LOGIN_PAGE_BACKGROUND.jpg" alt="LOGIN PAGE BACKGROUND" id="Background">
 
-        <form method="post" id="f1">
+        <center>
+            <form method="post" id="f1">
             <center>
                 <h2 id="T1">Login</h2>
             </center>
             <input type="text" id="I1" class="Input" name="username" value="username">
             <input type="text" id="I2" class="Input" name="password" value="password">
             <input type="submit" id="S1" name="loginButton" value="Login">
+            <a href=""></a>
             <center>
                 <p id="p1">Don't have an account? <a href="../View Files/Registration_Page.php" id="Reg"><b>Registe</b>r</a></p>
             </center>
-            
-        </form>
+            </form>
+        </center>
 
         <script src="../JavaScript Files/LOGIN_PAGE.js"></script>
     </body>
