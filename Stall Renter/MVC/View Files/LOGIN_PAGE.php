@@ -12,4 +12,8 @@
         <meta http-equiv="refresh" content="1800">
         <link rel="stylesheet" href="../Stylesheets/LOGIN_PAGE.css">
     </head>
+    <body>
+        <img src="../Images/LOGIN_PAGE_BACKGROUND.jpg" alt="LOGIN PAGE BACKGROUND" id="Background">
+        <script src="../JavaScript Files/LOGIN_PAGE.js"></script>
+    </body>
 </html>
