@@ -75,5 +75,7 @@
             <a href="https://github.com/Hridrita" id="HG" class="fl">Hridita's GitHub</a>
             <h5 id="T1">©ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h5>
         </footer>
+
+        <script src="../JavaScript Files/HOME_PAGE.js"></script>
     </body>
 </html>
