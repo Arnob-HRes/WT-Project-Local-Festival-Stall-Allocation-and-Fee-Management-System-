@@ -7,7 +7,7 @@
 }
 #f1{
     position: absolute;
-    top: 180px;
+    top: 160px;
     left: 580px;
     padding: 30px;
     width: 300px;
@@ -17,6 +17,7 @@
     border-radius: 10px;
 }
 #I1{
+    padding-left: 10px;
     width: 300px;
     height: 40px;
     border-radius: 50px;
@@ -27,6 +28,7 @@
     color: white;
 }
 #I2{
+    padding-left: 10px;
     width: 300px;
     height: 40px;
     border-radius: 50px;
@@ -45,6 +47,12 @@
     background-color: white;
     color: black;
 }
+#S1:hover{
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    color: white;
+    border: 1px solid white;
+}
 #T1{
     font-size: 50px;
     color: white;
@@ -58,4 +66,12 @@
 #p1{
     display: inline;
     color: white;
+}
+#FP{
+    position: absolute;
+    top: 310px;
+    right: 25px;
+    text-decoration: none;
+    color: white;
+    z-index: +1;
 }
