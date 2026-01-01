@@ -169,6 +169,14 @@
             object-fit: cover;
             z-index: -1;
         }
+        #IMG4{
+            position: absolute;
+            top:20px;
+            left: 10px;
+            width: 60px;
+            height: 60px;
+            border-radius: 20px;
+        }
     </style>
     <body>
         <img src="../Images/HOME_PAGE_BACKGROUND.jpg" alt="Home Page" id="IMG3">
