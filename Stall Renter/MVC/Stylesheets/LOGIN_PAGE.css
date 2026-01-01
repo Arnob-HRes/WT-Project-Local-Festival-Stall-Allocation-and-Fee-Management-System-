@@ -5,3 +5,13 @@
     width: 1523px;
     height: 730px;
 }
+#f1{
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    padding: 30px;
+    width: 500px;
+    height: auto;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+}
