@@ -168,7 +168,6 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            transform: rotate(-90deg);
         }
     </style>
     <body>
