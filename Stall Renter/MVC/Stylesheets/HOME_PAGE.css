@@ -361,7 +361,7 @@
             font-size: 15px;
             display: inline-block;
             padding: 20px;
-            font-family: 'Baloo 2', cursive;
+            font-family: "Lucida Console", "Courier New", monospace;
             border-radius: 10px;
             position: absolute;
             background-color: rgba(255, 255, 255, 0.6);

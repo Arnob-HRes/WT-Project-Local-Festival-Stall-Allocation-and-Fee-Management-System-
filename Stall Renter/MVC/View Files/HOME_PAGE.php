@@ -14,7 +14,7 @@
     <body>
         <img src="../Images/HOME_PAGE_BACKGROUND.jpg" alt="Home Page" id="IMG3">
         <header id="Head">
-            <a href="HOME_PAGE.php" id="S1" class="Sec">Home</a>
+            <a href="#IMG3" id="S1" class="Sec">Home</a>
             <a href="#d4" id="S2" class="Sec">Information</a>
             <a href="#footer" id="S3" class="Sec">About</a>
             <input type="button" value="SING IN" id="B3" onclick="window.location.href='LOGIN_PAGE.php'">
