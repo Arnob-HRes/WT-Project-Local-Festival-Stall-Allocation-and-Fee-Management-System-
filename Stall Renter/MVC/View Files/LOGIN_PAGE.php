@@ -15,7 +15,7 @@
     <body>
         <img src="../Images/LOGIN_PAGE_BACKGROUND.jpg" alt="LOGIN PAGE BACKGROUND" id="Background">
 
-        <button id="B1" onclick="window.location.href='HOME_PAGE.php'">Home Page</button>
+        <button id="B1" onclick="window.location.href='HOME_PAGE.php'">< Home Page</button>
         <form method="post" id="f1">
             <center>
                 <h2 id="T1">Login</h2>
