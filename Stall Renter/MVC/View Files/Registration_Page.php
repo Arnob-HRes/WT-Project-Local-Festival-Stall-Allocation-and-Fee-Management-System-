@@ -54,5 +54,6 @@
                 </p>
             </form>
         </div>
+        <script src="Registration_Page.php"></script>
     </body>
 </html>
