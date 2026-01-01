@@ -4,6 +4,11 @@
         <title>
             Home Page
         </title>
+        <meta name="description" content="This is a Web site for Local Festival Stall Allocation & Fee Management System" >
+        <meta name="author" content="Arnob Sarker Supta and Hridrita Saha Moon">
+        <meta name="keywords" content="Project, WT, JS, CSS, HTML, AIUB, CSE, Web Technology">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="6000">
         <link rel="stylesheet" href="../Stylesheets/HOME_PAGE.css">
     </head>
     <body>
