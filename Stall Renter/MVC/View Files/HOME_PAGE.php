@@ -64,9 +64,10 @@
             </div>
         </div>
 
+        <img src="../Images/Footer.jpg" alt="Footer" id=BackFooter>
+
         <footer id="footer">
-            <h2>Local Festival Stall Allocation & Fee Management System</h2>
-            <img src="../Images/Footer.jpg" alt="Footer" id=BackFooter>
+            <h2 id="copyright">Local Festival Stall Allocation & Fee Management System</h2>
             <img src="../Images/LOGO.png" alt="" id="FooterLogo">
             <a href="https://www.facebook.com/share/1DA2H2WT9q/" id="AF">Arnob's Facebook</a>
             <a href="https://www.facebook.com/share/1ASuv8pzxi/" id="HF">Hridita's Facebook</a>
