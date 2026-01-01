@@ -19,9 +19,11 @@
             <center>
                 <h2 id="T1">Login</h2>
             </center>
-            <input type="text" id="I1" name="username" value="username">
-            <input type="text" id="I2" name="password" value="password">
+            <input type="text" id="I1" class="Input" name="username" value="username">
+            <input type="text" id="I2" class="Input" name="password" value="password">
             <input type="submit" id="S1" name="loginButton" value="Login">
+            <p>Don't have an account?</p>
+            <a href="../View Files/Registration_Page.php" id="Reg">Register</a>
         </form>
 
         <script src="../JavaScript Files/LOGIN_PAGE.js"></script>
