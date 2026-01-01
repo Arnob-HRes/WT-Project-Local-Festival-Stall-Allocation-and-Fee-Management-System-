@@ -19,7 +19,7 @@
             <a href="#d4" id="S2" class="Sec">Information</a>
             <a href="#footer" id="S3" class="Sec">About</a>
             <input type="button" value="SING IN" id="B3" onclick="window.location.href='LOGIN_PAGE.php'">
-            <input type="button" value="SING UP" id="B4" onclick="window.location.href='LOGIN_PAGE.php'">
+            <input type="button" value="SING UP" id="B4" onclick="window.location.href='Registration_Page.php'">
             <img src="../Images/LOGO.png" alt="LOGO" id="IMG4">
         </header>
         <form id="F1">
@@ -31,7 +31,7 @@
             </div>
             <hr>
             <input type="button" value="SING IN" id="B1" onclick="window.location.href='LOGIN_PAGE.php'">
-            <input type="button" value="SING UP" id="B2" onclick="window.location.href='LOGIN_PAGE.php'"><br>
+            <input type="button" value="SING UP" id="B2" onclick="window.location.href='Registration_Page.php'"><br>
             <hr>
         </form>
         <div id="d3" class="DIV">
