@@ -1,0 +1,397 @@
+       #F1{
+            position: absolute;
+            top: 200px;
+            right: 390px;
+            width: 650px;
+            background-color: transparent;
+            backdrop-filter: blur(8px);
+            border-radius: 50px;
+            border:1px solid white;
+            padding: 50px;
+            height: auto;
+            text-align: center;
+        }
+        #B1{
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            color: white;
+            background-color: blue;
+            border: 1px solid blue;
+            border-radius: 10px;
+            margin:20px;
+        }
+        #B1:hover{
+            background-color: royalblue;
+        }
+        #B2{
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            color: blue;
+            background-color: lightblue;
+            border: 1px solid lightblue;
+            border-radius: 10px;
+            margin:20px;
+        }
+        #B2:hover{
+            background-color: royalblue;
+            color: white;
+        }
+        #D1{
+            background-color: transparent;
+            width: auto;
+            height: auto;
+        }
+        #D2{
+            background-color: transparent;
+            width: auto;
+            height: auto;
+        }
+        #d4{
+            position: absolute;
+            top: 850px;
+        }
+        #d5{
+            position: absolute;
+            top: 1200px;
+        }
+        #d6{
+            position: absolute;
+            top: 1550px;
+        }
+        #d7{
+            position: absolute;
+            top: 1900px;
+        }
+        #d3{
+            position: absolute;
+            top: 2250px;
+        }
+        .DIV{
+            position: relative;
+            margin: 50px 0px;
+            background-color: white;
+            border: 3px solid black;
+            border-radius: 20px;
+            width: 1350px;
+            height: 300px;
+        }
+        .d-sub{
+            position: relative;
+            width: 400px;
+            height: 260px;
+            margin: 20px;
+            background-color: blue;
+            border-radius: 10px;
+        }
+        #FoodStall{
+            position: absolute;
+            top: 0px;
+            width: 400px;
+            height: 260px;
+            border-radius: 10px;
+        }
+        #FoodStall:hover{
+            width: 420px;
+        }
+        #d5-sub{
+            position: absolute;
+            right: 0px;
+        }
+        #d7-sub{
+            position: absolute;
+            right: 0px;
+        }
+        #Head{
+            position: fixed;
+            top: 0px;
+            left: 1px;
+            width: 1510px;
+            height: 100px;
+            margin: 0px 1px 1px 1px;
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            border: 1px solid white;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            z-index: 1;
+            overflow: hidden;
+        }
+        #B3{
+            position: absolute;
+            right: 210px;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            color: white;
+            background-color: blue;
+            border: 1px solid blue;
+            border-radius: 10px;
+            margin:25px 10px 25px 0px;
+        }
+        #B3:hover{
+            background-color: royalblue;
+        }
+        #B4{
+            position: absolute;
+            right: 0px;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            color: blue;
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            margin:25px 10px 25px 0px;
+        }
+        #B4:hover{
+            background-color: royalblue;
+            color: white;
+        }
+        #img1{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        #IMG3{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1523px;
+            height: 850px;
+            object-fit: cover;
+            z-index: -1;
+        }
+        #IMG4{
+            position: absolute;
+            top:20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 20px;
+        }
+        .Sec{
+            display: inline-block;
+            padding: 20px;
+            font-family: 'Baloo 2', cursive;
+            border-radius: 10px;
+            position: absolute;
+            top:20px;
+            color: white;
+            text-decoration: none;
+        }
+        .Sec:hover{
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+        #S1{
+            position: absolute;
+            left: 120px;
+        }
+        #S2{
+            position: absolute;
+            left: 200px;
+        }
+        #S3{
+            position: absolute;
+            left: 330px;
+        }
+        #p1{
+            position: absolute;
+            top:70px;
+            left: 600px;
+            display: inline-block;
+            width: 500px;
+            height: auto;
+            font-family: 'Baloo 2', cursive;
+        }
+        #d4-title{
+            position: absolute;
+            top: 20px;
+            left: 600px;
+        }
+        #p2{
+            position: absolute;
+            top:60px;
+            left: 50px;
+            display: inline-block;
+            width: 750px;
+            height: auto;
+            font-family: 'Baloo 2', cursive;
+        }
+        #d5-title{
+            position: absolute;
+            top: 10px;
+            left: 50px;
+        }
+        #ArtStall{
+            position: absolute;
+            top: 0px;
+            width: 400px;
+            height: 260px;
+            border-radius: 10px;
+        }
+        #ArtStall:hover{
+            width: 410px;
+        }
+        #p3{
+            position: absolute;
+            top:60px;
+            left: 500px;
+            display: inline-block;
+            width: 750px;
+            height: auto;
+            font-family: 'Baloo 2', cursive;
+        }
+        #d6-title{
+            position: absolute;
+            top: 10px;
+            left: 500px;
+            width: 400px;
+        }
+        #TandAStall{
+            position: absolute;
+            top: 0px;
+            width: 400px;
+            height: 260px;
+            border-radius: 10px;
+        }
+        #TandAStall:hover{
+            width: 420px;
+        }
+        #p4{
+            position: absolute;
+            top:60px;
+            left: 50px;
+            display: inline-block;
+            width: 750px;
+            height: auto;
+            font-family: 'Baloo 2', cursive;
+        }
+        #d7-title{
+            position: absolute;
+            top: 10px;
+            left: 50px;
+        }
+        #HandStall{
+            position: absolute;
+            top: 0px;
+            width: 400px;
+            height: 260px;
+            border-radius: 10px;
+        }
+        #HandStall:hover{
+            width: 410px;
+        }
+        #p5{
+            position: absolute;
+            top:60px;
+            left: 500px;
+            display: inline-block;
+            width: 750px;
+            height: auto;
+            font-family: 'Baloo 2', cursive;
+        }
+        #d3-title{
+            position: absolute;
+            top: 10px;
+            left: 500px;
+            width: 400px;
+        }
+        #Arcade{
+            position: absolute;
+            top: 0px;
+            width: 400px;
+            height: 260px;
+            border-radius: 10px;
+        }
+        #Arcade:hover{
+            width: 420px;
+        }
+        #footer{
+            position: absolute;
+            top: 2600px;
+            left: 0px;
+            width: 1501px;
+            padding: 10px;
+            height: 300px;
+            border-radius: 20px;
+            margin-top: 20px;
+            background-color: transparent;
+            backdrop-filter: blur(8px);
+        }
+        #BackFooter{
+            position: absolute;
+            top: 2600px;
+            left: 0px;
+            width: 1501px;
+            height: 300px;
+            border-radius: 20px;
+            margin-top: 20px;
+            z-index: -1;
+        }
+        #FooterLogo{
+            position: absolute;
+            top: 50px;
+            right: 80px;
+            border-radius: 20px;
+            width: 200px;
+            height: 200px;
+        }
+        #copyright{
+            position: absolute;
+            top: 30px;
+            left: 10px;
+            color: white;
+            font-family: 'Baloo 2', cursive;
+
+        }
+        #T1{
+            color: white;
+            font-family: 'Baloo 2', cursive;
+            position: absolute;
+            top: 100px;
+            left: 10px;
+        }
+        .fl{
+            font-size: 15px;
+            display: inline-block;
+            padding: 20px;
+            font-family: "Lucida Console", "Courier New", monospace;
+            border-radius: 10px;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.6);
+            color: Black;
+            text-decoration: none;
+        }
+        .fl:hover{
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        #AF{
+            top:200px;
+            width: 150px;
+            height: 20px;
+            left: 10px;
+        }
+        #HF{
+            top:200px;
+            width: 150px;
+            height: 20px;
+            left: 250px;
+        }
+        #AG{
+            top:200px;
+            width: 150px;
+            height: 20px;
+            left: 490px;
+        }
+        #HG{
+            top:200px;
+            width: 150px;
+            height: 20px;
+            left: 730px;
+        }
