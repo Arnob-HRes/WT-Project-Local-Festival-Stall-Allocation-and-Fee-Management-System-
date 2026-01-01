@@ -13,8 +13,8 @@
     width: 300px;
     height: auto;
     background-color: transparent;
-    backdrop-filter: blur(8px);
-    border-radius: 10px;
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
 }
 #I1{
     padding-left: 10px;
