@@ -48,11 +48,6 @@
             width: auto;
             height: auto;
         }
-        #T1{
-            position: absolute;
-            top: 810px;
-            right: 190px;
-        }
         #d4{
             position: absolute;
             top: 850px;
@@ -320,20 +315,23 @@
         #footer{
             position: absolute;
             top: 2600px;
+            left: 0px;
             width: 1510px;
+            padding: 10px;
             height: 300px;
             border-radius: 20px;
-            margin: 20px;
+            margin-top: 20px;
             background-color: transparent;
             backdrop-filter: blur(8px);
         }
         #BackFooter{
             position: absolute;
             top: 2600px;
+            left: 0px;
             width: 1510px;
             height: 300px;
             border-radius: 20px;
-            margin: 20px;
+            margin-top: 20px;
             z-index: -1;
         }
         #FooterLogo{
@@ -343,4 +341,32 @@
             border-radius: 20px;
             width: 100px;
             height: 100px;
+        }
+        #copyright{
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            color: white;
+            font-family: 'Baloo 2', cursive;
+
+        }
+        #T1{
+            color: white;
+            font-family: 'Baloo 2', cursive;
+            position: absolute;
+            top: 100px;
+            left: 10px;
+        }
+        .fl{
+            display: inline-block;
+            padding: 20px;
+            font-family: 'Baloo 2', cursive;
+            border-radius: 10px;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            top:200px;
+            width: 100px;
+            margin-right: 20px;
+            color: Black;
+            text-decoration: none;
         }

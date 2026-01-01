@@ -69,11 +69,11 @@
         <footer id="footer">
             <h2 id="copyright">Local Festival Stall Allocation & Fee Management System</h2>
             <img src="../Images/LOGO.png" alt="" id="FooterLogo">
-            <a href="https://www.facebook.com/share/1DA2H2WT9q/" id="AF">Arnob's Facebook</a>
-            <a href="https://www.facebook.com/share/1ASuv8pzxi/" id="HF">Hridita's Facebook</a>
-            <a href="https://github.com/Arnob-HRes">Arnob's GitHub</a>
-            <a href="">Hridita's GitHub</a>
-            <h4 id="T1">©ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h4>
+            <a href="https://www.facebook.com/share/1DA2H2WT9q/" id="AF" class="fl">Arnob's Facebook</a>
+            <a href="https://www.facebook.com/share/1ASuv8pzxi/" id="HF" class="fl">Hridita's Facebook</a>
+            <a href="https://github.com/Arnob-HRes" id="AG" class="fl">Arnob's GitHub</a>
+            <a href="https://github.com/Hridrita" id="HG" class="fl">Hridita's GitHub</a>
+            <h5 id="T1">©ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h5>
         </footer>
     </body>
 </html>
