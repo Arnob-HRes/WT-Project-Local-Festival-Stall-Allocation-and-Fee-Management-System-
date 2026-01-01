@@ -8,9 +8,14 @@
     <style>
         #F1{
             position: absolute;
-            top: 430px;
-            right: 100px;
-            width: 500px;
+            top: 220px;
+            right: 390px;
+            width: 650px;
+            background-color: transparent;
+            backdrop-filter: blur(8px);
+            border-radius: 50px;
+            border:1px solid white;
+            padding: 50px;
             height: auto;
             text-align: center;
         }
@@ -42,30 +47,14 @@
             color: white;
         }
         #D1{
-            position: absolute;
-            top:200px;
-            right: 140px;
-            background-color: white;
+            background-color: transparent;
             width: auto;
             height: auto;
         }
         #D2{
-            position: absolute;
-            top:240px;
-            right: 190px;
-            background-color: white;
+            background-color: transparent;
             width: auto;
             height: auto;
-        }
-        #D3{
-            position: absolute;
-            top: 145px;
-            left: 0px;
-            background-color: blue;
-            border-radius: 20px;
-            margin: 5px;
-            width: 750px;
-            height: 720px;
         }
         #T1{
             position: absolute;
@@ -123,7 +112,9 @@
             width: 1510px;
             height: 100px;
             margin: 0px 1px 1px 1px;
-            background-color: lightblue;
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            border: 1px solid white;
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
             z-index: 1;
@@ -169,24 +160,33 @@
             object-fit: cover;
             z-index: -1;
         }
+        #IMG3{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1525px;
+            height: 850px;
+            object-fit: cover;
+            z-index: -1;
+        }
     </style>
     <body>
+        <img src="../Images/HOME_PAGE_BACKGROUND.jpg" alt="Home Page" id="IMG3">
         <header id="Head">
-            <input type="button" value="LOGIN" id="B3" onclick="window.location.href='LOGIN_PAGE.php'">
-            <input type="button" value="SINUP" id="B4" onclick="window.location.href='LOGIN_PAGE.php'">
-            <img src="confetti-sticker.gif" alt="Star falling not found" id="img1">
+            <input type="button" value="SING IN" id="B3" onclick="window.location.href='LOGIN_PAGE.php'">
+            <input type="button" value="SING UP" id="B4" onclick="window.location.href='LOGIN_PAGE.php'">
+            <img src="../Images/LOGO.png" alt="LOGO" id="IMG4">
         </header>
-        <div id="D3"></div>
-        <div id="D1">
-            <h1 style="font-size: 35px;">Local Festival Stall Allocation</h1>
-        </div>
-        <div id="D2">
-            <h1 style="font-size: 35px;">& Fee Management System</h1>
-        </div>
         <form id="F1">
+            <div id="D1">
+              <h1 style="font-size: 37px;font-family: 'Baloo 2', cursive;color: white">Local Festival Stall Allocation</h1>
+            </div>
+            <div id="D2">
+              <h1 style="font-size: 37px;font-family: 'Baloo 2', cursive;color: white">& Fee Management System</h1>
+            </div>
             <hr>
-            <input type="button" value="LOGIN" id="B1" onclick="window.location.href='LOGIN_PAGE.php'">
-            <input type="button" value="SINUP" id="B2" onclick="window.location.href='LOGIN_PAGE.php'"><br>
+            <input type="button" value="SING IN" id="B1" onclick="window.location.href='LOGIN_PAGE.php'">
+            <input type="button" value="SING UP" id="B2" onclick="window.location.href='LOGIN_PAGE.php'"><br>
             <hr>
         </form>
         <h4 id="T1">©ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h4>
