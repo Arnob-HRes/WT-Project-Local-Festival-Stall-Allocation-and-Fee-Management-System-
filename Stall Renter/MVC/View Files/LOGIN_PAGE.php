@@ -16,7 +16,9 @@
         <img src="../Images/LOGIN_PAGE_BACKGROUND.jpg" alt="LOGIN PAGE BACKGROUND" id="Background">
 
         <form method="post" id="f1">
-            <h2 id="T1">Login</h2>
+            <center>
+                <h2 id="T1">Login</h2>
+            </center>
             <input type="text" id="I1" name="username" value="username">
             <input type="text" id="I2" name="password" value="password">
             <input type="submit" id="S1" name="loginButton" value="Login">

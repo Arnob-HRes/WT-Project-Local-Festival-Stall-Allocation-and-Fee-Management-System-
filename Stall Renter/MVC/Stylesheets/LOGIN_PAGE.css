@@ -8,9 +8,9 @@
 #f1{
     position: absolute;
     top: 200px;
-    left: 300px;
+    left: 700px;
     padding: 30px;
-    width: 500px;
+    width: 400px;
     height: auto;
     background-color: transparent;
     backdrop-filter: blur(8px);
