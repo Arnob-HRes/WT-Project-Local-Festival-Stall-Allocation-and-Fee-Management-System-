@@ -37,8 +37,9 @@
 }
 #S1{
     width: 300px;
-    font-size: 20px;
+    font-size: 15px;
     height: 40px;
+    margin-bottom: 10px;
     border-radius: 50px;
     background-color: white;
     color: black;
@@ -47,4 +48,13 @@
     font-size: 50px;
     color: white;
     margin-bottom: 30px;
+}
+#Reg{
+    display: inline;
+    text-decoration: none;
+    color: white;
+}
+#p1{
+    display: inline;
+    color: white;
 }

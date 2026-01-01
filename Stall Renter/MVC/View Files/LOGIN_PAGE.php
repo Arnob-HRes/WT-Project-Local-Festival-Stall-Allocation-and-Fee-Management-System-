@@ -22,8 +22,10 @@
             <input type="text" id="I1" class="Input" name="username" value="username">
             <input type="text" id="I2" class="Input" name="password" value="password">
             <input type="submit" id="S1" name="loginButton" value="Login">
-            <p>Don't have an account?</p>
-            <a href="../View Files/Registration_Page.php" id="Reg">Register</a>
+            <center>
+                <p id="p1">Don't have an account? <a href="../View Files/Registration_Page.php" id="Reg"><b>Registe</b>r</a></p>
+            </center>
+            
         </form>
 
         <script src="../JavaScript Files/LOGIN_PAGE.js"></script>
