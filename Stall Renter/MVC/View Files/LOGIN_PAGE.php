@@ -18,14 +18,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     else if($pass==""){
         $error="Fill password !";
     }
-
-    if($user=="Arnob" && $pass=="1234"){
+    else{
+        if($user=="Arnob" && $pass=="1234"){
         $_SESSION["username"]=$user;
         header("Location:Dashboard_Renter.php");
         exit();
-    }
-    else{
-        $error="Invalide Username or Password !";
+       }
+       else{
+        $error_valid="Invalide Username or Password !";
+      }
     }
 }
 ?>
