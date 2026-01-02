@@ -1,3 +1,19 @@
+<?php
+session_start();
+if(isset($_SESSION["username"])){
+    header("");
+    exit();
+}
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $user=$_POST["username"];
+    $pass=$_POST["password"];
+
+    if($user=="Arnob" && $pass=="1234"){
+        $_SESSION["username"]=$user;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
