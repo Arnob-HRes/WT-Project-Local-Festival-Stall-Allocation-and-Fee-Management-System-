@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         exit();
        }
        else{
-        $error_valid="Invalide Username or Password !";
+        $error="Invalide Username or Password !";
       }
     }
 }
