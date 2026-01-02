@@ -1,15 +1,31 @@
 <?php
 session_start();
 if(isset($_SESSION["username"])){
-    header("");
+    header("Location:Dashboard_Renter.php");
     exit();
 }
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $user=$_POST["username"];
     $pass=$_POST["password"];
 
+
+    if($user=="" && $pass==""){
+        $error="Fill every box !";
+    }
+    else if($user==""){
+        $error="Fill username !";
+    }
+    else if($pass==""){
+        $error="Fill password !";
+    }
+
     if($user=="Arnob" && $pass=="1234"){
         $_SESSION["username"]=$user;
+        header("Location:Dashboard_Renter.php");
+        exit();
+    }
+    else{
+        $error="Invalide Username or Password !";
     }
 }
 ?>
@@ -41,8 +57,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             <input type="submit" id="S1" name="loginButton" value="Login">
             <a href="../View Files/Forgot_Password_Page.php" id="FP">Forgot Password?</a>
             <center>
-                <p id="p1">Don't have an account? <a href="../View Files/Registration_Page.php" id="Reg"><b>Registe</b>r</a></p>
+                <p id="p1">Don't have an account? <a href="../View Files/Registration_Page.php" id="Reg"><b>Registe</b>r</a></p><br>
+                <p id="perror"><?php if(isset($error)){echo $error;}?></p>
             </center>
+            
             
         </form>
 
