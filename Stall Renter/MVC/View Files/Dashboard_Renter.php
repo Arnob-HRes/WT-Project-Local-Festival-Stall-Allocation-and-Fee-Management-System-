@@ -19,6 +19,7 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
     <body>
 
         <img src="../Images/Dashboard_background.jpg" alt="Dashborad Background" id="mainimg">
+        <img src="../Images/LOGO.png" alt="Logo" id="logo">
         
         <script src="../JavaScript Files/Dashboard_Renter.js"></script>
     </body>
