@@ -1,10 +1,10 @@
 <?php
 include('../Database or Model Files/DataBase.php');
 session_start();
-if(isset($_SESSION["username"])){
+/*if(isset($_SESSION["username"])){
     header("Location:Dashboard_Renter.php");
     exit();
-}
+}*/
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $user=$_POST["username"];
     $pass=$_POST["password"];
