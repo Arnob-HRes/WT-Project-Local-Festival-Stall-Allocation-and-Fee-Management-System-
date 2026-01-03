@@ -186,7 +186,9 @@
             text-decoration: none;
         }
         .Sec:hover{
-            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid white;
+            background-color: transparent;
+            backdrop-filter: blur(8px);
         }
         #S1{
             position: absolute;

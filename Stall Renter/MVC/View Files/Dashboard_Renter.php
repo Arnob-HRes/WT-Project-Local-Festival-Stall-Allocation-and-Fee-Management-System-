@@ -24,6 +24,7 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
         <a href="" id="inf">Information</a>
         <a href="" id="cat">Catagories</a>
         <a href="" id="sett">Settings</a>
+        <button id="home" onclick="window.location.href='HOME_PAGE.php'">Go to Home Page</button>
         <img src="" alt="Profile" id="PP">
         <a href="../Controller Logic/Logout.php" id="logout">
             <center>

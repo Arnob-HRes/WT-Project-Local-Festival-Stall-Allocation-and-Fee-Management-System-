@@ -22,28 +22,43 @@
 }
 #inf{
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 550px;
     color: white;
     text-decoration: none;
 }
 #cat{
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 650px;
     color: white;
     text-decoration: none;
 }
 #sett{
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 750px;
     color: white;
     text-decoration: none;
 }
+#home{
+    position: absolute;
+    top:20px;
+    left: 820px;
+    color: white;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+#home:hover{
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+}
 #PP{
     position: absolute;
-    top:15px;
+    top:25px;
     left: 1350px;
     width: 40px;
     height: 40px;
@@ -52,7 +67,7 @@
 #logout{
     font-size: 17px;
     position: absolute;
-    top: 17px;
+    top: 20px;
     left: 1410px;
     display: inline-block;
     color: black;
