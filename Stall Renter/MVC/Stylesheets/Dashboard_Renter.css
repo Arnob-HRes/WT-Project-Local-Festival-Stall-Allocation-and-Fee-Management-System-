@@ -196,15 +196,43 @@
 #MDIV-2:hover{
     box-shadow: 10px 10px 20px 14px black;
 }
-#Food{
+#MDIV-3{
     position: absolute;
-    top: 70px;
-    left: 50px;
-    width: 400px;
-    height: 300px;
+    top: 1350px;
+    left: 170px;
+    width: 500px;
+    height: 450px;
     border-radius: 20px;
+    box-shadow: 10px 10px 16px black;
 }
-#TA{
+#MDIV-3:hover{
+    box-shadow: 10px 10px 20px 14px black;
+}
+#MDIV-4{
+    position: absolute;
+    top: 1350px;
+    left: 880px;
+    width: 500px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 16px black;
+}
+#MDIV-4:hover{
+    box-shadow: 10px 10px 20px 14px black;
+}
+#MDIV-5{
+    position: absolute;
+    top: 1850px;
+    left: 550px;
+    width: 500px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 16px black;
+}
+#MDIV-5:hover{
+    box-shadow: 10px 10px 20px 14px black;
+}
+.DIVpic{
     position: absolute;
     top: 70px;
     left: 50px;

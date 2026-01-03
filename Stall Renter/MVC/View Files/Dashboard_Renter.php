@@ -50,16 +50,40 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
             <center>
                 <h2>Food Stall</h2>
             </center>
-            <img src="../Images/Food_Stall.jpg" alt="Food Stall" id="Food">
-            <input type="submit" value="Learn more >" id="FS" class="IS" onclick="window.location.href='Booking_Page.php'">
+            <img src="../Images/Food_Stall.jpg" alt="Food Stall" class="DIVpic">
+            <input type="submit" value="Learn more >" id="FS1" class="IS" onclick="window.location.href='Booking_Page.php'">
         </div>
 
         <div id="MDIV-2">
             <center>
                 <h2>Toys and Accessories Stall</h2>
             </center>
-            <img src="../Images/Toys ans Accessories_Stall.png" alt="TandA Stall" id="TA">
-            <input type="submit" value="Learn more >" id="FS" class="IS" onclick="window.location.href='Booking_Page.php'">
+            <img src="../Images/Toys ans Accessories_Stall.png" alt="TandA Stall" class="DIVpic">
+            <input type="submit" value="Learn more >" id="FS2" class="IS" onclick="window.location.href='Booking_Page.php'">
+        </div>
+
+        <div id="MDIV-3">
+            <center>
+                <h2>Art Stall</h2>
+            </center>
+            <img src="../Images/Arts_stall.png" alt="Art Stall" class="DIVpic">
+            <input type="submit" value="Learn more >" id="FS3" class="IS" onclick="window.location.href='Booking_Page.php'">
+        </div>
+
+        <div id="MDIV-4">
+            <center>
+                <h2>Toys and Accessories Stall</h2>
+            </center>
+            <img src="../Images/Hand Craft_Stall.png" alt="HC Stall" class="DIVpic">
+            <input type="submit" value="Learn more >" id="FS4" class="IS" onclick="window.location.href='Booking_Page.php'">
+        </div>
+
+        <div id="MDIV-5">
+            <center>
+                <h2>Arcade</h2>
+            </center>
+            <img src="../Images/Arcade_Stall.png" alt="Arcade Stall" class="DIVpic">
+            <input type="submit" value="Learn more >" id="FS5" class="IS" onclick="window.location.href='Booking_Page.php'">
         </div>
         
         <script src="../JavaScript Files/Dashboard_Renter.js"></script>
