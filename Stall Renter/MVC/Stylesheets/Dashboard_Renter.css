@@ -5,6 +5,8 @@
     width: 1536px;
     height: 690px;
     z-index: -1;
+    background-color: transparent;
+    backdrop-filter: blur(7px);
 }
 #logo{
     position: absolute;
@@ -82,4 +84,31 @@
     backdrop-filter: blur(4px);
     color: white;
     border: 2px solid white;
+}
+#h11{
+    font-size: 75px;
+    position: absolute;
+    top: 120px;
+    left: 70px;
+    color: white;
+}
+#h12{
+    font-size: 75px;
+    position: absolute;
+    top: 230px;
+    left: 70px;
+    color: white;
+}
+#h13{
+    font-size: 75px;
+    position: absolute;
+    top: 370px;
+    left: 70px;
+    color: white;
+}
+#h33{
+    position: absolute;
+    top: 530px;
+    left: 70px;
+    color: white;
 }

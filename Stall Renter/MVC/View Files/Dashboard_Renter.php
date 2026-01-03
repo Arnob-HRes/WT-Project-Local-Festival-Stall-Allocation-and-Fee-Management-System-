@@ -31,7 +31,10 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
                 Logout
             </center>
         </a>
-
+        <h1 id="h11"><b>Welcome,</b></h1>
+        <h1 id="h12"><b>To Your Personal </b></h1>
+        <h1 id="h13"><b>Local Festival Stall Renting Profile. </b></h1>
+        <h3 id="h33">For more information scroll down ↓ or search on the tab ⌕</h3>
         
         <script src="../JavaScript Files/Dashboard_Renter.js"></script>
     </body>
