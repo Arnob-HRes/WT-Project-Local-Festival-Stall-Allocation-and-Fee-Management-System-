@@ -40,6 +40,11 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
             <input type="submit" value="Search" id="Submi">
             </div>
         </div>
+        <hr id="h1">
+        <center>
+            <h2 id="f1">Stall Catagories</h2>
+        </center>
+        <hr id="h2">
         
         <script src="../JavaScript Files/Dashboard_Renter.js"></script>
     </body>
