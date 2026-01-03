@@ -20,14 +20,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $error="Fill password !";
     }
     else{
-        if($user=="Arnob" && $pass=="1234"){
-        $_SESSION["username"]=$user;
-        header("Location:Dashboard_Renter.php");
-        exit();
+        $sql="SELECT * FROM user WHERE Username='".$user."' AND Password='".$pass."'";
+        $result=$conn->query($sql);
+        $row=$result->num_rows;
+        if($row==1){
+            $_SESSION["username"]=$user;
+            header("Location:Dashboard_Renter.php");
+            exit();
+        }
+        else{
+         $error="Invalide Username or Password !";
        }
-       else{
-        $error="Invalide Username or Password !";
-      }
     }
 }
 ?>
