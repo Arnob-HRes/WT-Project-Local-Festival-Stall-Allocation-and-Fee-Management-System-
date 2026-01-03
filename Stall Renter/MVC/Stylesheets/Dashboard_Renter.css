@@ -53,6 +53,7 @@
     border: 2px solid white;
     padding: 10px;
     border-radius: 20px;
+    cursor: pointer;
 }
 #home:hover{
     background-color: transparent;
@@ -71,13 +72,16 @@
     position: absolute;
     top: 20px;
     left: 1410px;
+    text-align: center;
+    padding: 15px 10px 0px 10px;
     display: inline-block;
-    color: black;
+    color: white;
     background-color: rgba(255, 255, 255, 0.2);
     width: 100px;
     height: 40px;
     border-radius: 10px;
     text-decoration: none;
+    cursor: pointer;
 }
 #logout:hover{
     background-color: transparent;
