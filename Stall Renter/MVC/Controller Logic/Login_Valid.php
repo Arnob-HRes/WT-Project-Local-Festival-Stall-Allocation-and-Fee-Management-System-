@@ -1,4 +1,5 @@
 <?php
+include('../Database or Model Files/DataBase.php');
 session_start();
 if(isset($_SESSION["username"])){
     header("Location:Dashboard_Renter.php");
