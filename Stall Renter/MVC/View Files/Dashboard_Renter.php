@@ -20,6 +20,8 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
 
         <img src="../Images/Dashboard_background.jpg" alt="Dashborad Background" id="mainimg">
         <img src="../Images/LOGO.png" alt="Logo" id="logo">
+        <p id="wu"><b>Welcome, <?php if(isset($FullName)){echo $FullName;}?></b></p>
+        <p id="inf">Information &darr;</p>
         
         <script src="../JavaScript Files/Dashboard_Renter.js"></script>
     </body>
