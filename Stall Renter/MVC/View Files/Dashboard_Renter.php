@@ -26,7 +26,9 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
         <a href="" id="sett">Settings</a>
         <img src="" alt="Profile" id="PP">
         <a href="../Controller Logic/Logout.php" id="logout">
-            Logout
+            <center>
+                Logout
+            </center>
         </a>
 
         
