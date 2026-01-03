@@ -21,7 +21,14 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
         <img src="../Images/Dashboard_background.jpg" alt="Dashborad Background" id="mainimg">
         <img src="../Images/LOGO.png" alt="Logo" id="logo">
         <p id="wu"><b>Welcome, <?php if(isset($FullName)){echo $FullName;}?></b></p>
-        <p id="inf">Information &darr;</p>
+        <a href="" id="inf">Information</a>
+        <a href="" id="cat">Catagories</a>
+        <a href="" id="sett">Settings</a>
+        <img src="" alt="Profile" id="PP">
+        <a href="../Controller Logic/Logout.php" id="logout">
+            Logout
+        </a>
+
         
         <script src="../JavaScript Files/Dashboard_Renter.js"></script>
     </body>
