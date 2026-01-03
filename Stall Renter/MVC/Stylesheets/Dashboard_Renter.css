@@ -172,3 +172,53 @@
     left: 0px;
     width: 1536px;
 }
+#MDIV-1{
+    position: absolute;
+    top: 850px;
+    left: 170px;
+    width: 500px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 16px black;
+}
+#MDIV-1:hover{
+    box-shadow: 10px 10px 20px 14px black;
+}
+#MDIV-2{
+    position: absolute;
+    top: 850px;
+    left: 880px;
+    width: 500px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 16px black;
+}
+#MDIV-2:hover{
+    box-shadow: 10px 10px 20px 14px black;
+}
+#Food{
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+}
+#TA{
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+}
+.IS{
+    position: absolute;
+    top: 390px;
+    left: 200px;
+    width: 100px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}

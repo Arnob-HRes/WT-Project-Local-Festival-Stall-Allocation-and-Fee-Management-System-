@@ -45,6 +45,22 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
             <h2 id="f1">Stall Catagories</h2>
         </center>
         <hr id="h2">
+
+        <div id="MDIV-1">
+            <center>
+                <h2>Food Stall</h2>
+            </center>
+            <img src="../Images/Food_Stall.jpg" alt="Food Stall" id="Food">
+            <input type="submit" value="Learn more >" id="FS" class="IS" onclick="window.location.href='Booking_Page.php'">
+        </div>
+
+        <div id="MDIV-2">
+            <center>
+                <h2>Toys and Accessories Stall</h2>
+            </center>
+            <img src="../Images/Toys ans Accessories_Stall.png" alt="TandA Stall" id="TA">
+            <input type="submit" value="Learn more >" id="FS" class="IS" onclick="window.location.href='Booking_Page.php'">
+        </div>
         
         <script src="../JavaScript Files/Dashboard_Renter.js"></script>
     </body>
