@@ -158,6 +158,12 @@
     width: 1536px;
     height: auto;
 }
+#f2{
+    position: absolute;
+    top: 2360px;
+    width: 1536px;
+    height: auto;
+}
 #h1{
     position: absolute;
     color: black;
@@ -169,6 +175,20 @@
     color: black;
     position: absolute;
     top: 800px;
+    left: 0px;
+    width: 1536px;
+}
+#h3{
+    position: absolute;
+    color: black;
+    top: 2350px;
+    left: 0px;
+    width: 1536px;
+}
+#h4{
+    color: black;
+    position: absolute;
+    top: 2410px;
     left: 0px;
     width: 1536px;
 }

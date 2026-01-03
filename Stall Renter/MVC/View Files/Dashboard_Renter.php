@@ -85,6 +85,12 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
             <img src="../Images/Arcade_Stall.png" alt="Arcade Stall" class="DIVpic">
             <input type="submit" value="Learn more >" id="FS5" class="IS" onclick="window.location.href='Booking_Page.php'">
         </div>
+
+        <hr id="h3">
+        <center>
+            <h2 id="f2">Information About Booking</h2>
+        </center>
+        <hr id="h4">
         
         <script src="../JavaScript Files/Dashboard_Renter.js"></script>
     </body>
