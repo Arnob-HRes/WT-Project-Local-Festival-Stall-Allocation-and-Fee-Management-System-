@@ -38,6 +38,7 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
             <div id="d1">
             <input type="text" id="ST" placeholder="⌕ Search for a topic" name="searchT">
             <input type="submit" value="Search" id="Submi">
+            <input type="submit" value="Book a stall" id="Submi2">
             </div>
         </div>
         <hr id="h1">

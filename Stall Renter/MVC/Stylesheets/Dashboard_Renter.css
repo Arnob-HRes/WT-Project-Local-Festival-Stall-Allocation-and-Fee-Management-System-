@@ -135,7 +135,7 @@
     padding: 0px 0px 0px 20px;
     position: absolute;
     top:30px;
-    width: 600px;
+    width: 450px;
     height: 40px;
     border-radius: 20px;
     border: 1px solid white;
@@ -144,11 +144,22 @@
 #Submi{
     position: absolute;
     top:30px;
-    left: 650px;
+    left: 500px;
     width: 150px;
     height: 40px;
     background-color: red;
     color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+#Submi2{
+    position: absolute;
+    top:30px;
+    left: 660px;
+    width: 150px;
+    height: 40px;
+    background-color: gold;
+    color: black;
     border-radius: 20px;
     border: 1px solid white;
 }
