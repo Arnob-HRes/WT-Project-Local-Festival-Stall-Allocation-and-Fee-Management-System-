@@ -124,7 +124,7 @@
 #d1{
     padding: 20px;
     position: sticky;
-    top:650px;
+    top:0px;
     width: 790px;
     height: 65px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -281,3 +281,4 @@
     border-radius: 20px;
     cursor: pointer;
 }
+

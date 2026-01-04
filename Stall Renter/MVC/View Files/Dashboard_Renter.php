@@ -29,10 +29,10 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
         <a href="../Controller Logic/Logout.php" id="logout">
                 Logout
         </a>
-        <h1 id="h11"><b>Welcome,</b></h1>
-        <h1 id="h12"><b>To Your Personal </b></h1>
-        <h1 id="h13"><b>Local Festival Stall Renting Profile. </b></h1>
-        <h3 id="h33">For more information scroll down ↓ or search on the tab ⌕</h3>
+        <h1 id="h11" class="ani"><b>Welcome,</b></h1>
+        <h1 id="h12" class="ani"><b>To Your Personal </b></h1>
+        <h1 id="h13" class="ani"><b>Local Festival Stall Renting Profile. </b></h1>
+        <h3 id="h33" class="ani">For more information scroll down ↓ or search on the tab ⌕</h3>
 
         <div id="stiky1">
             <div id="d1">
