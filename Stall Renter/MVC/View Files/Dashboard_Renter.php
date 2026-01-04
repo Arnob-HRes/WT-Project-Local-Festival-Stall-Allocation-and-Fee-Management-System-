@@ -94,5 +94,8 @@ include("../Controller Logic/Dashboard_Renter_Valid.php");
         <hr id="h4">
         
         <script src="../JavaScript Files/Dashboard_Renter.js"></script>
+        <footer id="footer">
+            
+        </footer>
     </body>
 </html>
