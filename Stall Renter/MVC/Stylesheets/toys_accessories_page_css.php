@@ -197,9 +197,9 @@
     }
     #TT1{
         position: absolute;
-        left: 370px;
-        top: 20px;
-        font-size: 120px;
+        left: 200px;
+        top: 40px;
+        font-size: 80px;
         color: white;
         overflow: hidden;
         white-space: nowrap;
