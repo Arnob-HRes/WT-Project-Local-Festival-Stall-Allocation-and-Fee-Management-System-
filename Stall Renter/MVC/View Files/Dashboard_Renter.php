@@ -59,10 +59,10 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
 
         <div id="MDIV-2">
             <center>
-                <h2>Hand Craft Stall</h2>
+                <h2>Toys and Accessories Stall</h2>
             </center>
             <img src="../Images/Toys ans Accessories_Stall.png" alt="TandA Stall" class="DIVpic">
-            <input type="submit" value="Learn more >" id="FS2" class="IS" onclick="window.location.href='Booking_Page.php'">
+            <input type="submit" value="Learn more >" id="FS2" class="IS" onclick="window.location.href='toys_accessories_page.php'">
         </div>
 
         <div id="MDIV-3">
@@ -75,10 +75,10 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
 
         <div id="MDIV-4">
             <center>
-                <h2>Toys and Accessories Stall</h2>
+                <h2>Hand Craft Stall</h2>
             </center>
             <img src="../Images/Hand Craft_Stall.png" alt="HC Stall" class="DIVpic">
-            <input type="submit" value="Learn more >" id="FS4" class="IS" onclick="window.location.href='toys_accessories_page.php'">
+            <input type="submit" value="Learn more >" id="FS4" class="IS" onclick="window.location.href='hand_craft_stall_page.php'">
         </div>
 
         <div id="MDIV-5">
