@@ -34,7 +34,7 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
         <h1 id="h11" class="ani"><b>Welcome,</b></h1>
         <h1 id="h12" class="ani"><b>To Your Personal </b></h1>
         <h1 id="h13" class="ani"><b>Local Festival Stall Renting Profile. </b></h1>
-        <h3 id="h33" class="ani">For more information scroll down ↓ or search on the tab ⌕</h3>
+        <h3 id="h33" >For more information scroll down ↓ or search on the tab ⌕</h3>
 
         <div id="stiky1">
             <div id="d1">

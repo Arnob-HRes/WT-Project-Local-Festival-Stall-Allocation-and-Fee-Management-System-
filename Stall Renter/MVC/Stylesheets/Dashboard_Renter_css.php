@@ -282,5 +282,18 @@
     border-radius: 20px;
     cursor: pointer;
 }
+.ani{
+    animation: appear-bottom 2.5s ease-out forwards;
+}
+@keyframes appear-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1; /* End fully visible */
+    transform: translateY(0);
+  }
+}
 </style>
 
