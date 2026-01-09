@@ -178,6 +178,23 @@
             box-shadow: 0 0 44px rgba(0, 255, 0, 1);
         }
     }
+    @keyframes shadow2 {
+        0% {
+            box-shadow: 0 0 60px rgba(0, 255, 0, 1);
+        }
+        25%{
+            box-shadow: 0 0 65px rgba(255, 0, 0, 1);
+        }
+        50%{
+            box-shadow: 0 0 70px rgba(0, 0, 255, 1);
+        }
+        75%{
+            box-shadow: 0 0 75px rgba(255, 0, 255, 1);
+        }
+        100% {
+            box-shadow: 0 0 80px rgba(0, 255, 0, 1);
+        }
+    }
     #TT1{
         position: absolute;
         left: 470px;
@@ -212,6 +229,11 @@
         background-color: gold;
         text-align: center;
         border-radius: 50px;
+    }
+    #move:hover{
+        background-color: transparent;
+        border-color: black;
+        animation: shadow2 2s infinite alternate;
     }
     #Info{
         font-size: 20px;
