@@ -86,7 +86,7 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
                 <h2>Arcade</h2>
             </center>
             <img src="../Images/Arcade_Stall.png" alt="Arcade Stall" class="DIVpic">
-            <input type="submit" value="Learn more >" id="FS5" class="IS" onclick="window.location.href='Booking_Page.php'">
+            <input type="submit" value="Learn more >" id="FS5" class="IS" onclick="window.location.href='arcade.php'">
         </div>
 
         <hr id="h3">
