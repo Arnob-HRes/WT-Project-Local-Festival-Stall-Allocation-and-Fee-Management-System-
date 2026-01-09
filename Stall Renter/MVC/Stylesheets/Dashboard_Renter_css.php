@@ -306,6 +306,7 @@
     cursor: pointer;
 }
 .ani{
+    text-shadow: 2px 2px 4px black;
     animation: appear-bottom 2.5s ease-out forwards;
 }
 @keyframes appear-bottom {
