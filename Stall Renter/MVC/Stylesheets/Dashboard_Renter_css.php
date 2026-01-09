@@ -3,7 +3,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 1536px;
+    width: 1522px;
     height: 650px;
     z-index: -1;
     background-color: transparent;
@@ -63,7 +63,7 @@
 #PP{
     position: absolute;
     top:25px;
-    left: 1350px;
+    left: 1330px;
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -72,7 +72,7 @@
     font-size: 17px;
     position: absolute;
     top: 20px;
-    left: 1410px;
+    left: 1390px;
     text-align: center;
     padding: 15px 10px 0px 10px;
     display: inline-block;
@@ -203,28 +203,28 @@
     color: black;
     top: 740px;
     left: 0px;
-    width: 1536px;
+    width: 1521px;
 }
 #h2{
     color: black;
     position: absolute;
     top: 800px;
     left: 0px;
-    width: 1536px;
+    width: 1521px;
 }
 #h3{
     position: absolute;
     color: black;
     top: 2350px;
     left: 0px;
-    width: 1536px;
+    width: 1521px;
 }
 #h4{
     color: black;
     position: absolute;
     top: 2410px;
     left: 0px;
-    width: 1536px;
+    width: 1521px;
 }
 #MDIV-1{
     position: absolute;
@@ -316,6 +316,16 @@
     opacity: 1; /* End fully visible */
     transform: translateY(0);
   }
+}
+#footer{
+    position: absolute;
+    top: 2600px;
+    left: 0px;
+    width: 1521px;
+    height: 200px;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 </style>
 
