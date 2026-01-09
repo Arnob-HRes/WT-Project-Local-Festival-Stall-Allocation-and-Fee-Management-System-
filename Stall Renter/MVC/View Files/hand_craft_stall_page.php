@@ -28,7 +28,7 @@ include("../JavaScript Files/hand_craft_stall_page_js.php");
         <a href="../Controller Logic/Logout.php" id="logout">
                 Logout
         </a>
-        <p id="TT1">ART STALL</p>
+        <p id="TT1">HAND CRAFT STALL</p>
         <div id="d1">
             Information
         </div>
