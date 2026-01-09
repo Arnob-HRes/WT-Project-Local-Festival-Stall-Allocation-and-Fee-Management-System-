@@ -78,7 +78,7 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
                 <h2>Toys and Accessories Stall</h2>
             </center>
             <img src="../Images/Hand Craft_Stall.png" alt="HC Stall" class="DIVpic">
-            <input type="submit" value="Learn more >" id="FS4" class="IS" onclick="window.location.href='Booking_Page.php'">
+            <input type="submit" value="Learn more >" id="FS4" class="IS" onclick="window.location.href='toys_accessories_page.php'">
         </div>
 
         <div id="MDIV-5">
