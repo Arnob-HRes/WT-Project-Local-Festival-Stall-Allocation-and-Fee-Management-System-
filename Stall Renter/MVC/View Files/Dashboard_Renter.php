@@ -70,7 +70,7 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
                 <h2>Art Stall</h2>
             </center>
             <img src="../Images/Arts_stall.png" alt="Art Stall" class="DIVpic">
-            <input type="submit" value="Learn more >" id="FS3" class="IS" onclick="window.location.href='Booking_Page.php'">
+            <input type="submit" value="Learn more >" id="FS3" class="IS" onclick="window.location.href='art_stall_page.php'">
         </div>
 
         <div id="MDIV-4">
