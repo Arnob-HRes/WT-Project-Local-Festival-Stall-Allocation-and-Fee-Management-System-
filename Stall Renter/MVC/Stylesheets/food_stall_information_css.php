@@ -5,7 +5,7 @@
     top: 0px;
     left: 0px;
     width: 1522px;
-    height: 350px;
+    height: 380px;
     z-index: -1;
     background-color: transparent;
     backdrop-filter: blur(7px);
@@ -29,7 +29,7 @@
     position: absolute;
     top:20px;
     width: 200px;
-    left: 690px;
+    left: 670px;
     color: white;
     background-color: transparent;
     backdrop-filter: blur(16px);
@@ -180,9 +180,17 @@
     }
     #TT1{
         position: absolute;
-        top: 100px;
-        font-size: 100px;
+        left: 470px;
+        top: 20px;
+        font-size: 120px;
         color: white;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: .15em solid white;
+        text-shadow: 2px 2px 4px black;
+        animation: 
+              typing 1.5s steps(10,end),
+              blink-caret .75s step-end infinite;
     }
 </style>
 
