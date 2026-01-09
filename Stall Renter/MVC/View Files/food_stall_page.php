@@ -32,6 +32,7 @@ include("../JavaScript Files/food_stall_information_js.php");
         <div id="d1">
             Information
         </div>
+        
         <footer id="footer">
             <img src="../Images/LOGO.png" alt="" id="FooterLogo">
             <a href="https://www.facebook.com/share/1DA2H2WT9q/" id="AF" class="fl">Arnob's Facebook</a>
