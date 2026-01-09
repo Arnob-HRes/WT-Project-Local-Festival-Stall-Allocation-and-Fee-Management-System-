@@ -20,8 +20,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $error="Fill password !";
     }
     else{
-        $sql="SELECT * FROM user WHERE Username='".$user."' AND Password='".$pass."'";
-        $result=$conn->query($sql);
+        $conn=connectsql();
+        $result=getuser($conn,$user,$pass);
         $row=$result->num_rows;
         if($row==1){
             $_SESSION["username"]=$user;
