@@ -94,17 +94,18 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
             <h2 id="f2">Information About Booking</h2>
         </center>
         <hr id="h4">
-        <p class="detail1">1. You have to choose the stall type</p>
-        <p class="detail1">2. You need to Choose the Location</p>
-        <p class="detail1">3. You need to Choose the Time and Date</p>
-        <p class="detail1">4. You need to Choose the Payment Method</p>
+        <p id="deel1" class="detail1">1. You have to choose the stall Categories (Food, Art, Toys, Accessories, Hand Craft, Arcade)</p>
+        <p id="deel2" class="detail1">2. You need to Choose the Location</p>
+        <p id="deel3" class="detail1">3. You need to Choose the Time and Date</p>
+        <p id="deel4" class="detail1">4. You need to Choose the Payment Method (Bkash, Nagad, Bank, Card)</p>
+        <a href="#mainimg" id="top">TOP</a>
         <footer id="footer">
             <img src="../Images/LOGO.png" alt="" id="FooterLogo">
             <a href="https://www.facebook.com/share/1DA2H2WT9q/" id="AF" class="fl">Arnob's Facebook</a>
             <a href="https://www.facebook.com/share/1ASuv8pzxi/" id="HF" class="fl">Hridita's Facebook</a>
             <a href="https://github.com/Arnob-HRes" id="AG" class="fl">Arnob's GitHub</a>
             <a href="https://github.com/Hridrita" id="HG" class="fl">Hridita's GitHub</a>
-            <h5 id="T1">©ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h5>
+            <h5 id="T1">© ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h5>
         </footer>
     </body>
 </html>

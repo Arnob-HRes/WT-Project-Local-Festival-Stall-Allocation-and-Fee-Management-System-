@@ -51,7 +51,7 @@
     left: 820px;
     color: white;
     background-color: transparent;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(16px);
     border: 2px solid white;
     padding: 10px;
     border-radius: 20px;
@@ -60,6 +60,7 @@
 #home:hover{
     background-color: transparent;
     backdrop-filter: blur(4px);
+    animation: shadow 2s infinite alternate;
 }
 #PP{
     position: absolute;
@@ -315,13 +316,13 @@
     transform: translateY(20px);
   }
   to {
-    opacity: 1; /* End fully visible */
+    opacity: 1;
     transform: translateY(0);
   }
 }
 #footer{
     position: absolute;
-    top: 2600px;
+    top: 2700px;
     left: 0px;
     width: 1521px;
     height: 200px;
@@ -380,5 +381,73 @@
             height: 20px;
             left: 730px;
         }
+        .detail1{
+            position: absolute;
+            left: 30px;
+            color: black;
+            font-size: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid black;
+            animation: 
+              typing 3.0s steps(15,end),
+              blink-caret .75s step-end infinite;
+        }
+        #deel1{
+            position: absolute;
+            top: 2450px;
+        }
+        #deel2{
+            position: absolute;
+            top: 2490px;
+        }
+        #deel3{
+            position: absolute;
+            top: 2530px;
+        }
+        #deel4{
+            position: absolute;
+            top: 2570px;
+        }
+        #top{
+            font-size: 17px;
+            position: absolute;
+            top: 2637px;
+            left: 735px;
+            text-align: center;
+            padding: 15px 10px 0px 10px;
+            display: inline-block;
+            color: white;
+            background-color: black;
+            width: 70px;
+            height: 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #top:hover{
+            border: 1px solid black;
+            background-color: transparent;
+            backdrop-filter: blur(8px);
+            color: black;
+            animation: shadow 2s infinite alternate;
+        }
+        @keyframes shadow {
+        0% {
+            box-shadow: 0 0 40px rgba(0, 255, 0, 1);
+        }
+        25%{
+            box-shadow: 0 0 41px rgba(255, 0, 0, 1);
+        }
+        50%{
+            box-shadow: 0 0 42px rgba(0, 0, 255, 1);
+        }
+        75%{
+            box-shadow: 0 0 43px rgba(255, 0, 255, 1);
+        }
+        100% {
+            box-shadow: 0 0 44px rgba(0, 255, 0, 1);
+        }
+}
 </style>
 
