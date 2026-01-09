@@ -54,7 +54,7 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
                 <h2>Food Stall</h2>
             </center>
             <img src="../Images/Food_Stall.jpg" alt="Food Stall" class="DIVpic">
-            <input type="submit" value="Learn more >" id="FS1" class="IS" onclick="window.location.href='Booking_Page.php'">
+            <input type="submit" value="Learn more >" id="FS1" class="IS" onclick="window.location.href='food_stall_page.php'">
         </div>
 
         <div id="MDIV-2">
