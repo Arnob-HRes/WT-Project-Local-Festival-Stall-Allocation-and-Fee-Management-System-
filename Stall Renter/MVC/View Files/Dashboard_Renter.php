@@ -22,7 +22,7 @@ include("../Controller Logic/session_and_cookie_check.php");
 
         <img src="../Images/Dashboard_background.jpg" alt="Dashborad Background" id="mainimg">
         <img src="../Images/LOGO.png" alt="Logo" id="logo">
-        <p id="wu"><b>Welcome, <?php if(isset($FullName)){echo $FullName;}?></b></p>
+        <p id="wu"><b>Welcome, <?php if(isset($_SESSION["fullname"])){echo $_SESSION["fullname"];}?></b></p>
         <a href="" id="inf">Information</a>
         <a href="" id="cat">Catagories</a>
         <a href="" id="sett">Settings</a>
