@@ -59,7 +59,7 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
 
         <div id="MDIV-2">
             <center>
-                <h2>Toys and Accessories Stall</h2>
+                <h2>Hand Craft Stall</h2>
             </center>
             <img src="../Images/Toys ans Accessories_Stall.png" alt="TandA Stall" class="DIVpic">
             <input type="submit" value="Learn more >" id="FS2" class="IS" onclick="window.location.href='Booking_Page.php'">
