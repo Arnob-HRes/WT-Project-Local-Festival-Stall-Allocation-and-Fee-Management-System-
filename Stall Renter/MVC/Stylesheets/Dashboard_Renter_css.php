@@ -116,6 +116,28 @@
     top: 530px;
     left: 70px;
     color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid white;
+    animation: 
+              typing 2.5s steps(15,end),
+              blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 #stiky1{
     position: absolute;
