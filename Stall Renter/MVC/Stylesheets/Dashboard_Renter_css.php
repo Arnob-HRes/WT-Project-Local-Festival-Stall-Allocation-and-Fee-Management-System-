@@ -329,5 +329,56 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+#FooterLogo{
+            position: absolute;
+            top: 30px;
+            right: 80px;
+            border-radius: 20px;
+            width: 150px;
+            height: 150px;
+        }
+        #T1{
+            color: white;
+            position: absolute;
+            top: 20px;
+            left: 10px;
+        }
+         .fl{
+            font-size: 15px;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.6);
+            color: Black;
+            text-decoration: none;
+        }
+        .fl:hover{
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        #AF{
+            top:110px;
+            width: 150px;
+            height: 20px;
+            left: 10px;
+        }
+        #HF{
+            top:110px;
+            width: 120px;
+            height: 20px;
+            left: 250px;
+        }
+        #AG{
+            top:110px;
+            width: 100px;
+            height: 20px;
+            left: 490px;
+        }
+        #HG{
+            top:110px;
+            width: 100px;
+            height: 20px;
+            left: 730px;
+        }
 </style>
 

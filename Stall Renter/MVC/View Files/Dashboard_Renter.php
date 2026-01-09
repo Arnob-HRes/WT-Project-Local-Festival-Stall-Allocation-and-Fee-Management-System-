@@ -94,6 +94,10 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
             <h2 id="f2">Information About Booking</h2>
         </center>
         <hr id="h4">
+        <p class="detail1">1. You have to choose the stall type</p>
+        <p class="detail1">2. You need to Choose the Location</p>
+        <p class="detail1">3. You need to Choose the Time and Date</p>
+        <p class="detail1">4. You need to Choose the Payment Method</p>
         <footer id="footer">
             <img src="../Images/LOGO.png" alt="" id="FooterLogo">
             <a href="https://www.facebook.com/share/1DA2H2WT9q/" id="AF" class="fl">Arnob's Facebook</a>
