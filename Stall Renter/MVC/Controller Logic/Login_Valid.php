@@ -24,7 +24,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $result=getuser($conn,$user,$pass);
         $row=$result->num_rows;
         if($row==1){
-            $_SESSION["username"]=$user;
+            foreach($result as $R){
+            $_SESSION["username"]=$R["Username"];
+            $_SESSION["fullname"]=$R["FullName"];
+            $_SESSION["number"]=$R["ContectNumber"];
+            $_SESSION["email"]=$R["Email"];
+            $_SESSION["address"]=$R["Address"];
+            }
             header("Location:Dashboard_Renter.php");
             exit();
         }
