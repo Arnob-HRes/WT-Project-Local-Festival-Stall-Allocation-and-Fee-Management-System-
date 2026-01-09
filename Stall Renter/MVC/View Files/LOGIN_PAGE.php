@@ -26,7 +26,7 @@ include('../JavaScript Files/LOGIN_PAGE_js.php');
                 <h2 id="T1">Login</h2>
             </center>
             <input type="text" id="I1" class="Input" name="username" placeholder="username">
-            <input type="text" id="I2" class="Input" name="password" placeholder="password">
+            <input type="password" id="I2" class="Input" name="password" placeholder="password">
             <input type="submit" id="S1" name="loginButton" value="Login">
             <a href="../View Files/Forgot_Password_Page.php" id="FP">Forgot Password?</a>
             <center>
