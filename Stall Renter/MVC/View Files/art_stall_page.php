@@ -1,8 +1,8 @@
 <?php
-include("../Controller Logic/food_stall_information_Valid.php");
+include("../Controller Logic/art_stall_page_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
-include("../Stylesheets/food_stall_information_css.php");
-include("../JavaScript Files/food_stall_information_js.php");
+include("../Stylesheets/art_stall_page_css.php");
+include("../JavaScript Files/art_stall_page_js.php");
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ include("../JavaScript Files/food_stall_information_js.php");
 <html>
     <head>
         <title>
-            Food Stall Information
+            Art Stall Information
         </title>
         <meta name="description" content="This is a Web site for Local Festival Stall Allocation & Fee Management System" >
         <meta name="author" content="Arnob Sarker Supta and Hridrita Saha Moon">
@@ -28,16 +28,16 @@ include("../JavaScript Files/food_stall_information_js.php");
         <a href="../Controller Logic/Logout.php" id="logout">
                 Logout
         </a>
-        <p id="TT1">FOOD STALL</p>
+        <p id="TT1">ART STALL</p>
         <div id="d1">
             Information
         </div>
         <div id="TT2">
-            <p id="Info">The Food Stall section is designed to offer a vibrant and well-organized space for vendors and visitors during the festival. A limited number of food stalls are available to ensure quality control, proper hygiene, and smooth crowd management. This limited allocation helps maintain a balanced variety of food options while avoiding congestion and unfair competition among vendors. Stall availability is managed on a first-come, first-served basis, subject to administrative approval.
+            <p id="Info">The Art Stall section is dedicated to showcasing creativity and craftsmanship, providing artists with a platform to display and sell paintings, handmade crafts, sculptures, and other artistic works. To maintain a high standard and ensure equal opportunity, only a limited number of art stalls are available. This controlled allocation helps preserve the artistic atmosphere of the festival while giving visitors a curated and enjoyable experience.
 
-                        The food stalls operate at fixed hours from 10:00 AM to 4:00 PM, allowing visitors to enjoy fresh meals and snacks throughout the main festival period. Vendors are required to strictly follow the assigned time schedule and comply with festival regulations, including cleanliness, food safety standards, and stall layout guidelines. Any violation may result in cancellation of stall allocation.
+                        Art stalls operate during fixed festival hours from 10:00 AM to 4:00 PM, and stall renters are required to adhere strictly to the assigned schedule. Artists must ensure proper presentation of their work, maintain stall cleanliness, and follow all festival guidelines. The admin reserves the right to approve or reject stall requests based on availability and compliance with festival policies.
 
-                        To make the booking process convenient and accessible, multiple payment methods are supported. Stall renters can complete payments using bKash, Nagad, bank transfer, or card payment, ensuring flexibility for all users. Once payment is successfully completed and verified, stall allocation details such as location and operating time are confirmed by the admin. This structured system ensures transparency, efficiency, and a smooth experience for both food vendors and festival organizers.</p>
+                        For convenience and transparency, multiple payment options are supported for art stall booking. Renters can make payments through bKash, Nagad, bank transfer, or card payment. After successful payment verification, the admin confirms the stall allocation along with location and time details. This structured process ensures a smooth, fair, and professional environment for artists to promote their work and engage with festival visitors.</p>
         </div>
         <button id="move" onclick="window.location.href='Booking_Page.php'">Booking Page</button>
         <footer id="footer">
