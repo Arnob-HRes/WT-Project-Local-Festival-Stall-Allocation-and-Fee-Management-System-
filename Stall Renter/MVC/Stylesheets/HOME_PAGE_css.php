@@ -1,3 +1,4 @@
+<style>
        #F1{
             position: absolute;
             top: 200px;
@@ -397,3 +398,4 @@
             height: 20px;
             left: 730px;
         }
+</style>

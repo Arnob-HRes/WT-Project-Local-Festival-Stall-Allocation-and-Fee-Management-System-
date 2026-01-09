@@ -1,3 +1,4 @@
+<style>
 #mainimg{
     position: absolute;
     top: 0px;
@@ -281,4 +282,5 @@
     border-radius: 20px;
     cursor: pointer;
 }
+</style>
 
