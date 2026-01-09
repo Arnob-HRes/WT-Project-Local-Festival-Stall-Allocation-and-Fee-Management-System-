@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("../Controller Logic/Dashboard_Renter_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
 ?>
