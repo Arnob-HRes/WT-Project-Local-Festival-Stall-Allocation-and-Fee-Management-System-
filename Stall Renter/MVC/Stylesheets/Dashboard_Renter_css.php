@@ -1,5 +1,6 @@
 <style>
 #mainimg{
+    filter: blur(2px);
     position: absolute;
     top: 0px;
     left: 0px;
