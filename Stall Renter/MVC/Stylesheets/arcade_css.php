@@ -197,7 +197,7 @@
     }
     #TT1{
         position: absolute;
-        left: 470px;
+        left: 500px;
         top: 20px;
         font-size: 120px;
         color: white;
