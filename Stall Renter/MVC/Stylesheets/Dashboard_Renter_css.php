@@ -120,7 +120,7 @@
     white-space: nowrap;
     border-right: .15em solid white;
     animation: 
-              typing 2.5s steps(15,end),
+              typing 3.0s steps(15,end),
               blink-caret .75s step-end infinite;
 }
 @keyframes typing {
