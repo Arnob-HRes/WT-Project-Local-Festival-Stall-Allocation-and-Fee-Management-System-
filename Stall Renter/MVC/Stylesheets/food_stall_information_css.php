@@ -24,27 +24,6 @@
     left: 130px;
     color: white;
 }
-#inf{
-    position: absolute;
-    top: 30px;
-    left: 550px;
-    color: white;
-    text-decoration: none;
-}
-#cat{
-    position: absolute;
-    top: 30px;
-    left: 650px;
-    color: white;
-    text-decoration: none;
-}
-#sett{
-    position: absolute;
-    top: 30px;
-    left: 750px;
-    color: white;
-    text-decoration: none;
-}
 #home{
     text-align: center;
     position: absolute;
