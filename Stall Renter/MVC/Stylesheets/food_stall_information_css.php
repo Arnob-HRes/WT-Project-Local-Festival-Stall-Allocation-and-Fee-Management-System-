@@ -5,7 +5,7 @@
     top: 0px;
     left: 0px;
     width: 1522px;
-    height: 400px;
+    height: 350px;
     z-index: -1;
     background-color: transparent;
     backdrop-filter: blur(7px);
