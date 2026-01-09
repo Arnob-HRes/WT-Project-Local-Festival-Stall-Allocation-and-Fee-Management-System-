@@ -192,6 +192,17 @@
               typing 1.5s steps(10,end),
               blink-caret .75s step-end infinite;
     }
+    #TT2{
+        position: absolute;
+        top: 400px;
+        left: 50px;
+        width: 1400px;
+        height: auto;
+        padding: 10px;
+    }
+    #Info{
+        font-size: 20px;
+    }
     #d1{
         position: absolute;
         left: 710px;

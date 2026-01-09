@@ -28,11 +28,18 @@ include("../JavaScript Files/food_stall_information_js.php");
         <a href="../Controller Logic/Logout.php" id="logout">
                 Logout
         </a>
-        <p id="TT1">FOOD STAL</p>
+        <p id="TT1">FOOD STALL</p>
         <div id="d1">
             Information
         </div>
-        
+        <div id="TT2">
+            <p id="Info">The Food Stall section is designed to offer a vibrant and well-organized space for vendors and visitors during the festival. A limited number of food stalls are available to ensure quality control, proper hygiene, and smooth crowd management. This limited allocation helps maintain a balanced variety of food options while avoiding congestion and unfair competition among vendors. Stall availability is managed on a first-come, first-served basis, subject to administrative approval.
+
+                        The food stalls operate at fixed hours from 10:00 AM to 4:00 PM, allowing visitors to enjoy fresh meals and snacks throughout the main festival period. Vendors are required to strictly follow the assigned time schedule and comply with festival regulations, including cleanliness, food safety standards, and stall layout guidelines. Any violation may result in cancellation of stall allocation.
+
+                        To make the booking process convenient and accessible, multiple payment methods are supported. Stall renters can complete payments using bKash, Nagad, bank transfer, or card payment, ensuring flexibility for all users. Once payment is successfully completed and verified, stall allocation details such as location and operating time are confirmed by the admin. This structured system ensures transparency, efficiency, and a smooth experience for both food vendors and festival organizers.</p>
+        </div>
+        <button id="move" onclick="window.location.href='Booking_Page.php'"></button>
         <footer id="footer">
             <img src="../Images/LOGO.png" alt="" id="FooterLogo">
             <a href="https://www.facebook.com/share/1DA2H2WT9q/" id="AF" class="fl">Arnob's Facebook</a>
