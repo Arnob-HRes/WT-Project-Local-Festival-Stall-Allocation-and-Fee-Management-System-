@@ -23,8 +23,8 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
         <img src="../Images/Dashboard_background.jpg" alt="Dashborad Background" id="mainimg">
         <img src="../Images/LOGO.png" alt="Logo" id="logo">
         <p id="wu"><b>Welcome, <?php if(isset($_SESSION["fullname"])){echo $_SESSION["fullname"];}?></b></p>
-        <a href="" id="inf">Information</a>
-        <a href="" id="cat">Catagories</a>
+        <a href="#h3" id="inf">Information</a>
+        <a href="#h1" id="cat">Catagories</a>
         <a href="" id="sett">Settings</a>
         <button id="home" onclick="window.location.href='HOME_PAGE.php'">Go to Home Page</button>
         <img src="" alt="Profile" id="PP">

@@ -102,7 +102,7 @@
 }
 #footer{
     position: absolute;
-    top: 2700px;
+    top: 800px;
     left: 0px;
     width: 1521px;
     height: 200px;
@@ -191,6 +191,23 @@
         animation: 
               typing 1.5s steps(10,end),
               blink-caret .75s step-end infinite;
+    }
+    #d1{
+        position: absolute;
+        left: 710px;
+        top: 360px;
+        padding: 10px;
+        border-radius: 20px;
+        width: auto;
+        height: auto;
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        font-size: 20px;
+        cursor: help;
+    }
+    #d1:hover{
+        box-shadow: 0px 0px 50px purple;
     }
 </style>
 
