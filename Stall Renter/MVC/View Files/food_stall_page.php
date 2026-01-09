@@ -39,7 +39,7 @@ include("../JavaScript Files/food_stall_information_js.php");
 
                         To make the booking process convenient and accessible, multiple payment methods are supported. Stall renters can complete payments using bKash, Nagad, bank transfer, or card payment, ensuring flexibility for all users. Once payment is successfully completed and verified, stall allocation details such as location and operating time are confirmed by the admin. This structured system ensures transparency, efficiency, and a smooth experience for both food vendors and festival organizers.</p>
         </div>
-        <button id="move" onclick="window.location.href='Booking_Page.php'"></button>
+        <button id="move" onclick="window.location.href='Booking_Page.php'">Booking Page</button>
         <footer id="footer">
             <img src="../Images/LOGO.png" alt="" id="FooterLogo">
             <a href="https://www.facebook.com/share/1DA2H2WT9q/" id="AF" class="fl">Arnob's Facebook</a>

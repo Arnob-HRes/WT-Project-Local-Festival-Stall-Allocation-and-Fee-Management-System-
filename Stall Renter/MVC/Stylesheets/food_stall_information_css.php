@@ -200,6 +200,19 @@
         height: auto;
         padding: 10px;
     }
+    #move{
+        position: absolute;
+        top: 650px;
+        left: 705px;
+        padding: 17px;
+        width: auto;
+        height: auto;
+        border: 2px solid gold;
+        color: black;
+        background-color: gold;
+        text-align: center;
+        border-radius: 50px;
+    }
     #Info{
         font-size: 20px;
     }
