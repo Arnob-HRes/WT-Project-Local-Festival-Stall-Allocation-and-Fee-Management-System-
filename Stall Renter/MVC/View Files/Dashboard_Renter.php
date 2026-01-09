@@ -1,6 +1,8 @@
 <?php
 include("../Controller Logic/Dashboard_Renter_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
+include("../Stylesheets/Dashboard_Renter_css.php");
+include("../JavaScript Files/Dashboard_Renter_js.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +17,6 @@ include("../Controller Logic/session_and_cookie_check.php");
         <meta name="keywords" content="Project, WT, JS, CSS, HTML, AIUB, CSE, Web Technology">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="refresh" content="1800">
-        <link rel="stylesheet" href="../Stylesheets/Dashboard_Renter.css">
     </head>
     <body>
 
@@ -93,8 +94,6 @@ include("../Controller Logic/session_and_cookie_check.php");
             <h2 id="f2">Information About Booking</h2>
         </center>
         <hr id="h4">
-        
-        <script src="../JavaScript Files/Dashboard_Renter.js"></script>
         <footer id="footer">
             
         </footer>

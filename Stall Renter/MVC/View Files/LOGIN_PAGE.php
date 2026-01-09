@@ -1,5 +1,7 @@
 <?php
 include('../Controller Logic/Login_Valid.php');
+include('../Stylesheets/LOGIN_PAGE_css.php');
+include('../JavaScript Files/LOGIN_PAGE_js.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,6 @@ include('../Controller Logic/Login_Valid.php');
         <meta name="keywords" content="Project, WT, JS, CSS, HTML, AIUB, CSE, Web Technology">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="refresh" content="1800">
-        <link rel="stylesheet" href="../Stylesheets/LOGIN_PAGE.css">
     </head>
     <body>
         <img src="../Images/LOGIN_PAGE_BACKGROUND.jpg" alt="LOGIN PAGE BACKGROUND" id="Background">
@@ -35,7 +36,5 @@ include('../Controller Logic/Login_Valid.php');
             
             
         </form>
-
-        <script src="../JavaScript Files/LOGIN_PAGE.js"></script>
     </body>
 </html>
