@@ -1,8 +1,8 @@
 <?php
-include("../Controller Logic/art_stall_page_Valid.php");
+include("../Controller Logic/hand_craft_stall_page_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
-include("../Stylesheets/art_stall_page_css.php");
-include("../JavaScript Files/art_stall_page_js.php");
+include("../Stylesheets/hand_craft_stall_page_css.php");
+include("../JavaScript Files/hand_craft_stall_page_js.php");
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ include("../JavaScript Files/art_stall_page_js.php");
 <html>
     <head>
         <title>
-            Art Stall Information
+            Hand Craft Stall Information
         </title>
         <meta name="description" content="This is a Web site for Local Festival Stall Allocation & Fee Management System" >
         <meta name="author" content="Arnob Sarker Supta and Hridrita Saha Moon">
@@ -33,11 +33,11 @@ include("../JavaScript Files/art_stall_page_js.php");
             Information
         </div>
         <div id="TT2">
-            <p id="Info">The Art Stall section is dedicated to showcasing creativity and craftsmanship, providing artists with a platform to display and sell paintings, handmade crafts, sculptures, and other artistic works. To maintain a high standard and ensure equal opportunity, only a limited number of art stalls are available. This controlled allocation helps preserve the artistic atmosphere of the festival while giving visitors a curated and enjoyable experience.
+            <p id="Info">The Hand Craft Stall section highlights traditional and handmade products, providing skilled artisans with an opportunity to showcase unique items such as handmade décor, textiles, pottery, and cultural crafts. To maintain quality and ensure fair participation, a limited number of hand craft stalls are available. This controlled allocation helps preserve the authenticity of handmade products while offering visitors a rich cultural shopping experience.
 
-                        Art stalls operate during fixed festival hours from 10:00 AM to 4:00 PM, and stall renters are required to adhere strictly to the assigned schedule. Artists must ensure proper presentation of their work, maintain stall cleanliness, and follow all festival guidelines. The admin reserves the right to approve or reject stall requests based on availability and compliance with festival policies.
+                        Hand craft stalls operate during fixed festival hours from 10:00 AM to 4:00 PM, and stall renters must strictly adhere to the assigned schedule. Artisans are expected to maintain proper product display, ensure stall cleanliness, and follow all festival rules and guidelines. The admin has the authority to monitor compliance and take necessary action if any regulations are violated.
 
-                        For convenience and transparency, multiple payment options are supported for art stall booking. Renters can make payments through bKash, Nagad, bank transfer, or card payment. After successful payment verification, the admin confirms the stall allocation along with location and time details. This structured process ensures a smooth, fair, and professional environment for artists to promote their work and engage with festival visitors.</p>
+                        For booking convenience, multiple payment options are supported, including bKash, Nagad, bank transfer, and card payment. Once the payment is completed and verified, the admin confirms the stall allocation along with the specific location and operating time. This structured and transparent system ensures a smooth experience for artisans, organizers, and visitors alike.</p>
         </div>
         <button id="move" onclick="window.location.href='Booking_Page.php'">Booking Page</button>
         <footer id="footer">
