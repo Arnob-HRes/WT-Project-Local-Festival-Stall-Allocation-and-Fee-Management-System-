@@ -1,8 +1,8 @@
 <?php
-include("../Controller Logic/art_stall_page_Valid.php");
+include("../Controller Logic/arcade_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
-include("../Stylesheets/art_stall_page_css.php");
-include("../JavaScript Files/art_stall_page_js.php");
+include("../Stylesheets/arcade_css.php");
+include("../JavaScript Files/arcade_js.php");
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ include("../JavaScript Files/art_stall_page_js.php");
 <html>
     <head>
         <title>
-            Art Stall Information
+            Arcade
         </title>
         <meta name="description" content="This is a Web site for Local Festival Stall Allocation & Fee Management System" >
         <meta name="author" content="Arnob Sarker Supta and Hridrita Saha Moon">
@@ -28,16 +28,16 @@ include("../JavaScript Files/art_stall_page_js.php");
         <a href="../Controller Logic/Logout.php" id="logout">
                 Logout
         </a>
-        <p id="TT1">ART STALL</p>
+        <p id="TT1">ARCADE</p>
         <div id="d1">
             Information
         </div>
         <div id="TT2">
-            <p id="Info">The Art Stall section is dedicated to showcasing creativity and craftsmanship, providing artists with a platform to display and sell paintings, handmade crafts, sculptures, and other artistic works. To maintain a high standard and ensure equal opportunity, only a limited number of art stalls are available. This controlled allocation helps preserve the artistic atmosphere of the festival while giving visitors a curated and enjoyable experience.
+            <p id="Info">The Arcade Stall section is designed to add excitement and entertainment to the festival by offering interactive games and fun activities for visitors of all ages. To ensure safety, smooth operation, and proper space management, only a limited number of arcade stalls are available. This controlled allocation helps maintain crowd flow and ensures each arcade operator can provide a high-quality gaming experience.
 
-                        Art stalls operate during fixed festival hours from 10:00 AM to 4:00 PM, and stall renters are required to adhere strictly to the assigned schedule. Artists must ensure proper presentation of their work, maintain stall cleanliness, and follow all festival guidelines. The admin reserves the right to approve or reject stall requests based on availability and compliance with festival policies.
+                        Arcade stalls operate during fixed festival hours from 10:00 AM to 4:00 PM, and stall renters must strictly follow the assigned time schedule. Operators are responsible for maintaining their gaming equipment, ensuring user safety, and keeping the stall area organized and secure. Any violation of safety or operational guidelines may result in cancellation of stall allocation.
 
-                        For convenience and transparency, multiple payment options are supported for art stall booking. Renters can make payments through bKash, Nagad, bank transfer, or card payment. After successful payment verification, the admin confirms the stall allocation along with location and time details. This structured process ensures a smooth, fair, and professional environment for artists to promote their work and engage with festival visitors.</p>
+                        For convenient and secure booking, multiple payment methods are supported, including bKash, Nagad, bank transfer, and card payment. After successful payment verification, the admin confirms the stall allocation along with the assigned location and operating time. This organized system ensures transparency, efficiency, and an enjoyable entertainment experience for both arcade operators and festival visitors.</p>
         </div>
         <button id="move" onclick="window.location.href='Booking_Page.php'">Booking Page</button>
         <footer id="footer">
