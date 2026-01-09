@@ -28,7 +28,7 @@ include("../JavaScript Files/food_stall_information_js.php");
         <a href="../Controller Logic/Logout.php" id="logout">
                 Logout
         </a>
-        
+        <p id="TT1">FOOD STAL</p>
         <footer id="footer">
             <img src="../Images/LOGO.png" alt="" id="FooterLogo">
             <a href="https://www.facebook.com/share/1DA2H2WT9q/" id="AF" class="fl">Arnob's Facebook</a>

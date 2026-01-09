@@ -177,6 +177,12 @@
         100% {
             box-shadow: 0 0 44px rgba(0, 255, 0, 1);
         }
-}
+    }
+    #TT1{
+        position: absolute;
+        top: 100px;
+        font-size: 100px;
+        color: white;
+    }
 </style>
 
