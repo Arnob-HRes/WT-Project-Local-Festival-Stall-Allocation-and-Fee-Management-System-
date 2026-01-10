@@ -30,7 +30,7 @@ include('../JavaScript Files/LOGIN_PAGE_js.php');
             <input type="submit" id="S1" name="loginButton" value="Login">
             <a href="../View Files/Forgot_Password_Page.php" id="FP">Forgot Password?</a>
             <center>
-                <p id="p1">Don't have an account? <a href="../View Files/Registration_Page.php" id="Reg"><b>Registe</b>r</a></p><br>
+                <p id="p1">Don't have an account? <a href="../View Files/Registration_Page.php" id="Reg"><b>Register</b></a></p><br>
                 <p id="perror"><?php if(isset($error)){echo $error;}?></p>
             </center>
             
