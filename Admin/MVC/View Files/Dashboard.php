@@ -13,7 +13,7 @@
             <h2>Stall Admin</h2>
         </div>
         <nav class="sidebar-nav">
-            <a href="#" class="active">Dashboard</a>
+            <a href="Dashboard.php" class="active">Dashboard</a>
             <a href="Bookings.php">Bookings</a>
             <a href="Stalls.php">Stalls</a>
             <a href="Categories.php">Categories</a>

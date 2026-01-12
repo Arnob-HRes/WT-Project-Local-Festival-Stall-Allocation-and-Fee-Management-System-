@@ -11,12 +11,12 @@
             <h2>Stall Admin</h2>
         </div>
         <nav class="sidebar-nav">
-            <a href="index.html">Dashboard</a>     <!-- changing page area -->
-            <a href="bookings.html" class="active">Bookings</a>
-            <a href="#">Stalls</a>
-            <a href="#">Categories</a>
-            <a href="#">Payments</a>
-            <a href="#">Users</a>
+            <a href="Dashboard.php">Dashboard</a>     <!-- changing page area -->
+            <a href="Bookings.php" class="active">Bookings</a>
+            <a href="Stalls.php">Stalls</a>
+            <a href="Categories.php">Categories</a>
+            <a href="Payments.php">Payments</a>
+            <a href="Users.php">Users</a>
             <a href="#">Settings</a>
         </nav>
     </aside>
