@@ -55,4 +55,73 @@
         left: 10px;
         color: white;
     }
+    #dashboard{
+        position: absolute;
+        top:570px;
+        left: 50px;
+        padding: 15px;
+        border: 1px solid white;
+        background-color: white;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    #dashboard:hover{
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        left: 40px;
+        text-shadow: 0px 0px 8px black;
+        font-size: 18px;
+        animation: shadow 2s infinite alternate;
+    }
+    #logout{
+        position: absolute;
+        top:640px;
+        left: 50px;
+        width: 130px;
+        padding: 15px 20px 15px 20px;
+        border: 1px solid white;
+        background-color: gold;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    #logout:hover{
+        animation: backshadow 1.5s infinite alternate;
+        color: white;
+        text-shadow: 0px 0px 8px black;
+    }
+    @keyframes shadow {
+        0% {
+            box-shadow: 0 0 40px rgba(0, 255, 0, 1);
+        }
+        25%{
+            box-shadow: 0 0 41px rgba(255, 0, 0, 1);
+        }
+        50%{
+            box-shadow: 0 0 42px rgba(0, 0, 255, 1);
+        }
+        75%{
+            box-shadow: 0 0 43px rgba(255, 0, 255, 1);
+        }
+        100% {
+            box-shadow: 0 0 44px rgba(0, 255, 0, 1);
+        }
+    }
+    @keyframes backshadow {
+        0% {
+            background-color:rgba(0, 255, 0, 0.8);
+        }
+        25%{
+            background-color:rgba(255, 0, 0, 0.8);
+        }
+        50%{
+            background-color:rgba(0, 0, 255, 0.8);
+        }
+        75%{
+            background-color:rgba(255, 0, 255, 0.8);
+        }
+        100% {
+            background-color:rgba(0, 255, 0, 0.8);
+        }
+    }
 </style>

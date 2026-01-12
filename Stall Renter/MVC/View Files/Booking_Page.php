@@ -27,5 +27,7 @@ include("../JavaScript Files/Booking_Page_js.php");
         <h3 id="n2"><?php echo $_SESSION["number"]?></h3>
         <h3 id="n3"><?php echo $_SESSION["email"]?></h3>
         <h3 id="n4"><?php echo $_SESSION["address"]?></h3>
+        <button id="dashboard" onclick="window.location.href='Dashboard_Renter.php'">Go to Dashboard</button>
+        <button id="logout" onclick="window.location.href='../Controller Logic/Logout.php'">Logout</button>
     </body>
 </html>
