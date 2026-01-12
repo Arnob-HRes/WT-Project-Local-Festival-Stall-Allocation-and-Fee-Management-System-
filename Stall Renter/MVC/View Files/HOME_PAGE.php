@@ -1,3 +1,9 @@
+<?php
+session_start();
+include("../Stylesheets/HOME_PAGE_css.php");
+include("../JavaScript Files/HOME_PAGE_js.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -10,7 +16,6 @@
         <meta name="keywords" content="Project, WT, JS, CSS, HTML, AIUB, CSE, Web Technology">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="refresh" content="1800">
-        <link rel="stylesheet" href="../Stylesheets/HOME_PAGE.css">
     </head>
     <body>
         <img src="../Images/HOME_PAGE_BACKGROUND.jpg" alt="Home Page" id="IMG3">
@@ -81,7 +86,5 @@
             <a href="https://github.com/Hridrita" id="HG" class="fl">Hridita's GitHub</a>
             <h5 id="T1">©ARNOB SARKER SUPTA & HRIDRITA SAHA MOON 2025</h5>
         </footer>
-
-        <script src="../JavaScript Files/HOME_PAGE.js"></script>
     </body>
 </html>

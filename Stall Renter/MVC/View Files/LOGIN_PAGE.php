@@ -1,3 +1,9 @@
+<?php
+include('../Controller Logic/Login_Valid.php');
+include('../Stylesheets/LOGIN_PAGE_css.php');
+include('../JavaScript Files/LOGIN_PAGE_js.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -10,7 +16,6 @@
         <meta name="keywords" content="Project, WT, JS, CSS, HTML, AIUB, CSE, Web Technology">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="refresh" content="1800">
-        <link rel="stylesheet" href="../Stylesheets/LOGIN_PAGE.css">
     </head>
     <body>
         <img src="../Images/LOGIN_PAGE_BACKGROUND.jpg" alt="LOGIN PAGE BACKGROUND" id="Background">
@@ -21,15 +26,15 @@
                 <h2 id="T1">Login</h2>
             </center>
             <input type="text" id="I1" class="Input" name="username" placeholder="username">
-            <input type="text" id="I2" class="Input" name="password" placeholder="password">
+            <input type="password" id="I2" class="Input" name="password" placeholder="password">
             <input type="submit" id="S1" name="loginButton" value="Login">
             <a href="../View Files/Forgot_Password_Page.php" id="FP">Forgot Password?</a>
             <center>
-                <p id="p1">Don't have an account? <a href="../View Files/Registration_Page.php" id="Reg"><b>Registe</b>r</a></p>
+                <p id="p1">Don't have an account? <a href="../View Files/Registration_Page.php" id="Reg"><b>Register</b></a></p><br>
+                <p id="perror"><?php if(isset($error)){echo $error;}?></p>
             </center>
             
+            
         </form>
-
-        <script src="../JavaScript Files/LOGIN_PAGE.js"></script>
     </body>
 </html>

@@ -1,0 +1,98 @@
+<style>
+#Background{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1523px;
+    height: 730px;
+}
+#f1{
+    position: absolute;
+    top: 160px;
+    left: 580px;
+    padding: 30px;
+    width: 300px;
+    height: auto;
+    background-color: transparent;
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+}
+#I1{
+    padding-left: 10px;
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    border: 1px solid white;
+    color: white;
+}
+#I2{
+    padding-left: 10px;
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    border: 1px solid white;
+    color: white;
+}
+#S1{
+    width: 300px;
+    font-size: 15px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+}
+#S1:hover{
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    color: white;
+    border: 1px solid white;
+}
+#T1{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 30px;
+}
+#Reg{
+    display: inline;
+    text-decoration: none;
+    color: white;
+}
+#p1{
+    display: inline;
+    color: white;
+}
+#FP{
+    position: absolute;
+    top: 310px;
+    right: 25px;
+    text-decoration: none;
+    color: white;
+    z-index: +1;
+}
+#B1{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+#B1:hover{
+    background-color: rgba(255, 255, 255, 0.18);
+}
+#perror{
+    color: red;
+}
+</style>

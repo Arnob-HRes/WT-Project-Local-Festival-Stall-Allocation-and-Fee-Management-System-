@@ -1,1 +1,0 @@
-alert("Welcom to the login Page of Local Festival Stall Allocation & Fee Management System");
