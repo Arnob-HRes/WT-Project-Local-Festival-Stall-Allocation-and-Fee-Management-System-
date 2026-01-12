@@ -21,5 +21,6 @@ include("../JavaScript Files/Booking_Page_js.php");
     <body>
         <img src="../Images/BookingSide.gif" alt="Booking" id="IMG1">
         <img src="../Images/booking.gif" alt="BookingTop" id=IMG2>
+        <img src="" alt="profile" id="profilepic">
     </body>
 </html>
