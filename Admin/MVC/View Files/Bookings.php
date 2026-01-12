@@ -11,7 +11,7 @@
             <h2>Stall Admin</h2>
         </div>
         <nav class="sidebar-nav">
-            <a href="Dashboard.php">Dashboard</a>     <!-- changing page area -->
+            <a href="Dashboard.php">Dashboard</a>     
             <a href="Bookings.php" class="active">Bookings</a>
             <a href="Stalls.php">Stalls</a>
             <a href="Categories.php">Categories</a>
