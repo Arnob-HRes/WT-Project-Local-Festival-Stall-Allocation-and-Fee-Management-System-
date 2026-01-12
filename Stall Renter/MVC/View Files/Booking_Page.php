@@ -22,5 +22,10 @@ include("../JavaScript Files/Booking_Page_js.php");
         <img src="../Images/BookingSide.gif" alt="Booking" id="IMG1">
         <img src="../Images/booking.gif" alt="BookingTop" id=IMG2>
         <img src="" alt="profile" id="profilepic">
+        <h2 id="t1">You are Booking as</h2>
+        <h3 id="n1"><?php echo $_SESSION["fullname"]?></h3>
+        <h3 id="n2"><?php echo $_SESSION["number"]?></h3>
+        <h3 id="n3"><?php echo $_SESSION["email"]?></h3>
+        <h3 id="n4"><?php echo $_SESSION["address"]?></h3>
     </body>
 </html>

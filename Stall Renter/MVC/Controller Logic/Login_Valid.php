@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             foreach($result as $R){
             $_SESSION["username"]=$R["Username"];
             $_SESSION["fullname"]=$R["FullName"];
-            $_SESSION["number"]=$R["ContectNumber"];
+            $_SESSION["number"]=$R["ContactNumber"];
             $_SESSION["email"]=$R["Email"];
             $_SESSION["address"]=$R["Address"];
             }
