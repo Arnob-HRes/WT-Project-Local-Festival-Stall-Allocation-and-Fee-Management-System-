@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive ;
+}
+
+body{
+    background: linear-gradient(135deg, #1d2671, #c33764),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="noise" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23noise)"/></svg>');
+
+    background-blend-mode: overlay;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.c1{
+    background: rgba(0, 0, 0, 0.25) ;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px) ;
+    border: 1px solid rgba(255,255,255,0.2);
+    width: 480px;
+    padding: 14px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.c1 h2{
+    text-align: center;
+    margin-bottom: 3px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5) ;
+    font-weight: 700 ;
+}
+
+.c2{
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 15px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.c3{
+    margin-bottom: 10px;
+}
+
+label{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.c1 input:focus, .c1 select:focus {
+    border-color: rgba(255,255,255,0.6);
+    outline: none;
+    transform: scale(1.02);
+}
+
+input, select {
+    width: 100%;
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: rgba(206, 175, 175, 0.562);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-weight: 500;
+
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+input:focus, select:focus {
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+};
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #1d2671, #a32a60);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(29, 38, 113, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #353d9c, #d94f7e);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(29, 38, 113, 0.6);
+}
+
+button:active {
+    background: linear-gradient(135deg, #1d2671, #8b2450);
+    transform: translateY(0);
+}
+
+.c4{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.c4 a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.c4 a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    transition: width 0.3s ease;
+}
+
+.c4 a:hover::after {
+    width: 100%;
+}
+
+.c4 a:hover {
+    color: #fff;
+}
+
+@media (max-width: 480px){
+    .c1 {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+
+.c1 input,
+.c1 select,
+.c1 button {
+    height: 30px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+
