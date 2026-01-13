@@ -1,3 +1,42 @@
+<?php
+require_once '../Database_or_Model_Files/Database.php';
+
+$conn = connectsql();
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $stallId     = $_POST['stall_id'];
+    $zone        = $_POST['zone'];
+    $category    = $_POST['category'];
+    $width       = (int)$_POST['width'];
+    $length      = (int)$_POST['length'];
+    $baseFee     = (int)$_POST['base_fee'];
+    $status      = $_POST['status'];
+    $priority    = $_POST['priority'];
+    $description = $_POST['description'];
+
+    $sql = "INSERT INTO stalls
+            (stall_id, zone, category, width, length, base_fee, status, priority, description)
+            VALUES (?,?,?,?,?,?,?,?,?)";
+    $stmt = $conn->prepare($sql);                 // prepared statement best practice [web:54][web:38]
+    $stmt->bind_param(
+        "sssiiisss",
+        $stallId, $zone, $category,
+        $width, $length, $baseFee,
+        $status, $priority, $description
+    );
+    $stmt->execute();
+
+    // reload kore fresh data dekhate
+    header("Location: Stalls.php");
+    exit;
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,6 +102,7 @@
                                 <th>Zone</th>
                                 <th>Category</th>
                                 <th>Size</th>
+                                <th>Photo</th>
                                 <th>Base Fee (৳)</th>
                                 <th>Status</th>
                             </tr>
@@ -73,6 +113,7 @@
                                 <td>Zone A</td>
                                 <td>Food</td>
                                 <td>3m x 3m</td>
+                                <td>---</td>
                                 <td>2500</td>
                                 <td><span class="badge badge-available">Available</span></td>
                             </tr>
@@ -81,6 +122,7 @@
                                 <td>Zone A</td>
                                 <td>Food</td>
                                 <td>3m x 3m</td>
+                                <td>---</td>
                                 <td>2500</td>
                                 <td><span class="badge badge-booked">Booked</span></td>
                             </tr>
@@ -89,6 +131,7 @@
                                 <td>Zone B</td>
                                 <td>Hand Craft</td>
                                 <td>2m x 3m</td>
+                                <td>---</td>
                                 <td>2200</td>
                                 <td><span class="badge badge-available">Available</span></td>
                             </tr>
@@ -97,6 +140,7 @@
                                 <td>Zone C</td>
                                 <td>Arcade</td>
                                 <td>4m x 4m</td>
+                                <td>---</td>
                                 <td>4000</td>
                                 <td><span class="badge badge-maintenance">Maintenance</span></td>
                             </tr>
