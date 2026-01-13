@@ -17,7 +17,7 @@
             <a href="Categories.php">Categories</a>
             <a href="Payments.php">Payments</a>
             <a href="Users.php" class="active">Users</a>
-            <a href="#">Settings</a>
+            
         </nav>
     </aside>
 
