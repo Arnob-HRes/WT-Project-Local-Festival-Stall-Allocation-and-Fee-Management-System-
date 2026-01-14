@@ -156,4 +156,19 @@ tbody.addEventListener('click', e => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   }
 
+  if (action === 'delete') {
+    if (!confirm('Delete this category?')) return;
+    categories = categories.filter(c => c.id !== id);
+    if (editingId === id) clearForm();
+    renderTable();
+  }
+});
+
+if (searchBox) {
+  searchBox.addEventListener('input', () => {
+    clearTimeout(searchBox._t);
+    searchBox._t = setTimeout(renderTable, 200);
+  });
+}
+
   
