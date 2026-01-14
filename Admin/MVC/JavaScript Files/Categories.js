@@ -88,3 +88,16 @@ async function validateForm() {
   }
    return true;
 }
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!(await validateForm())) return;
+
+  const name  = nameInput.value.trim();
+  let slug    = slugInput.value.trim();
+  const desc  = descInput.value.trim();
+  const status= statusInput.value;
+  const order = parseInt(ordreInput.value, 10) || (categories.length + 1);
+  const color = colorInput.value;
+
+  
