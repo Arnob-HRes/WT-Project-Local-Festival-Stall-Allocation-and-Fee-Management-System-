@@ -5,14 +5,15 @@ const tableBody      = document.getElementById('stalls-body');
 
 function getStatusClass(status) {
     if (status === 'Available')   return 'badge badge-available';
-    if (status === 'Booked')      return 'badge badge-booked';
-    if (status === 'Maintenance') return 'badge badge-maintenance';
+    if (status === 'Booked')   return 'badge badge-booked';
+    if (status === 'Maintenance')   return 'badge badge-maintenance';
+    
     return 'badge';
 }
 
 async function loadStalls() {
     const params = new URLSearchParams({
-        ajax: '1',
+        ajax: '1',    //calling ajax
         status: statusSelect ? statusSelect.value : 'all',
         category: categorySelect ? categorySelect.value : 'all',
         search: searchInput ? searchInput.value.trim() : ''
@@ -20,7 +21,7 @@ async function loadStalls() {
 
     try {
         const res  = await fetch('Stalls.php?' + params.toString());
-        const json = await res.json(); // JSON parse [web:150][web:133]
+        const json = await res.json(); // JSON parse 
 
         tableBody.innerHTML = '';
 
@@ -67,3 +68,47 @@ if (searchInput) {
 
 // initial load
 document.addEventListener('DOMContentLoaded', loadStalls);
+
+async function loadCategoryOptions() {
+    try {
+        const res  = await fetch('../Controller Logic/CategoryOptions.php');
+        const json = await res.json();
+        if (!json.success) return;
+
+        const list = json.data;
+        const catSelect = document.getElementById('category');
+        const filterCat = document.getElementById('filter-category');
+
+        if (catSelect) {
+            catSelect.innerHTML = '<option value="">Select category</option>';
+            list.forEach(name => {
+                const opt = document.createElement('option');
+                opt.value = name;
+                opt.textContent = name;
+                catSelect.appendChild(opt);
+            });
+        }
+        if (filterCat) {
+            // top filter dropdown
+            const current = filterCat.value;
+            filterCat.innerHTML = '<option value="all">All Categories</option>';
+            list.forEach(name => {
+                const opt = document.createElement('option');
+                opt.value = name;
+                opt.textContent = name;
+                filterCat.appendChild(opt);
+            });
+            if (current && current !== 'all') {
+                filterCat.value = current;
+            }
+        }
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadCategoryOptions();
+    loadStalls();
+});
+

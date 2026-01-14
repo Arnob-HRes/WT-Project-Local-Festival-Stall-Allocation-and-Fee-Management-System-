@@ -21,7 +21,7 @@ require_once '../Controller/StallsController.php';
             <a href="Categories.php">Categories</a>
             <a href="Payments.php">Payments</a>
             <a href="Users.php">Users</a>
-            <a href="#">Settings</a>
+            
         </nav>
     </aside>
 
@@ -43,6 +43,7 @@ require_once '../Controller/StallsController.php';
                     <option value="Accessories">Accessories</option>
                     <option value="Hand Craft">Hand Craft</option>
                     <option value="Arcade">Arcade</option>
+            
                 </select>
                 <input type="text" id="filter-search" placeholder="Search stall ID or zone..." />
                 <div class="user-badge">Admin</div>
@@ -71,8 +72,9 @@ require_once '../Controller/StallsController.php';
                                 <th>Category</th>
                                 <th>Size</th>
                                 <th>Photo</th>
-                                <th>Base Fee (৳)</th>
+                                <th>Base Fee</th>
                                 <th>Status</th>
+                                
                             </tr>
                         </thead>
                         <tbody id="stalls-body">
@@ -83,7 +85,7 @@ require_once '../Controller/StallsController.php';
             </div>
 
             
-            <form class="form" method="post" action="Stalls.php" enctype="multipart/form-data">
+            <form class="form" method="post" action="Stalls.php"  enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="stall-id">Stall ID</label>
                     <input type="text" id="stall-id" name="stall_id" placeholder="e.g., A-10" required />
@@ -108,7 +110,7 @@ require_once '../Controller/StallsController.php';
                             <option value="Toys">Toys</option>
                             <option value="Accessories">Accessories</option>
                             <option value="Hand Craft">Hand Craft</option>
-                            <option value="Arcade">Arcade</option>
+                            <option value="Arcade">Arcade</option>  
                         </select>
                     </div>
                 </div>

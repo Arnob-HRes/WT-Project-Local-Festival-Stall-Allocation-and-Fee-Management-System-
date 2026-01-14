@@ -3,7 +3,7 @@ require_once '../Database_or_Model_Files/Database.php';
 
 $conn = connectsql();
 
-// ---------- AJAX JSON ----------
+
 $isAjax = isset($_GET['ajax']) && $_GET['ajax'] === '1';
 
 if ($isAjax) {
