@@ -23,5 +23,25 @@ const colorInput = document.getElementById('cat-color');
 
 const errName   = document.getElementById('err-name');
 
+function badge(status) {
+  return status === 'Active'
+    ? '<span class="badge badge-active">Active</span>'
+    : '<span class="badge badge-inactive">Inactive</span>';
+    
+}
 
+function renderTable() {
+  tbody.innerHTML = '';
 
+  const term = (searchBox?.value || '').toLowerCase();
+
+  const filtered = categories.filter(c =>
+    c.name.toLowerCase().includes(term) || c.slug.toLowerCase().includes(term)
+  );
+  
+if (filtered.length === 0) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td colspan="6">No categories found.</td>';
+    tbody.appendChild(tr);
+    return;
+  }
