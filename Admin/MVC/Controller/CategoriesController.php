@@ -100,5 +100,27 @@ if ($action === 'save') {
         }
     }
 
+     // updated row return korbe
+    $res = $conn->query("SELECT * FROM categories WHERE id=$id");
+    $row = $res->fetch_assoc();
+    echo json_encode(['success' => true, 'data' => $row]);
+    exit;
+}
+
+/* DELETE part */
+if ($action === 'delete') {
+    $id = (int)($_POST['id'] ?? 0);
+    if ($id <= 0) {
+        echo json_encode(['success' => false]);
+        exit;
+    }
+    $stmt = $conn->prepare("DELETE FROM categories WHERE id=?");
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
+    echo json_encode(['success' => true]);
+    exit;
+}
+
+
 
 
