@@ -171,4 +171,9 @@ if (searchBox) {
   });
 }
 
+clearBtn.addEventListener('click', clearForm);
+
+// initial render
+document.addEventListener('DOMContentLoaded', renderTable);
+
   
