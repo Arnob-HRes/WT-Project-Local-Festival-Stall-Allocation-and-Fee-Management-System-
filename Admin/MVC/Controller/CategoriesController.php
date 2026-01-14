@@ -121,6 +121,8 @@ if ($action === 'delete') {
     exit;
 }
 
+echo json_encode(['success' => false, 'message' => 'Bad request']);
+
 
 
 
