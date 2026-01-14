@@ -129,4 +129,31 @@ form.addEventListener('submit', async e => {
     });
   }
 
+  clearForm();
+  renderTable();
+});
+
+// edit / delete buttons
+tbody.addEventListener('click', e => {
+  const btn = e.target.closest('button[data-action]');
+  if (!btn) return;
+
+  const tr  = btn.closest('tr');
+  const id  = Number(tr.dataset.id);
+  const cat = categories.find(c => c.id === id);
+  if (!cat) return;
+
+  const action = btn.dataset.action;
+
+  if (action === 'edit') {
+    editingId        = id;
+    nameInput.value  = cat.name;
+    slugInput.value  = cat.slug;
+    descInput.value  = cat.description;
+    statusInput.value= cat.status;
+    orderInput.value = cat.order;
+    colorInput.value = cat.color || '#2563eb';
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
+
   
