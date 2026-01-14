@@ -100,6 +100,33 @@ form.addEventListener('submit', async e => {
   const order = parseInt(ordreInput.value, 10) || (categories.length + 1);
   const color = colorInput.value;
 
-  
+  if (!slug) {
+    slug = name.toLowerCase().replace(/[^a-z0-9]+/gi, '-');
+  }
+
+  if (editingId) {
+    // update
+    const idx = categories.findIndex(c => c.id === editingId);
+    if (idx !== -1) {
+      categories[idx] = {
+        ...categories[idx],
+        name, slug, description: desc, status, order, color
+      };
+    }
+  } else {
+    const newId = categories.length
+      ? Math.max(...categories.map(c => c.id)) + 1
+      : 1;
+    categories.push({
+      id: newId,
+      name,
+      slug,
+      description: desc,
+      totalStalls: 0,
+      status,
+      order,
+      color
+    });
+  }
 
   
