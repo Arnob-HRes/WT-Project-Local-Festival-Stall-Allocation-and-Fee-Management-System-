@@ -67,3 +67,14 @@ filtered
       tbody.appendChild(tr);
     });
 }
+
+function clearForm() {
+  editingId        = null;
+  nameInput.value  = '';
+  slugInput.value  = '';
+  descInput.value  = '';
+  statusInput.value= 'Active';
+  orderInput.value = '';
+  colorInput.value = '#2563eb';
+  errName.textContent = '';
+}
