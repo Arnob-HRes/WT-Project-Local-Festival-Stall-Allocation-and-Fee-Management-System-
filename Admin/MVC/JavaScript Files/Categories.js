@@ -78,3 +78,13 @@ function clearForm() {
   colorInput.value = '#2563eb';
   errName.textContent = '';
 }
+
+async function validateForm() {
+  errName.textContent = '';
+  const name = nameInput.value.trim();
+  if (!name) {
+    errName.textContent = 'Category name is required.';
+    return false;
+  }
+   return true;
+}
