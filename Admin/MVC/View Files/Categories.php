@@ -17,7 +17,6 @@
             <a href="Categories.php" class="active">Categories</a>
             <a href="Payments.php">Payments</a>
             <a href="Users.php">Users</a>
-           
         </nav>
     </aside>
 
@@ -25,7 +24,7 @@
         <header class="topbar">
             <h1>Categories</h1>
             <div class="topbar-right">
-                <input type="text" placeholder="Search category..." />
+                <input type="text" id="cat-search" placeholder="Search category..." />
                 <div class="user-badge">Admin</div>
             </div>
         </header>
@@ -52,73 +51,8 @@
                                 <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Food</td>
-                                <td>food</td>
-                                <td>All kinds of food and beverages stalls</td>
-                                <td>12</td>
-                                <td><span class="badge badge-active">Active</span></td>
-                                <td class="actions">
-                                    <button class="btn-sm btn-neutral">Edit</button>
-                                    <button class="btn-sm btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Art</td>
-                                <td>art</td>
-                                <td>Handmade and creative art stalls</td>
-                                <td>6</td>
-                                <td><span class="badge badge-active">Active</span></td>
-                                <td class="actions">
-                                    <button class="btn-sm btn-neutral">Edit</button>
-                                    <button class="btn-sm btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Toys</td>
-                                <td>toys</td>
-                                <td>Toys and kids’ items</td>
-                                <td>4</td>
-                                <td><span class="badge badge-active">Active</span></td>
-                                <td class="actions">
-                                    <button class="btn-sm btn-neutral">Edit</button>
-                                    <button class="btn-sm btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Accessories</td>
-                                <td>accessories</td>
-                                <td>Fashion, bags, jewellery, etc.</td>
-                                <td>5</td>
-                                <td><span class="badge badge-active">Active</span></td>
-                                <td class="actions">
-                                    <button class="btn-sm btn-neutral">Edit</button>
-                                    <button class="btn-sm btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Hand Craft</td>
-                                <td>hand-craft</td>
-                                <td>Hand crafted items and souvenirs</td>
-                                <td>3</td>
-                                <td><span class="badge badge-active">Active</span></td>
-                                <td class="actions">
-                                    <button class="btn-sm btn-neutral">Edit</button>
-                                    <button class="btn-sm btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Arcade</td>
-                                <td>arcade</td>
-                                <td>Games and entertainment (rides, VR, etc.)</td>
-                                <td>2</td>
-                                <td><span class="badge badge-active">Active</span></td>
-                                <td class="actions">
-                                    <button class="btn-sm btn-neutral">Edit</button>
-                                    <button class="btn-sm btn-danger">Delete</button>
-                                </td>
-                            </tr>
+                        <tbody id="cat-body">
+                            <!-- JS diye rows asbe -->
                         </tbody>
                     </table>
                 </div>
@@ -133,50 +67,54 @@
                     </div>
                 </div>
 
-                <form class="form">
+                <form class="form" id="cat-form">
                     <div class="form-group">
                         <label for="cat-name">Category Name</label>
-                        <input type="text" id="cat-name" placeholder="e.g., Electronics" />
+                        <input type="text" id="cat-name" name="name" placeholder="e.g., Electronics" />
+                        <small class="error" id="err-name"></small>
                     </div>
 
                     <div class="form-group">
                         <label for="cat-slug">Slug (optional)</label>
-                        <input type="text" id="cat-slug" placeholder="e.g., electronics" />
+                        <input type="text" id="cat-slug" name="slug" placeholder="e.g., electronics" />
                         <span class="help-text">If empty, slug will be generated from name.</span>
                     </div>
 
                     <div class="form-group">
                         <label for="cat-description">Description</label>
-                        <textarea id="cat-description" rows="3" placeholder="Short description of this category."></textarea>
+                        <textarea id="cat-description" name="description" rows="3"
+                            placeholder="Short description of this category."></textarea>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label for="cat-status">Status</label>
-                            <select id="cat-status">
-                                <option>Active</option>
-                                <option>Inactive</option>
+                            <select id="cat-status" name="status">
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="cat-order">Display Order</label>
-                            <input type="number" id="cat-order" placeholder="1" />
+                            <input type="number" id="cat-order" name="order" placeholder="1" />
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="cat-color">Color Tag (optional)</label>
-                        <input type="color" id="cat-color" value="#2563eb" />
+                        <input type="color" id="cat-color" name="color" value="#2563eb" />
                         <span class="help-text">Used for icons / labels in UI.</span>
                     </div>
 
                     <div class="form-actions">
-                        <button type="button" class="btn-secondary">Clear</button>
+                        <button type="button" class="btn-secondary" id="btn-clear">Clear</button>
                         <button type="submit" class="btn-primary">Save Category</button>
                     </div>
                 </form>
             </div>
         </section>
     </div>
+
+    <script src="../JavaScript Files/categories.js"></script>
 </body>
 </html>

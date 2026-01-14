@@ -1,33 +1,23 @@
-let categories = [
-  { id: 1, name: 'Food',        slug: 'food',        description: 'All kinds of food and beverages stalls', totalStalls: 12, status: 'Active',   order: 1, color: '#16a34a' },
-  { id: 2, name: 'Art',         slug: 'art',         description: 'Handmade and creative art stalls',      totalStalls:  6, status: 'Active',   order: 2, color: '#2563eb' },
-  { id: 3, name: 'Toys',        slug: 'toys',        description: 'Toys and kids’ items',                  totalStalls:  4, status: 'Active',   order: 3, color: '#f97316' },
-  { id: 4, name: 'Accessories', slug: 'accessories', description: 'Fashion, bags, jewellery, etc.',        totalStalls:  5, status: 'Active',   order: 4, color: '#6b21a8' },
-  { id: 5, name: 'Hand Craft',  slug: 'hand-craft',  description: 'Hand crafted items and souvenirs',      totalStalls:  3, status: 'Active',   order: 5, color: '#4b5563' },
-  { id: 6, name: 'Arcade',      slug: 'arcade',      description: 'Games and entertainment (rides, VR, etc.)', totalStalls: 2, status: 'Active', order: 6, color: '#22c55e' }
-];
-
-let editingId = null;
+let categories = [];
 
 const tbody      = document.getElementById('cat-body');
 const searchBox  = document.getElementById('cat-search');
 const form       = document.getElementById('cat-form');
 const clearBtn   = document.getElementById('btn-clear');
 
-const nameInput  = document.getElementById('cat-name');
-const slugInput  = document.getElementById('cat-slug');
-const descInput  = document.getElementById('cat-description');
-const statusInput= document.getElementById('cat-status');
-const orderInput = document.getElementById('cat-order');
-const colorInput = document.getElementById('cat-color');
+const nameInput   = document.getElementById('cat-name');
+const slugInput   = document.getElementById('cat-slug');
+const descInput   = document.getElementById('cat-description');
+const statusInput = document.getElementById('cat-status');
+const orderInput  = document.getElementById('cat-order');
+const colorInput  = document.getElementById('cat-color');
 
-const errName   = document.getElementById('err-name');
+const errName     = document.getElementById('err-name');
 
 function badge(status) {
   return status === 'Active'
     ? '<span class="badge badge-active">Active</span>'
     : '<span class="badge badge-inactive">Inactive</span>';
-    
 }
 
 function renderTable() {
@@ -36,19 +26,20 @@ function renderTable() {
   const term = (searchBox?.value || '').toLowerCase();
 
   const filtered = categories.filter(c =>
-    c.name.toLowerCase().includes(term) || c.slug.toLowerCase().includes(term)
+    c.name.toLowerCase().includes(term) ||
+    c.slug.toLowerCase().includes(term)
   );
 
-if (filtered.length === 0) {
+  if (filtered.length === 0) {
     const tr = document.createElement('tr');
     tr.innerHTML = '<td colspan="6">No categories found.</td>';
     tbody.appendChild(tr);
     return;
-}
+  }
 
-filtered
+  filtered
     .slice()
-    .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name))
+    .sort((a, b) => (a.display_order ?? 0) - (b.display_order ?? 0) || a.name.localeCompare(b.name))
     .forEach(cat => {
       const tr = document.createElement('tr');
       tr.dataset.id = cat.id;
@@ -56,29 +47,42 @@ filtered
         <td>${cat.name}</td>
         <td>${cat.slug}</td>
         <td>${cat.description || ''}</td>
-        <td>${cat.totalStalls}</td>
+        <td>${cat.total_stalls}</td>
         <td>${badge(cat.status)}</td>
-
         <td class="actions">
-          <button class="btn-sm btn-neutral" data-action="edit">Edit</button>
-          <button class="btn-sm btn-danger"  data-action="delete">Delete</button>
+          <button class="btn-sm btn-danger" data-action="delete">Delete</button>
         </td>
       `;
       tbody.appendChild(tr);
     });
 }
 
+// DB theke list
+async function loadCategories() {
+  const term = (searchBox?.value || '').trim();
+  const params = new URLSearchParams({ action: 'list', search: term });
+
+  const res  = await fetch('../Controller/CategoriesController.php?' + params.toString());
+  const json = await res.json();
+  if (json.success) {
+    categories = json.data;
+    renderTable();
+  } else {
+    console.error(json);
+  }
+}
+
 function clearForm() {
-  editingId        = null;
-  nameInput.value  = '';
-  slugInput.value  = '';
-  descInput.value  = '';
-  statusInput.value= 'Active';
-  orderInput.value = '';
-  colorInput.value = '#2563eb';
+  nameInput.value   = '';
+  slugInput.value   = '';
+  descInput.value   = '';
+  statusInput.value = 'Active';
+  orderInput.value  = '';
+  colorInput.value  = '#2563eb';
   errName.textContent = '';
 }
 
+// validation
 async function validateForm() {
   errName.textContent = '';
   const name = nameInput.value.trim();
@@ -86,94 +90,87 @@ async function validateForm() {
     errName.textContent = 'Category name is required.';
     return false;
   }
-   return true;
+  return true;
 }
 
+// Save (always insert / same-name logic PHP handle করবে)
 form.addEventListener('submit', async e => {
   e.preventDefault();
   if (!(await validateForm())) return;
 
-  const name  = nameInput.value.trim();
-  let slug    = slugInput.value.trim();
-  const desc  = descInput.value.trim();
-  const status= statusInput.value;
-  const order = parseInt(ordreInput.value, 10) || (categories.length + 1);
-  const color = colorInput.value;
+  const name   = nameInput.value.trim();
+  let slug     = slugInput.value.trim();
+  const desc   = descInput.value.trim();
+  const status = statusInput.value;
+  const order  = parseInt(orderInput.value, 10) || 1;
+  const color  = colorInput.value;
 
   if (!slug) {
     slug = name.toLowerCase().replace(/[^a-z0-9]+/gi, '-');
   }
 
-  if (editingId) {
-    // update
-    const idx = categories.findIndex(c => c.id === editingId);
-    if (idx !== -1) {
-      categories[idx] = {
-        ...categories[idx],
-        name, slug, description: desc, status, order, color
-      };
+  const fd = new FormData();
+  fd.append('action', 'save');
+  // id পাঠাচ্ছি না -> PHP always insert/same-name handle
+  fd.append('name', name);
+  fd.append('slug', slug);
+  fd.append('description', desc);
+  fd.append('status', status);
+  fd.append('display_order', order);
+  fd.append('color_tag', color);
+
+  const res  = await fetch('../Controller/CategoriesController.php', {
+    method: 'POST',
+    body: fd
+  });
+  const json = await res.json();
+
+  if (!json.success) {
+    if (json.errors && json.errors.name) {
+      errName.textContent = json.errors.name;
     }
-  } else {
-    const newId = categories.length
-      ? Math.max(...categories.map(c => c.id)) + 1
-      : 1;
-    categories.push({
-      id: newId,
-      name,
-      slug,
-      description: desc,
-      totalStalls: 0,
-      status,
-      order,
-      color
-    });
+    return;
   }
 
   clearForm();
-  renderTable();
+  await loadCategories();
 });
 
-// edit / delete buttons
-tbody.addEventListener('click', e => {
-  const btn = e.target.closest('button[data-action]');
+// শুধুই delete
+tbody.addEventListener('click', async e => {
+  const btn = e.target.closest('button[data-action="delete"]');
   if (!btn) return;
 
   const tr  = btn.closest('tr');
-  const id  = Number(tr.dataset.id);
-  const cat = categories.find(c => c.id === id);
-  if (!cat) return;
+  const id  = tr.dataset.id;
+  if (!id) return;
 
-  const action = btn.dataset.action;
+  if (!confirm('Delete this category?')) return;
 
-  if (action === 'edit') {
-    editingId        = id;
-    nameInput.value  = cat.name;
-    slugInput.value  = cat.slug;
-    descInput.value  = cat.description;
-    statusInput.value= cat.status;
-    orderInput.value = cat.order;
-    colorInput.value = cat.color || '#2563eb';
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-  }
+  const fd = new FormData();
+  fd.append('action', 'delete');
+  fd.append('id', id);
 
-  if (action === 'delete') {
-    if (!confirm('Delete this category?')) return;
-    categories = categories.filter(c => c.id !== id);
-    if (editingId === id) clearForm();
-    renderTable();
+  const res  = await fetch('../Controller/CategoriesController.php', {
+    method: 'POST',
+    body: fd
+  });
+  const json = await res.json();
+  if (json.success) {
+    await loadCategories();
   }
 });
 
+// Search
 if (searchBox) {
   searchBox.addEventListener('input', () => {
     clearTimeout(searchBox._t);
-    searchBox._t = setTimeout(renderTable, 200);
+    searchBox._t = setTimeout(loadCategories, 200);
   });
 }
 
+// Clear button
 clearBtn.addEventListener('click', clearForm);
 
-// initial render
-document.addEventListener('DOMContentLoaded', renderTable);
-
-  
+// initial
+document.addEventListener('DOMContentLoaded', loadCategories);
