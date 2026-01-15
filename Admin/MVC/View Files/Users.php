@@ -79,6 +79,27 @@
                                 <td>18,500</td>
                             </tr>
 
+                            <tr>
+                                <td>Nishi Akter</td>
+                                <td>Nishi Crafts</td>
+                                <td>01822-111111</td>
+                                <td><span class="tag role-renter">Renter</span></td>
+                                <td><span class="badge badge-active">Active</span></td>
+                                <td>5</td>
+                                <td>12,000</td>
+                            </tr>
+                            <tr>
+                                <td>FunLand BD</td>
+                                <td>FunLand</td>
+                                <td>01933-222222</td>
+                                <td><span class="tag role-renter">Renter</span></td>
+                                <td><span class="badge badge-suspended">Suspended</span></td>
+                                <td>3</td>
+                                <td>7,000</td>
+                            </tr>
+                            <tr>
+
+
 
 
 
