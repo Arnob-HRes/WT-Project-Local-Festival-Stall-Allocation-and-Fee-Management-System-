@@ -179,6 +179,18 @@
                         </div>
                     </div>
 
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Total Bookings</label>
+                            <input type="text" value="8" disabled />
+                        </div>
+                        <div class="form-group">
+                            <label>Total Paid (৳)</label>
+                            <input type="text" value="18500" disabled />
+                        </div>
+                    </div>
+
+
 
 
 
