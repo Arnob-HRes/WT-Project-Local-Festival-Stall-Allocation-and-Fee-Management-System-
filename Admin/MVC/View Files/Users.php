@@ -37,9 +37,23 @@
                     <option value="active">Active</option>
                     <option value="suspended">Suspended</option>
                 </select>
+
                 <input type="text" placeholder="Search name, phone, email..." />
                 <div class="user-badge">Admin</div>
             </div>
         </header>
+
+         <section class="layout">
+            
+            <div class="panel panel-table">
+                <div class="panel-header">
+                    <div>
+                        <h2>All Users</h2>
+                        <p class="subtext">Manage renters, staff and admin accounts.</p>
+                    </div>
+                    <button class="btn-outline">Add User</button>
+                </div>
+
+
 
         
