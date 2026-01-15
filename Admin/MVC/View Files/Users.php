@@ -54,6 +54,20 @@
                     <button class="btn-outline">Add User</button>
                 </div>
 
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Business</th>
+                                <th>Phone</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Total Bookings</th>
+                                <th>Total Paid (৳)</th>
+                            </tr>
+                        </thead>
+
 
 
         
