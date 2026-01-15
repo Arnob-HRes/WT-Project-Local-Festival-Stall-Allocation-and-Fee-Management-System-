@@ -23,6 +23,8 @@
         left: 600px;
         font-size: 60px;
         color: white;
+        text-shadow: 2px 2px 4px black;
+        animation: appear-bottom 2.5s ease-out forwards;
     }
     #profilepic{
         position: absolute;
@@ -145,6 +147,16 @@
         width: 1290px;
         height: 580px;
         border-radius: 20px;
-        text-shadow: 2px 2px 4px black;
+        
     }
+    @keyframes appear-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>

@@ -33,7 +33,20 @@ include("../JavaScript Files/Booking_Page_js.php");
 
         <div id="MD">
             <form method="post">
-
+                <center><h1>Fill Every Information</h1></center>
+                Username:
+                <input type="text" name="name" id="I1" class="II">
+                Phone Number:
+                <input type="text" name="phone" id="I2" class="II">
+                Stall Cetagory:
+                <select name="stall" id="I3" class="II" required>
+                <option value="" disabled selected hidden>Select a Stall</option>
+                <option value="TandA">Toys and Accessories Stall</option>
+                <option value="Food">Food Stall</option>
+                <option value="Art">Art Stall</option>
+                <option value="Hand">Hand Craft Stall</option>
+                <option value="Arcade">Arcade</option>
+                </select>
             </form>
         </div>
     </body>
