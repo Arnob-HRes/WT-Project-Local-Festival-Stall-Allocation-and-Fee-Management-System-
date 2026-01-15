@@ -136,4 +136,15 @@
             background-color:rgba(0, 255, 0, 0.8);
         }
     }
+    #MD{
+        position: absolute;
+        top: 145px;
+        left: 245px;
+        border: 5px solid skyblue;
+        background-color: white;
+        width: 1290px;
+        height: 580px;
+        border-radius: 20px;
+        text-shadow: 2px 2px 4px black;
+    }
 </style>

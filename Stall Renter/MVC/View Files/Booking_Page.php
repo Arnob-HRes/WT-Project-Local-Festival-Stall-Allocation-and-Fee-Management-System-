@@ -30,5 +30,11 @@ include("../JavaScript Files/Booking_Page_js.php");
         <h3 id="n4"><?php echo $_SESSION["address"]?></h3>
         <button id="dashboard" onclick="window.location.href='Dashboard_Renter.php'">Go to Dashboard</button>
         <button id="logout" onclick="window.location.href='../Controller Logic/Logout.php'">Logout</button>
+
+        <div id="MD">
+            <form method="post">
+
+            </form>
+        </div>
     </body>
 </html>
