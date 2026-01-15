@@ -107,6 +107,18 @@
                                 <td>-</td>
                             </tr>
                             <tr>
+                                <td>Super Admin</td>
+                                <td>Management</td>
+                                <td>admin@example.com</td>
+                                <td><span class="tag role-admin">Admin</span></td>
+                                <td><span class="badge badge-active">Active</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
 
 
 
