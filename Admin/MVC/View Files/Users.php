@@ -140,6 +140,22 @@
                     </div>
                 </div>
 
+                <form class="form">
+                    <div class="form-group">
+                        <label for="u-name">Full Name</label>
+                        <input type="text" id="u-name" value="Rahim Uddin" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="u-business">Business Name</label>
+                        <input type="text" id="u-business" value="Rahim Store" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="u-email">Email</label>
+                        <input type="email" id="u-email" value="rahim@example.com" />
+                    </div>
+
 
 
 
