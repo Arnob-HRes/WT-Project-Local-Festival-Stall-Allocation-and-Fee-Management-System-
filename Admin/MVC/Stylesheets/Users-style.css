@@ -109,8 +109,9 @@ body {
 
 .layout {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1.25rem;
+    grid-template-columns: 2fr 0fr;
+    gap: 20px;
+    transition: grid-template-columns 0.3s ease;
 }
 
 /* Panels */
@@ -285,7 +286,11 @@ tbody tr:hover {
 /* Form */
 
 .panel-form {
-    max-height: 100%;
+  overflow: hidden;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .form {
@@ -426,4 +431,14 @@ textarea {
     .form-row {
         grid-template-columns: 1fr;
     }
+}
+
+.layout.form-open {
+  grid-template-columns: 1.3fr 1.2fr; /* table + form visible */
+}
+
+.layout.form-open .panel-form {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
 }
