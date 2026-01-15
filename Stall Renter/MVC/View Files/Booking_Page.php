@@ -32,15 +32,16 @@ include("../JavaScript Files/Booking_Page_js.php");
         <button id="logout" onclick="window.location.href='../Controller Logic/Logout.php'">Logout</button>
 
         <div id="MD">
-            <form method="post">
+            <center>
+            <form method="post" id="f1">
                 <center><h1>Fill Every Information</h1></center>
-                Username:
-                <input type="text" name="name" id="I1" class="II">
-                Phone Number:
-                <input type="text" name="phone" id="I2" class="II">
-                Email:
-                <input type="email" name="email" id="I3" class="II">
-                Stall Cetagory:
+                <b>Username:</b> <br>
+                <input type="text" name="name" id="I1" class="II" placeholder="Give your username"><br>
+                <b>Phone Number:</b> <br>
+                <input type="text" name="phone" id="I2" class="II" placeholder="Give any available phone number"><br>
+                <b>Email:</b> <br>
+                <input type="email" name="email" id="I3" class="II" placeholder="Give a valid available email"><br>
+                <b>Stall Cetagory:</b> <br>
                 <select name="stall" id="I4" class="II" required>
                 <option value="" disabled selected hidden>Select a Stall</option>
                 <option value="TandA">Toys and Accessories Stall</option>
@@ -49,19 +50,23 @@ include("../JavaScript Files/Booking_Page_js.php");
                 <option value="Hand">Hand Craft Stall</option>
                 <option value="Arcade">Arcade</option>
                 </select>
-                Location:
-                <input type="text" name="location" id="I5" class="II">
-                Book for:
-                <input type="date" name="date" id="I6" class="II">
-                Payment Method:
-                <select name="pay" id="I7" class="II" required>
+                <br>
+                <b>Location:</b> <br>
+                <input type="text" name="location" id="I5" class="II" placeholder="Which Location"><br>
+                <b>Book for:</b> <br>
+                <input type="date" name="date" id="I6" class="II"><br>
+                <b>Payment Method:</b> <br>
+                <select name="pay" id="I7" class="II" required><
                 <option value="" disabled selected hidden>Select a Payment Method</option>
                 <option value="bkash">Bkash</option>
                 <option value="nagad">Nagad</option>
                 <option value="bank">Bank</option>
                 <option value="card">Card</option>
                 </select>
+                <br>
+                <input type="submit" name="submit" id="submit" class="II" value="Book"><br>
             </form>
+            </center>
         </div>
     </body>
 </html>

@@ -159,4 +159,18 @@
     transform: translateY(0);
   }
 }
+#f1{
+    padding: 10px;
+    text-align: left;
+    width: 600px;
+    height: auto;
+}
+.II{
+    padding: 10px;
+    width: 400px;
+    height: 30px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 50px
+}
 </style>
