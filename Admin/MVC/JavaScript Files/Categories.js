@@ -160,6 +160,19 @@ tbody.addEventListener('click', async e => {
   }
 });
 
+if (searchBox) {
+  searchBox.addEventListener('input', () => {
+    clearTimeout(searchBox._t);
+    searchBox._t = setTimeout(loadCategories, 200);
+  });
+}
+
+// Clear button
+clearBtn.addEventListener('click', clearForm);
+
+// initial
+document.addEventListener('DOMContentLoaded', loadCategories);
+
 
 
 
