@@ -5,7 +5,7 @@
         top: 0px;
         left: 0px;
         width: 250px;
-        height: 740px;
+        height: 790px;
         z-index: -1;
     }
     #IMG2{
@@ -121,6 +121,23 @@
             box-shadow: 0 0 44px rgba(0, 255, 0, 1);
         }
     }
+    @keyframes shadow2 {
+        0% {
+            box-shadow: 0 0 10px rgba(0, 255, 0, 1);
+        }
+        25%{
+            box-shadow: 0 0 10px rgba(255, 0, 0, 1);
+        }
+        50%{
+            box-shadow: 0 0 10px rgba(0, 0, 255, 1);
+        }
+        75%{
+            box-shadow: 0 0 10px rgba(255, 0, 255, 1);
+        }
+        100% {
+            box-shadow: 0 0 10px rgba(0, 255, 0, 1);
+        }
+    }
     @keyframes backshadow {
         0% {
             background-color:rgba(0, 255, 0, 0.8);
@@ -144,10 +161,10 @@
         left: 245px;
         border: 5px solid skyblue;
         background-color: white;
-        width: 1290px;
-        height: 580px;
+        width: 1260px;
+        height: 620px;
         border-radius: 20px;
-        
+        padding: 10px;
     }
     @keyframes appear-bottom {
   from {
@@ -162,15 +179,20 @@
 #f1{
     padding: 10px;
     text-align: left;
-    width: 600px;
+    width: 500px;
     height: auto;
+    border: 1px solid lightblue;
+    border-radius: 20px;
 }
 .II{
     padding: 10px;
-    width: 400px;
-    height: 30px;
+    width: 470px;
+    height: 38px;
     margin: 10px;
     border: 2px solid black;
     border-radius: 50px
+}
+.II:hover{
+    animation: shadow2 2s infinite alternate;
 }
 </style>

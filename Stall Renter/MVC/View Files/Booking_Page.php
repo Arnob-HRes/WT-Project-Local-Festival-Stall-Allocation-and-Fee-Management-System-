@@ -34,7 +34,6 @@ include("../JavaScript Files/Booking_Page_js.php");
         <div id="MD">
             <center>
             <form method="post" id="f1">
-                <center><h1>Fill Every Information</h1></center>
                 <b>Username:</b> <br>
                 <input type="text" name="name" id="I1" class="II" placeholder="Give your username"><br>
                 <b>Phone Number:</b> <br>
