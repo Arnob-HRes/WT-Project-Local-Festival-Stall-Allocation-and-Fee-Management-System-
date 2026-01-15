@@ -9,13 +9,20 @@
         z-index: -1;
     }
     #IMG2{
-        filter: blur(4px);
+        filter: blur(10px);
         position: absolute;
         top: 0px;
         left: 0px;
         width: 1534px;
-        height: 120px;
+        height: 150px;
         z-index: -2;
+    }
+    #bookingT{
+        position: absolute;
+        top:0px;
+        left: 600px;
+        font-size: 60px;
+        color: white;
     }
     #profilepic{
         position: absolute;
