@@ -73,5 +73,26 @@ async function loadCategories() {
   }
 }
 
+function clearForm() {
+  nameInput.value   = '';
+  slugInput.value   = '';
+  descInput.value   = '';
+  statusInput.value = 'Active';
+  orderInput.value  = '';
+  colorInput.value  = '#2563eb';
+  errName.textContent = '';
+}
+
+// validation
+async function validateForm() {
+  errName.textContent = '';
+  const name = nameInput.value.trim();
+  if (!name) {
+    errName.textContent = 'Category name is required.';
+    return false;
+  }
+  return true;
+}
+
 
 
