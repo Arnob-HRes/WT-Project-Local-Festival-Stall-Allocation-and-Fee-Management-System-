@@ -30,30 +30,35 @@
         top:35px;
         left: 28px;
         color: white;
+        text-shadow: 1px 1px 2px black;
     }
     #n1{
         position: absolute;
         top:250px;
         left: 40px;
         color: white;
+        text-shadow: 2px 2px 4px black;
     }
     #n2{
         position: absolute;
         top:280px;
         left: 50px;
         color: white;
+        text-shadow: 2px 2px 4px black;
     }
     #n3{
         position: absolute;
-        top:320px;
+        top:310px;
         left: 30px;
         color: white;
+        text-shadow: 2px 2px 4px black;
     }
     #n4{
         position: absolute;
-        top:350px;
+        top:340px;
         left: 10px;
         color: white;
+        text-shadow: 2px 2px 4px black;
     }
     #dashboard{
         position: absolute;
@@ -69,9 +74,9 @@
         background-color: transparent;
         border: 2px solid white;
         color: white;
-        left: 40px;
+        left: 30px;
         text-shadow: 0px 0px 8px black;
-        font-size: 18px;
+        font-size: 19px;
         animation: shadow 2s infinite alternate;
     }
     #logout{
