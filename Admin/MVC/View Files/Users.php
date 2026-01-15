@@ -43,9 +43,9 @@
             </div>
         </header>
 
-         <section class="layout">
+         <section class="layout" id="usersLayout">
             
-            <div class="panel panel-table" id="userTablePanel>
+            <div class="panel panel-table" id="userTablePanel">
                 <div class="panel-header">
                     <div>
                         <h2>All Users</h2>
