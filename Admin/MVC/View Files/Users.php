@@ -204,6 +204,8 @@
             </div>
         </section>
     </div>
+
+    <script src="../JavaScript Files/Users.js"></script>
 </body>
 </html>
 
