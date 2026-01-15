@@ -156,6 +156,30 @@
                         <input type="email" id="u-email" value="rahim@example.com" />
                     </div>
 
+                     <div class="form-group">
+                        <label for="u-phone">Phone</label>
+                        <input type="text" id="u-phone" value="01711-000000" />
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="u-role">Role</label>
+                            <select id="u-role">
+                                <option selected>Renter</option>
+                                <option>Staff</option>
+                                <option>Admin</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="u-status">Status</label>
+                            <select id="u-status">
+                                <option selected>Active</option>
+                                <option>Suspended</option>
+                            </select>
+                        </div>
+                    </div>
+
+
 
 
 
