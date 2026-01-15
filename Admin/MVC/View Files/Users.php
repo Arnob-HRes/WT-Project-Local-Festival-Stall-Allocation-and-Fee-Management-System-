@@ -131,6 +131,15 @@
                     </div>
                 </div>
 
+                <div class="user-summary">
+                    <div class="avatar-circle">R</div>
+                    <div>
+                        <h3>Rahim Uddin</h3>
+                        <p class="summary-text">Rahim Store • Renter</p>
+                        <p class="summary-meta">Joined: 2025-11-10 • Last active: 2026-01-02</p>
+                    </div>
+                </div>
+
 
 
 
