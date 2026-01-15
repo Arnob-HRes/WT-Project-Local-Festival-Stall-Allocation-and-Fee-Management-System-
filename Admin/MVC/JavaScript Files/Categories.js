@@ -10,7 +10,6 @@ const slugInput   = document.getElementById('cat-slug');
 const descInput  = document.getElementById('cat-description');
 const statusInput = document.getElementById('cat-status');
 const orderInput  = document.getElementById('cat-order');
-const colorInput  = document.getElementById('cat-color');
 
 const errName     = document.getElementById('err-name');
 
@@ -79,7 +78,7 @@ function clearForm() {
   descInput.value   = '';
   statusInput.value = 'Active';
   orderInput.value  = '';
-  colorInput.value  = '#2563eb';
+  
   errName.textContent = '';
 }
 
@@ -103,7 +102,7 @@ form.addEventListener('submit', async e => {
   const desc   = descInput.value.trim();
   const status = statusInput.value;
   const order  = parseInt(orderInput.value, 10) || 1;
-  const color  = colorInput.value;
+  
 
   if (!slug) {
     slug = name.toLowerCase().replace(/[^a-z0-9]+/gi, '-');
@@ -117,7 +116,7 @@ form.addEventListener('submit', async e => {
   fd.append('description', desc);
   fd.append('status', status);
   fd.append('display_order', order);
-  fd.append('color_tag', color);
+  
 
   const res  = await fetch('../Controller/CategoriesController.php', {
     method: 'POST',

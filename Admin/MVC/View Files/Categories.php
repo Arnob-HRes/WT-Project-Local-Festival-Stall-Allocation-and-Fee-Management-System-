@@ -100,11 +100,6 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="cat-color">Color Tag (optional)</label>
-                        <input type="color" id="cat-color" name="color" value="#2563eb" />
-                        <span class="help-text">Used for icons / labels in UI.</span>
-                    </div>
 
                     <div class="form-actions">
                         <button type="button" class="btn-secondary" id="btn-clear">Clear</button>

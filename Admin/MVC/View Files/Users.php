@@ -115,15 +115,7 @@
                     </table>
                 </div>
 
-                <div class="table-footer">
-                    <span>Showing 1–5 of 40 users</span>
-                    <div class="pagination">
-                        <button class="btn-page">&laquo;</button>
-                        <button class="btn-page active">1</button>
-                        <button class="btn-page">2</button>
-                        <button class="btn-page">3</button>
-                        <button class="btn-page">&raquo;</button>
-                    </div>
+                
                 </div>
             </div>
 
