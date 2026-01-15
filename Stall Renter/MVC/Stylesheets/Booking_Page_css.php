@@ -39,19 +39,19 @@
     }
     #n2{
         position: absolute;
-        top:270px;
-        left: 60px;
+        top:280px;
+        left: 50px;
         color: white;
     }
     #n3{
         position: absolute;
-        top:290px;
+        top:320px;
         left: 30px;
         color: white;
     }
     #n4{
         position: absolute;
-        top:330px;
+        top:350px;
         left: 10px;
         color: white;
     }
