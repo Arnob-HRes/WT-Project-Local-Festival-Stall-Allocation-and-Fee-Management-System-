@@ -98,6 +98,16 @@
                                 <td>7,000</td>
                             </tr>
                             <tr>
+                                <td>Aminul Islam</td>
+                                <td>Event Staff</td>
+                                <td>01777-333333</td>
+                                <td><span class="tag role-staff">Staff</span></td>
+                                <td><span class="badge badge-active">Active</span></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+
 
 
 
