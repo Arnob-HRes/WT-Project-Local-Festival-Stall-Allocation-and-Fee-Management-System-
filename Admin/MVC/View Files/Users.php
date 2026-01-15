@@ -205,7 +205,7 @@
         </section>
     </div>
 
-    <script src="../JavaScript Files/Users.js"></script>
+    <script src="../JavaScript_Files/Users.js"></script>
 </body>
 </html>
 
