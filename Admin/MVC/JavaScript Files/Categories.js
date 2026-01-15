@@ -136,5 +136,30 @@ form.addEventListener('submit', async e => {
   await loadCategories();
 });
 
+tbody.addEventListener('click', async e => {
+  const btn = e.target.closest('button[data-action="delete"]');
+  if (!btn) return;
+
+  const tr  = btn.closest('tr');
+  const id  = tr.dataset.id;
+  if (!id) return;
+
+  if (!confirm('Delete this category?')) return;
+
+  const fd = new FormData();
+  fd.append('action', 'delete');
+  fd.append('id', id);
+
+  const res  = await fetch('../Controller/CategoriesController.php', {
+    method: 'POST',
+    body: fd
+  });
+  const json = await res.json();
+  if (json.success) {
+    await loadCategories();
+  }
+});
+
+
 
 
