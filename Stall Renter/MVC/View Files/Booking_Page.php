@@ -38,14 +38,28 @@ include("../JavaScript Files/Booking_Page_js.php");
                 <input type="text" name="name" id="I1" class="II">
                 Phone Number:
                 <input type="text" name="phone" id="I2" class="II">
+                Email:
+                <input type="email" name="email" id="I3" class="II">
                 Stall Cetagory:
-                <select name="stall" id="I3" class="II" required>
+                <select name="stall" id="I4" class="II" required>
                 <option value="" disabled selected hidden>Select a Stall</option>
                 <option value="TandA">Toys and Accessories Stall</option>
                 <option value="Food">Food Stall</option>
                 <option value="Art">Art Stall</option>
                 <option value="Hand">Hand Craft Stall</option>
                 <option value="Arcade">Arcade</option>
+                </select>
+                Location:
+                <input type="text" name="location" id="I5" class="II">
+                Book for:
+                <input type="date" name="date" id="I6" class="II">
+                Payment Method:
+                <select name="pay" id="I7" class="II" required>
+                <option value="" disabled selected hidden>Select a Payment Method</option>
+                <option value="bkash">Bkash</option>
+                <option value="nagad">Nagad</option>
+                <option value="bank">Bank</option>
+                <option value="card">Card</option>
                 </select>
             </form>
         </div>
