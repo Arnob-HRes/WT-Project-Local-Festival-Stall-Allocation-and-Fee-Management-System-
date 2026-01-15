@@ -14,7 +14,7 @@
         top: 0px;
         left: 0px;
         width: 1534px;
-        height: 200px;
+        height: 120px;
         z-index: -2;
     }
     #profilepic{
