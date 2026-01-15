@@ -66,6 +66,12 @@ include("../JavaScript Files/Booking_Page_js.php");
                 <input type="submit" name="submit" id="submit" class="II" value="Book"><br>
             </form>
             </center>
+            <div id="Info">
+                You entered:
+            </div>
+            <div id="InfoS">
+                Your status:
+            </div>
         </div>
     </body>
 </html>

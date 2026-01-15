@@ -20,7 +20,7 @@
     #bookingT{
         position: absolute;
         top:0px;
-        left: 600px;
+        left: 660px;
         font-size: 60px;
         color: white;
         text-shadow: 2px 2px 4px black;
@@ -194,5 +194,27 @@
 }
 .II:hover{
     animation: shadow2 2s infinite alternate;
+}
+#Info{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    border: 2px solid skyblue;
+    border-radius: 20px;
+    color: green;
+}
+#InfoS{
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: auto;
+    height: auto;
+    border: 2px solid skyblue;
+    border-radius: 20px;
+    color: red;
 }
 </style>
