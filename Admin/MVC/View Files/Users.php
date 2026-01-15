@@ -68,6 +68,18 @@
                             </tr>
                         </thead>
 
+                        <tbody>
+                            <tr>
+                                <td>Rahim Uddin</td>
+                                <td>Rahim Store</td>
+                                <td>01711-000000</td>
+                                <td><span class="tag role-renter">Renter</span></td>
+                                <td><span class="badge badge-active">Active</span></td>
+                                <td>8</td>
+                                <td>18,500</td>
+                            </tr>
+
+
 
 
         
