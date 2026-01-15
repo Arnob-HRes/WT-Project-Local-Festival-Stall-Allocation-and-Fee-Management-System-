@@ -190,6 +190,24 @@
                         </div>
                     </div>
 
+                     <div class="form-group">
+                        <label for="u-notes">Internal Notes</label>
+                        <textarea id="u-notes" rows="3" placeholder="E.g., pays on time, VIP renter, etc."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-danger-light">Suspend</button>
+                        <button type="button" class="btn-secondary">Reset Password</button>
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+
 
 
 
