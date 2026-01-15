@@ -59,4 +59,19 @@ function renderTable() {
     });
 }
 
+async function loadCategories() {
+  const term = (searchBox?.value || '').trim();
+  const params = new URLSearchParams({ action: 'list', search: term });
+
+  const res  = await fetch('../Controller/CategoriesController.php?' + params.toString());
+  const json = await res.json();
+  if (json.success) {
+    categories = json.data;
+    renderTable();
+  } else {
+    console.error(json);
+  }
+}
+
+
 
