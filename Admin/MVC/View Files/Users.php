@@ -45,13 +45,13 @@
 
          <section class="layout">
             
-            <div class="panel panel-table">
+            <div class="panel panel-table" id="userTablePanel>
                 <div class="panel-header">
                     <div>
                         <h2>All Users</h2>
                         <p class="subtext">Manage renters, staff and admin accounts.</p>
                     </div>
-                    <button class="btn-outline">Add User</button>
+                    <button class="btn-outline" id="addUserBtn">Add User</button>
                 </div>
 
                 <div class="table-wrapper">
@@ -123,7 +123,7 @@
             </div>
 
             <!-- User details / edit form -->
-            <div class="panel panel-form">
+            <div class="panel panel-form" id="userFormPanel">
                 <div class="panel-header">
                     <div>
                         <h2>User Details</h2>
