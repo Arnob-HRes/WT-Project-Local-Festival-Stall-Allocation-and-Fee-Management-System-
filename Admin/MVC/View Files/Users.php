@@ -119,6 +119,19 @@
                     </table>
                 </div>
 
+                 </div>
+            </div>
+
+            <!-- User details / edit form -->
+            <div class="panel panel-form">
+                <div class="panel-header">
+                    <div>
+                        <h2>User Details</h2>
+                        <p class="subtext">View and update selected user info.</p>
+                    </div>
+                </div>
+
+
 
 
 
