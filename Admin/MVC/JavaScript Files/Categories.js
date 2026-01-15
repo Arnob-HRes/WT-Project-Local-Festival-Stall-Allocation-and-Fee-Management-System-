@@ -94,5 +94,47 @@ async function validateForm() {
   return true;
 }
 
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!(await validateForm())) return;
+
+  const name   = nameInput.value.trim();
+  let slug     = slugInput.value.trim();
+  const desc   = descInput.value.trim();
+  const status = statusInput.value;
+  const order  = parseInt(orderInput.value, 10) || 1;
+  const color  = colorInput.value;
+
+  if (!slug) {
+    slug = name.toLowerCase().replace(/[^a-z0-9]+/gi, '-');
+  }
+
+  const fd = new FormData();
+  fd.append('action', 'save');
+  
+  fd.append('name', name);
+  fd.append('slug', slug);
+  fd.append('description', desc);
+  fd.append('status', status);
+  fd.append('display_order', order);
+  fd.append('color_tag', color);
+
+  const res  = await fetch('../Controller/CategoriesController.php', {
+    method: 'POST',
+    body: fd
+  });
+  const json = await res.json();
+
+  if (!json.success) {
+    if (json.errors && json.errors.name) {
+      errName.textContent = json.errors.name;
+    }
+    return;
+  }
+
+  clearForm();
+  await loadCategories();
+});
+
 
 
