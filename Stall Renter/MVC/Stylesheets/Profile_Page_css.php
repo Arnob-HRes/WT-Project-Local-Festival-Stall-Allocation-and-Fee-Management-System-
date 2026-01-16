@@ -5,6 +5,7 @@
         left: 0px;
         width: 1528px;
         height: 430px;
+        filter: blur(1px);
         z-index: -1;
     }
     #footer{
@@ -97,5 +98,49 @@
         border-radius: 50px;
         background-color: transparent;
         color: white;
+        cursor: pointer;
+    }
+    #dash:hover{
+        left: 685px;
+        width: 150px;
+        backdrop-filter: blur(1px);
+        animation: shadow 2s infinite alternate;
+    }
+    #log{
+        text-decoration: none;
+        color: white;
+        position: absolute;
+        top: 20px;
+        left: 630px;
+    }
+    #log:hover{
+        text-shadow: 2px 2px 4px black;
+    }
+    #Hom{
+        text-decoration: none;
+        color: white;
+        position: absolute;
+        top: 20px;
+        left: 840px;
+    }
+    #Hom:hover{
+        text-shadow: 2px 2px 4px black;
+    }
+    @keyframes shadow {
+        0% {
+            box-shadow: 0 0 40px rgba(0, 255, 0, 1);
+        }
+        25%{
+            box-shadow: 0 0 41px rgba(255, 0, 0, 1);
+        }
+        50%{
+            box-shadow: 0 0 42px rgba(0, 0, 255, 1);
+        }
+        75%{
+            box-shadow: 0 0 43px rgba(255, 0, 255, 1);
+        }
+        100% {
+            box-shadow: 0 0 44px rgba(0, 255, 0, 1);
+        }
     }
 </style>
