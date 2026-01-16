@@ -18,4 +18,9 @@ function getuser($C,$user,$pass){
     $sql="SELECT * FROM user WHERE Username='".$user."' AND Password='".$pass."'";
     return $C->query($sql);
 }
+
+function getBook($C,$user){
+    $sql="SELECT * FROM booking WHERE Username='".$user."'";
+    return $C->query($sql);
+}
 ?>

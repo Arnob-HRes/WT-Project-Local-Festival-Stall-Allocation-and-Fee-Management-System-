@@ -8,6 +8,17 @@
         filter: blur(1px);
         z-index: -1;
     }
+    #Book{
+        position: absolute;
+        top: 500px;
+        left: 680px;
+    }
+    #table1{
+        position: absolute;
+        top: 600px;
+        left: 20px;
+        width: 1490px;
+    }
     #footer{
     position: absolute;
     top: 800px;
@@ -140,6 +151,22 @@
     }
     #change:hover{
         width: 200px;
+        backdrop-filter: blur(1px);
+    }
+    #refresh{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 100px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 50px;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+    }
+    #refresh:hover{
+        width: 150px;
         backdrop-filter: blur(1px);
     }
     @keyframes shadow {

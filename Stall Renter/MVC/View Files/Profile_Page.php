@@ -1,6 +1,6 @@
 <?php
 include("../Controller Logic/Profile_Page_Valid.php");
-include("../Controller Logic/session_and_cookie_check.php");
+//include("../Controller Logic/session_and_cookie_check.php");
 include("../Stylesheets/Profile_Page_css.php");
 include("../JavaScript Files/Profile_Page_js.php");
 ?>
@@ -33,6 +33,28 @@ include("../JavaScript Files/Profile_Page_js.php");
         <a href="../Controller Logic/Logout.php" id="log">Logout</a>
         <a href="HOME_PAGE.php" id="Hom">Home</a>
         <button onclick="window.location.href=''" id="change">Update Information</button>
+        <button onclick="window.location.href='Profile_Page.php'" id="refresh">Refresh</button>
+        <h2 id="Book">Booking Details</h2>
+        <table border="2px" id="table1">
+            <tr>
+                <th>Booking ID</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Stall Location</th>
+                <th>Stall Cetagory</th>
+                <th>For Date</th>
+            </tr>
+            <?php foreach($result as $R){ ?>
+            <tr>
+                <td><?php echo $R["BookingID"]?></td>
+                <td><?php echo $R["phonenumber"]?></td>
+                <td><?php echo $R["email"]?></td>
+                <td><?php echo $R["location"]?></td>
+                <td><?php echo $R["stall"]?></td>
+                <td><?php echo $R["date"]?></td>
+            </tr>
+            <?php }?>
+        </table>
 
 
 
