@@ -126,6 +126,22 @@
     #Hom:hover{
         text-shadow: 2px 2px 4px black;
     }
+    #change{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 150px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 50px;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+    }
+    #change:hover{
+        width: 200px;
+        backdrop-filter: blur(1px);
+    }
     @keyframes shadow {
         0% {
             box-shadow: 0 0 40px rgba(0, 255, 0, 1);
