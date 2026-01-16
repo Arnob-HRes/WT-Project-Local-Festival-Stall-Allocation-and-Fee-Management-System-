@@ -23,4 +23,9 @@ function getBook($C,$user){
     $sql="SELECT * FROM booking WHERE Username='".$user."'";
     return $C->query($sql);
 }
+
+function getPay($C,$user){
+    $sql="SELECT * FROM payment WHERE Username='".$user."'";
+    return $C->query($sql);
+}
 ?>

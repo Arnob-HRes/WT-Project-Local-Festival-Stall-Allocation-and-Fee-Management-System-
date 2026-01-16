@@ -55,7 +55,21 @@ include("../JavaScript Files/Profile_Page_js.php");
             </tr>
             <?php }?>
         </table>
-
+        <h2 id="Pay">Payment Details</h2>
+        <table border="2px" id="table2">
+            <tr>
+                <th>Payment ID</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+            <?php foreach($result2 as $R){ ?>
+            <tr>
+                <td><?php echo $R["PaymentID"]?></td>
+                <td><?php echo $R["amount"]?></td>
+                <td><?php echo $R["status"]?></td>
+            </tr>
+            <?php }?>
+        </table>
 
 
 

@@ -13,15 +13,26 @@
         top: 500px;
         left: 680px;
     }
+    #Pay{
+        position: absolute;
+        top: 700px;
+        left: 680px;
+    }
     #table1{
         position: absolute;
         top: 600px;
         left: 20px;
         width: 1490px;
     }
+    #table2{
+        position: absolute;
+        top: 800px;
+        left: 20px;
+        width: 1490px;
+    }
     #footer{
     position: absolute;
-    top: 800px;
+    top: 1000px;
     left: 0px;
     width: 1521px;
     height: 200px;
