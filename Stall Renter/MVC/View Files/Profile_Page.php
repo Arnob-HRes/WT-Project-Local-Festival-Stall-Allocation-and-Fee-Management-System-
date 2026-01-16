@@ -1,6 +1,6 @@
 <?php
 include("../Controller Logic/Profile_Page_Valid.php");
-//include("../Controller Logic/session_and_cookie_check.php");
+include("../Controller Logic/session_and_cookie_check.php");
 include("../Stylesheets/Profile_Page_css.php");
 include("../JavaScript Files/Profile_Page_js.php");
 ?>
@@ -20,8 +20,16 @@ include("../JavaScript Files/Profile_Page_js.php");
     </head>
     <body>
         <img src="../Images/Profile_Page.gif" alt="Profile Page" id="PPMIMG">
-
-        
+        <div id="PD">
+            <center>
+            <img src="" alt="Profile Picture" id="PPP">
+            <p class="pt"><?php echo $_SESSION["fullname"]?></p>
+            <p class="pt"><?php echo $_SESSION["number"]?></p>
+            <p class="pt"><?php echo $_SESSION["email"]?></p>
+            <p class="pt"><?php echo $_SESSION["address"]?></p>
+            </center>
+        </div>
+        <button id="dash" onclick="window.location.href='Dashboard_Renter.php'">Dashboard</button>
 
 
 

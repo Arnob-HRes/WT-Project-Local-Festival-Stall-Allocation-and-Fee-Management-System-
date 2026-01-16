@@ -3,8 +3,8 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        width: 1530px;
-        height: 400px;
+        width: 1528px;
+        height: 430px;
         z-index: -1;
     }
     #footer{
@@ -69,4 +69,33 @@
             top: 20px;
             left: 10px;
         }
+    #PD{
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 1480px;
+        height: 300px;
+        padding: 20px;
+    }
+    #PPP{
+        width: 160px;
+        height: 160px;
+    }
+    .pt{
+        color: white;
+        font-size: 20px;
+        text-shadow: 2px 2px 4px black;
+    }
+    #dash{
+        position: absolute;
+        top: 10px;
+        left: 710px;
+        width: 100px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 50px;
+        background-color: transparent;
+        color: white;
+    }
 </style>
