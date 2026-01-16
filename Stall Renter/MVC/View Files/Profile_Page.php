@@ -1,6 +1,6 @@
 <?php
+include("../Controller Logic/session_and_cookie_check.php");
 include("../Controller Logic/Profile_Page_Valid.php");
-//include("../Controller Logic/session_and_cookie_check.php");
 include("../Stylesheets/Profile_Page_css.php");
 include("../JavaScript Files/Profile_Page_js.php");
 ?>
