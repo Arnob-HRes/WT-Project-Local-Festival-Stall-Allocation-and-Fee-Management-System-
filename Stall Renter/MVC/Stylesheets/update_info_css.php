@@ -89,6 +89,8 @@
         border: 2px solid white;
         background-color: transparent;
         border-radius: 50px;
+        color: white;
+        padding: 5px;
     }
     #sub{
         background-color: white;

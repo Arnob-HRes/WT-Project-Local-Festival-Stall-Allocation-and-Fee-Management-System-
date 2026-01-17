@@ -39,7 +39,7 @@ include("../JavaScript Files/update_info_js.php");
                     <label for="phone">New Phone Number:</label><br>
                     <input type="text" name="phone" id="phone"><br>
                     <label for="email">New Email:</label><br>
-                    <input type="email" name="email" id="phone"><br>
+                    <input type="email" name="email" id="email"><br>
                     <label for="address">New Address:</label><br>
                     <input type="text" name="address" id="address"><br>
                     <input type="submit" value="Update" id="sub" onclick=updateajax()>
