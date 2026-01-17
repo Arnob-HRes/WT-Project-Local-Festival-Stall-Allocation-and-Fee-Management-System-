@@ -1,7 +1,7 @@
 <?php
 include('../Database or Model Files/DataBase.php');
 session_start();
-if(isset($_SESSION["username"])){
+if(isset($_SESSION["username"]) && isset($_COOKIE["username"])){
     header("Location:Dashboard_Renter.php");
     exit();
 }
@@ -24,6 +24,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $result=getuser($conn,$user,$pass);
         $row=$result->num_rows;
         if($row==1){
+            $cookie_name="username";
+            $cookie_value=$user;
+            setcookie($cookie_name,$cookie_value,time()+1800,"/");
             foreach($result as $R){
             $_SESSION["username"]=$R["Username"];
             $_SESSION["fullname"]=$R["FullName"];
@@ -31,9 +34,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $_SESSION["email"]=$R["Email"];
             $_SESSION["address"]=$R["Address"];
             }
-            $cookie_name="username";
-            $cookie_value=$user;
-            setcookie($cookie_name,$cookie_value,time()+1800,"/");
             header("Location:Dashboard_Renter.php");
             exit();
         }

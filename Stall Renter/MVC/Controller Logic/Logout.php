@@ -1,7 +1,7 @@
 <?php
 session_start();
+setcookie("cookie_name","",time()-10,"/");
 session_destroy();
-setcookie("cookie_name","",time()-1800,"/");
 header("Location:../View Files/LOGIN_PAGE.php");
 exit();
 ?>
