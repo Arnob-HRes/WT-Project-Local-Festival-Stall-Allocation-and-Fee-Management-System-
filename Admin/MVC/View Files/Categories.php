@@ -110,6 +110,6 @@
         </section>
     </div>
 
-    <script src="../JavaScript Files/categories.js"></script>
+    <script src="../JavaScript_Files/Categories.js"></script>
 </body>
 </html>

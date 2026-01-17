@@ -56,11 +56,11 @@ if ($action === 'save') {
     if ($id > 0) {
        
         $sql = "UPDATE categories
-                SET name=?, slug=?, description=?, status=?, display_order=?, 
+                SET name=?, slug=?, description=?, status=?, display_order=?
                 WHERE id=?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param(
-            'ssssisi',
+            'sssisi',
             $name, $slug, $description, $status, $order, $id
         );
         $stmt->execute();
@@ -89,11 +89,11 @@ if ($action === 'save') {
             // new row
             $sql = "INSERT INTO categories
                     (name, slug, description, total_stalls, status, display_order)
-                    VALUES (?,?,?,?,?,?,?)";
+                    VALUES (?,?,?,?,?,?)";
             $stmt = $conn->prepare($sql);
             $total = $order;
             $stmt->bind_param(
-                'sssisis', $name, $slug, $description, $total, $status, $order
+                'sssisi', $name, $slug, $description, $total, $status, $order
             );
             $stmt->execute();
             $id = $stmt->insert_id;

@@ -170,6 +170,6 @@ require_once '../Controller/StallsController.php';
         </section>
     </div>
 
-    <script src="../JavaScript Files/stalls.js"></script>
+    <script src="../JavaScript_Files/stalls.js"></script>
 </body>
 </html>
