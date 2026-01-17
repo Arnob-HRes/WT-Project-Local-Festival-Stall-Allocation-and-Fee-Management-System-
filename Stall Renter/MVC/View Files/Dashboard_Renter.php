@@ -39,8 +39,8 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
         <div id="stiky1">
             <div id="d1">
             <input type="text" id="ST" placeholder="⌕ Search for a topic" name="searchT">
-            <input type="submit" value="Search" id="Submi">
-            <input type="submit" value="Book a stall" id="Submi2">
+            <input type="button" value="Search" name="Submi" id="Submi" onclick="window.location.href=''">
+            <input type="button" value="Book a stall" name="Submi2" id="Submi2" onclick="window.location.href='Booking_Page.php'">
             </div>
         </div>
         <hr id="h1">

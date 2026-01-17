@@ -1,6 +1,6 @@
 <?php
-include("../Controller Logic/Booking_Page_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
+include("../Controller Logic/Booking_Page_Valid.php");
 include("../Stylesheets/Booking_Page_css.php");
 include("../JavaScript Files/Booking_Page_js.php");
 ?>
