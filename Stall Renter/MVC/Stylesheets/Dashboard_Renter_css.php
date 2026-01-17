@@ -156,7 +156,9 @@
     box-shadow: 10px 10px 16px black;
 }
 #d1:hover{
+    border: 1px solid purple;
     box-shadow: 0 0 43px rgba(255, 0, 255, 1);
+    background-color: rgba(255, 255, 255, 1.0)
 }
 #ST{
     padding: 0px 0px 0px 20px;
