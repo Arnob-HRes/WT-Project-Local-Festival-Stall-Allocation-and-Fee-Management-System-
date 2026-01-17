@@ -1,6 +1,5 @@
 <?php
 include("../Controller Logic/session_and_cookie_check.php");
-include("../Controller Logic/Booking_Page_Valid.php");
 include("../Stylesheets/Booking_Page_css.php");
 include("../JavaScript Files/Booking_Page_js.php");
 ?>
@@ -33,7 +32,7 @@ include("../JavaScript Files/Booking_Page_js.php");
 
         <div id="MD">
             <center>
-            <form method="post" id="f1">
+            <div  id="f1">
                 <b>Username:</b> <br>
                 <input type="text" name="name" id="I1" class="II" placeholder="Give your username"><br>
                 <b>Phone Number:</b> <br>
@@ -63,8 +62,8 @@ include("../JavaScript Files/Booking_Page_js.php");
                 <option value="card">Card</option>
                 </select>
                 <br>
-                <input type="submit" name="submit" id="submit" class="II" value="Book"><br>
-            </form>
+                <input type="submit" name="submit" id="submit" class="II" value="Book" onclick=bookingajax()><br>
+            </div>
             </center>
             <div id="Info">
                 You entered:
