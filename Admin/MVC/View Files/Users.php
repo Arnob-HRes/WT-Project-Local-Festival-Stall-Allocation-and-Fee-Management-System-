@@ -1,3 +1,12 @@
+<?php
+require_once('../Database_or_Model_Files/Database.php'); 
+$conn = connectsql();
+
+
+$sql = "SELECT * FROM all_users ORDER BY id DESC";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +26,6 @@
             <a href="Categories.php">Categories</a>
             <a href="Payments.php">Payments</a>
             <a href="Users.php" class="active">Users</a>
-            
         </nav>
     </aside>
 
@@ -43,8 +51,7 @@
             </div>
         </header>
 
-         <section class="layout" id="usersLayout">
-            
+        <section class="layout" id="usersLayout">
             <div class="panel panel-table" id="userTablePanel">
                 <div class="panel-header">
                     <div>
@@ -67,136 +74,82 @@
                                 <th>Total Paid (৳)</th>
                             </tr>
                         </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>Rahim Uddin</td>
-                                <td>Rahim Store</td>
-                                <td>01711-000000</td>
-                                <td><span class="tag role-renter">Renter</span></td>
-                                <td><span class="badge badge-active">Active</span></td>
-                                <td>8</td>
-                                <td>18,500</td>
-                            </tr>
-
-                            <tr>
-                                <td>Nishi Akter</td>
-                                <td>Nishi Crafts</td>
-                                <td>01822-111111</td>
-                                <td><span class="tag role-renter">Renter</span></td>
-                                <td><span class="badge badge-active">Active</span></td>
-                                <td>5</td>
-                                <td>12,000</td>
-                            </tr>
-                            <tr>
-                                <td>FunLand BD</td>
-                                <td>FunLand</td>
-                                <td>01933-222222</td>
-                                <td><span class="tag role-renter">Renter</span></td>
-                                <td><span class="badge badge-suspended">Suspended</span></td>
-                                <td>3</td>
-                                <td>7,000</td>
-                            </tr>
-                            <tr>
-                                <td>Aminul Islam</td>
-                                <td>Event Staff</td>
-                                <td>01777-333333</td>
-                                <td><span class="tag role-staff">Staff</span></td>
-                                <td><span class="badge badge-active">Active</span></td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>Super Admin</td>
-                                <td>Management</td>
-                                <td>admin@example.com</td>
-                                <td><span class="tag role-admin">Admin</span></td>
-                                <td><span class="badge badge-active">Active</span></td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
+                        <tbody id="userTableBody">
+                            <?php if ($result && $result->num_rows > 0): ?>
+                                <?php while($row = $result->fetch_assoc()): ?>
+                                    <tr>
+                                        <td><?php echo htmlspecialchars($row['Name']); ?></td>
+                                        <td><?php echo htmlspecialchars($row['Business'] ? $row['Business'] : '-'); ?></td>
+                                        <td><?php echo htmlspecialchars($row['Phone']); ?></td>
+                                        <td><span class="tag role-<?php echo strtolower($row['Role']); ?>"><?php echo $row['Role']; ?></span></td>
+                                        <td><span class="badge badge-<?php echo strtolower($row['Status']); ?>"><?php echo $row['Status']; ?></span></td>
+                                        <td><?php echo $row['Total Bookings']; ?></td>
+                                        <td><?php echo number_format($row['Total Paid(৳)']); ?></td>
+                                    </tr>
+                                <?php endwhile; ?>
+                            <?php else: ?>
+                                <tr><td colspan="7" style="text-align:center;">No users found in database.</td></tr>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- User details / edit form -->
             <div class="panel panel-form" id="userFormPanel">
                 <div class="panel-header">
                     <div>
-                        <h2>User Details</h2>
-                        <p class="subtext">View and update selected user info.</p>
+                        <h2 id="formTitle">Add New User</h2>
+                        <p class="subtext">Enter details to register a new account.</p>
                     </div>
                 </div>
 
-                <div class="user-summary">
-                    <div class="avatar-circle">R</div>
-                    <div>
-                        <h3>Rahim Uddin</h3>
-                        <p class="summary-text">Rahim Store • Renter</p>
-                        <p class="summary-meta">Joined: 2025-11-10 • Last active: 2026-01-02</p>
-                    </div>
-                </div>
-
-                <form class="form">
+                <form class="form" id="addUserForm">
                     <div class="form-group">
                         <label for="u-name">Full Name</label>
-                        <input type="text" id="u-name" value="Rahim Uddin" />
+                        <input type="text" name="u-name" id="u-name" required placeholder="Full Name" />
                     </div>
 
                     <div class="form-group">
                         <label for="u-business">Business Name</label>
-                        <input type="text" id="u-business" value="Rahim Store" />
+                        <input type="text" name="u-business" id="u-business" placeholder="Store Name" />
                     </div>
 
                     <div class="form-group">
                         <label for="u-email">Email</label>
-                        <input type="email" id="u-email" value="rahim@example.com" />
+                        <input type="email" name="u-email" id="u-email" required placeholder="email@example.com" />
                     </div>
 
-                     <div class="form-group">
+                    <div class="form-group">
                         <label for="u-phone">Phone</label>
-                        <input type="text" id="u-phone" value="01711-000000" />
+                        <input type="text" name="u-phone" id="u-phone" required placeholder="017xx-xxxxxx" />
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label for="u-role">Role</label>
-                            <select id="u-role">
-                                <option selected>Renter</option>
-                                <option>Staff</option>
-                                <option>Admin</option>
+                            <select name="u-role" id="u-role">
+                                <option value="Renter">Renter</option>
+                                <option value="Staff">Staff</option>
+                                <option value="Admin">Admin</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="u-status">Status</label>
-                            <select id="u-status">
-                                <option selected>Active</option>
-                                <option>Suspended</option>
+                            <select name="u-status" id="u-status">
+                                <option value="Active">Active</option>
+                                <option value="Suspended">Suspended</option>
                             </select>
                         </div>
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Total Bookings</label>
-                            <input type="text" value="8" disabled />
-                        </div>
-                        <div class="form-group">
-                            <label>Total Paid (৳)</label>
-                            <input type="text" value="18500" disabled />
-                        </div>
-                    </div>
-
-                     <div class="form-group">
+                    <div class="form-group">
                         <label for="u-notes">Internal Notes</label>
-                        <textarea id="u-notes" rows="3" placeholder="E.g., pays on time, VIP renter, etc."></textarea>
+                        <textarea name="u-notes" id="u-notes" rows="3" placeholder="Additional notes..."></textarea>
                     </div>
 
                     <div class="form-actions">
-                        <button type="button" class="btn-danger-light">Suspend</button>
-                        <button type="button" class="btn-secondary">Reset Password</button>
-                        <button type="submit" class="btn-primary">Save Changes</button>
+                        <button type="button" class="btn-secondary" id="cancelBtn">Cancel</button>
+                        <button type="submit" class="btn-primary">Add User</button>
                     </div>
                 </form>
             </div>
@@ -206,15 +159,3 @@
     <script src="../JavaScript_Files/Users.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-        

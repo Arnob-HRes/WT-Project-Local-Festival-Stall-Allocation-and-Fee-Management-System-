@@ -3,7 +3,7 @@ function connectsql(){
     $host ="localhost";
     $user ="root";
     $pass ="";
-    $dbname ="Admin-database";   // phpMyAdmin e je DB create korle oita
+    $dbname ="webtechproject";   // phpMyAdmin e je DB create korle oita
 
     $conn = new mysqli($host, $user, $pass, $dbname);
 
