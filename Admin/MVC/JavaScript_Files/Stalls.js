@@ -37,7 +37,7 @@ async function loadStalls() {
 
         json.data.forEach(row => {
             const tr = document.createElement('tr');
-            const sizeText = `${row.width}m x ${row.length}m`;
+            const sizeText = `${row.width}m x ${row.lenth}m`;
 
             tr.innerHTML = `
                 <td>${row.stall_id}</td>

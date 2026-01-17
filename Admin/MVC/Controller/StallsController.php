@@ -35,7 +35,7 @@ if ($isAjax) {
         $types   .= 'ss';
     }
 
-    $sql = "SELECT stall_id, zone, category, width, length, base_fee, status
+    $sql = "SELECT stall_id, zone, category, width, `lenth`, base_fee, status
             FROM stalls";
     if ($where) {
         $sql .= " WHERE ".implode(' AND ', $where);
@@ -64,21 +64,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $zone        = trim($_POST['zone'] ?? '');
     $category    = trim($_POST['category'] ?? '');
     $width       = (int)($_POST['width'] ?? 0);
-    $length      = (int)($_POST['length'] ?? 0);
+    $lenth      = (int)($_POST['lenth'] ?? 0);
     $baseFee     = (int)($_POST['base_fee'] ?? 0);
     $status      = $_POST['status'] ?? 'Available';
     $priority    = $_POST['priority'] ?? 'Normal';
     $description = trim($_POST['description'] ?? '');
 
-    if ($stallId !== '' && $zone !== '' && $category !== '' && $width > 0 && $length > 0 && $baseFee > 0) {
+    if ($stallId !== '' && $zone !== '' && $category !== '' && $width > 0 && $lenth > 0 && $baseFee > 0) {
         $sql = "INSERT INTO stalls
-                (stall_id, zone, category, width, length, base_fee, status, priority, description)
+                (stall_id, zone, category, width, lenth, base_fee, status, priority, description)
                 VALUES (?,?,?,?,?,?,?,?,?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param(
             "sssiiisss",
             $stallId, $zone, $category,
-            $width, $length, $baseFee,
+            $width, $lenth, $baseFee,
             $status, $priority, $description
         );
         $stmt->execute();

@@ -2,8 +2,7 @@
 require_once('../Database_or_Model_Files/Database.php'); 
 $conn = connectsql();
 
-
-$sql = "SELECT * FROM all_users ORDER BY id DESC";
+$sql = "SELECT Username, FullName, ContactNumber, Email, Address, ProfilePicture FROM user";
 $result = $conn->query($sql);
 ?>
 
@@ -15,6 +14,7 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="../Stylesheets/Users-style.css" />
 </head>
 <body>
+   
     <aside class="sidebar">
         <div class="sidebar-header">
             <h2>Stall Admin</h2>
@@ -33,19 +33,8 @@ $result = $conn->query($sql);
         <header class="topbar">
             <h1>Users</h1>
             <div class="topbar-right">
-                <select>
-                    <option value="all">All Roles</option>
-                    <option value="renter">Renter</option>
-                    <option value="staff">Staff</option>
-                    <option value="admin">Admin</option>
-                </select>
-
-                <select>
-                    <option value="all">All Status</option>
-                    <option value="active">Active</option>
-                    <option value="suspended">Suspended</option>
-                </select>
-
+                
+                
                 <input type="text" placeholder="Search name, phone, email..." />
                 <div class="user-badge">Admin</div>
             </div>
@@ -65,26 +54,32 @@ $result = $conn->query($sql);
                     <table>
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Business</th>
+                                <th>Full Name</th>
+                                <th>Username</th>
                                 <th>Phone</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>Profile Picture</th>
                                 <th>Role</th>
-                                <th>Status</th>
-                                <th>Total Bookings</th>
-                                <th>Total Paid (৳)</th>
                             </tr>
                         </thead>
                         <tbody id="userTableBody">
                             <?php if ($result && $result->num_rows > 0): ?>
                                 <?php while($row = $result->fetch_assoc()): ?>
                                     <tr>
-                                        <td><?php echo htmlspecialchars($row['Name']); ?></td>
-                                        <td><?php echo htmlspecialchars($row['Business'] ? $row['Business'] : '-'); ?></td>
-                                        <td><?php echo htmlspecialchars($row['Phone']); ?></td>
-                                        <td><span class="tag role-<?php echo strtolower($row['Role']); ?>"><?php echo $row['Role']; ?></span></td>
-                                        <td><span class="badge badge-<?php echo strtolower($row['Status']); ?>"><?php echo $row['Status']; ?></span></td>
-                                        <td><?php echo $row['Total Bookings']; ?></td>
-                                        <td><?php echo number_format($row['Total Paid(৳)']); ?></td>
+                                        <td><?php echo htmlspecialchars($row['FullName'] ?? '-'); ?></td>
+                                        <td><?php echo htmlspecialchars($row['Username'] ?? '-'); ?></td>
+                                        <td><?php echo htmlspecialchars($row['ContactNumber'] ?? '-'); ?></td>
+                                        <td><?php echo htmlspecialchars($row['Email'] ?? '-'); ?></td>
+                                        <td><?php echo htmlspecialchars($row['Address'] ?? '-'); ?></td>
+                                        <td>
+                                            <?php if (!empty($row['ProfilePicture'])): ?>
+                                                <img src="<?php echo htmlspecialchars($row['ProfilePicture']); ?>" width="40" alt="Profile">
+                                            <?php else: ?>
+                                                -
+                                            <?php endif; ?>
+                                        </td>
+                                        <td><span class="tag role-user">User</span></td> <!-- Default Role -->
                                     </tr>
                                 <?php endwhile; ?>
                             <?php else: ?>
@@ -95,58 +90,34 @@ $result = $conn->query($sql);
                 </div>
             </div>
 
+            <!-- Form same রাখো, শুধু Role/Status optional -->
             <div class="panel panel-form" id="userFormPanel">
-                <div class="panel-header">
-                    <div>
-                        <h2 id="formTitle">Add New User</h2>
-                        <p class="subtext">Enter details to register a new account.</p>
-                    </div>
-                </div>
-
+                <!-- Form content same -->
                 <form class="form" id="addUserForm">
                     <div class="form-group">
-                        <label for="u-name">Full Name</label>
-                        <input type="text" name="u-name" id="u-name" required placeholder="Full Name" />
+                        <label for="u-username">Username</label>
+                        <input type="text" name="u-username" id="u-username" required placeholder="Username" />
                     </div>
-
                     <div class="form-group">
-                        <label for="u-business">Business Name</label>
-                        <input type="text" name="u-business" id="u-business" placeholder="Store Name" />
+                        <label for="u-fullname">Full Name</label>
+                        <input type="text" name="u-fullname" id="u-fullname" required placeholder="Full Name" />
                     </div>
-
                     <div class="form-group">
                         <label for="u-email">Email</label>
                         <input type="email" name="u-email" id="u-email" required placeholder="email@example.com" />
                     </div>
-
                     <div class="form-group">
                         <label for="u-phone">Phone</label>
                         <input type="text" name="u-phone" id="u-phone" required placeholder="017xx-xxxxxx" />
                     </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="u-role">Role</label>
-                            <select name="u-role" id="u-role">
-                                <option value="Renter">Renter</option>
-                                <option value="Staff">Staff</option>
-                                <option value="Admin">Admin</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="u-status">Status</label>
-                            <select name="u-status" id="u-status">
-                                <option value="Active">Active</option>
-                                <option value="Suspended">Suspended</option>
-                            </select>
-                        </div>
-                    </div>
-
                     <div class="form-group">
-                        <label for="u-notes">Internal Notes</label>
-                        <textarea name="u-notes" id="u-notes" rows="3" placeholder="Additional notes..."></textarea>
+                        <label for="u-password">Password</label>
+                        <input type="password" name="u-password" id="u-password" required placeholder="Password" />
                     </div>
-
+                    <div class="form-group">
+                        <label for="u-address">Address</label>
+                        <input type="text" name="u-address" id="u-address" placeholder="Address" />
+                    </div>
                     <div class="form-actions">
                         <button type="button" class="btn-secondary" id="cancelBtn">Cancel</button>
                         <button type="submit" class="btn-primary">Add User</button>

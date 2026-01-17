@@ -3,7 +3,7 @@ function connectsql(){
     $host ="localhost";
     $user ="root";
     $pass ="";
-    $dbname ="webtechproject";   // phpMyAdmin e je DB create korle oita
+    $dbname ="webtechproject";   
 
     $conn = new mysqli($host, $user, $pass, $dbname);
 
@@ -13,7 +13,7 @@ function connectsql(){
     return $conn;
 }
 
-// Login er jonno; pore secure version banabo
+
 function getuser($C, $user, $pass){
     $sql = "SELECT * FROM user WHERE Username='".$user."' AND Password='".$pass."'";
     return $C->query($sql);

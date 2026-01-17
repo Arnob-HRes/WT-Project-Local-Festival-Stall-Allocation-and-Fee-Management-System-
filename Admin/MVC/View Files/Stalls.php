@@ -121,8 +121,8 @@ require_once '../Controller/StallsController.php';
                         <input type="number" id="width" name="width" placeholder="3" min="1" required />
                     </div>
                     <div class="form-group">
-                        <label for="length">Length (m)</label>
-                        <input type="number" id="length" name="length" placeholder="3" min="1" required />
+                        <label for="lenth">Length (m)</label>
+                        <input type="number" id="lenth" name="lenth" placeholder="3" min="1" required />
                     </div>
                     <div class="form-group">
                         <label for="base-fee">Base Fee</label>

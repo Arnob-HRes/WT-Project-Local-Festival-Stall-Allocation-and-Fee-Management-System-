@@ -2,9 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const addUserBtn = document.getElementById('addUserBtn');
     const layout = document.getElementById('usersLayout');
     const userForm = document.getElementById('addUserForm');
-    const userTableBody = document.getElementById('userTableBody');
 
-    
+    // Form toggle
     if (addUserBtn && layout) {
         addUserBtn.addEventListener('click', () => {
             layout.classList.toggle('form-open');
@@ -12,43 +11,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    
+    // Form submit
     if (userForm) {
         userForm.addEventListener('submit', function (e) {
-            e.preventDefault(); 
-
+            e.preventDefault();
             console.log("Submitting form via AJAX...");
 
             const formData = new FormData(this);
 
-           
-            fetch('UserController.php?action=save', {
+            fetch('../Controller/UserController.php?action=save', {  
                 method: 'POST',
                 body: formData
             })
             .then(response => {
-                
                 if (!response.ok) throw new Error('Network response was not ok');
                 return response.json();
             })
             .then(data => {
                 if (data.success) {
                     alert('User added successfully!');
-                    
                     location.reload(); 
                 } else {
-                    
                     alert('Error: ' + (data.error || data.message));
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Connection Error: কন্ট্রোলার ফাইল খুঁজে পাওয়া যাচ্ছে না অথবা সার্ভার এরর।');
+                alert('Connection Error: কন্ট্রোলার ফাইল খুঁজে পাওয়া যাচ্ছে না।');
             });
         });
     }
 
-    
+    // Cancel button
     const cancelBtn = document.getElementById('cancelBtn');
     if(cancelBtn) {
         cancelBtn.addEventListener('click', () => {
