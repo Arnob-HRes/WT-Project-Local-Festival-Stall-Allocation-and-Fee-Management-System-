@@ -21,7 +21,7 @@ else if($data["email"]==""){
 else if($data["address"]==""){
     echo json_encode(['error'=>'Fill New Address']);
 }
-else if(!preg_match('/^[a-zA-Z]+$/', $data["fullname"])){
+else if(!preg_match('/^[a-zA-Z ]+$/', $data["fullname"])){
     echo json_encode(['error'=>'Fill new Name correctly']);
 }
 else if(!ctype_digit($data["phone"]) || strlen($data["phone"]) != 11){
