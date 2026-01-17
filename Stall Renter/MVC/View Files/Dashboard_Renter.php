@@ -38,9 +38,12 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
 
         <div id="stiky1">
             <div id="d1">
-            <input type="text" id="ST" placeholder="⌕ Search for a topic" name="searchT">
-            <input type="button" value="Search" name="Submi" id="Submi" onclick="window.location.href=''">
+                <form method="post">
+                    <input type="text" id="ST" placeholder="⌕ Search for a topic" name="searchT">
+                    <input type="submit" value="Search" name="Submi" id="Submi">
+                </form>
             <input type="button" value="Book a stall" name="Submi2" id="Submi2" onclick="window.location.href='Booking_Page.php'">
+            <p id="inf1"><?php if(isset($error)){echo $error;}?></p>
             </div>
         </div>
         <hr id="h1">

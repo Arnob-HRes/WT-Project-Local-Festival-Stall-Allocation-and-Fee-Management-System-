@@ -168,6 +168,16 @@
     border: 1px solid white;
     background-color: lightgray;
 }
+#Inf1{
+    position: absolute;
+    top: 20px;
+    color: red;
+    left: 360px;
+    padding: 5px;
+    background-color: lightcoral;
+    border-radius: 50px;
+    color: white;
+}
 #Submi{
     position: absolute;
     top:30px;
