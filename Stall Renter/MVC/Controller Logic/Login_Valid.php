@@ -31,6 +31,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $_SESSION["email"]=$R["Email"];
             $_SESSION["address"]=$R["Address"];
             }
+            $cookie_name="username";
+            $cookie_value=$user;
+            setcookie($cookie_name,$cookie_value,time()+1800,"/");
             header("Location:Dashboard_Renter.php");
             exit();
         }
