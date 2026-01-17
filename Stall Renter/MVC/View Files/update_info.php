@@ -32,8 +32,7 @@ include("../JavaScript Files/update_info_js.php");
         </div>
         <button onclick="window.location.href='Profile_Page.php'" id="pp">< Profile Page</button>
         <center>
-            <form method="post" id="f1">
-                <fieldset>
+                <fieldset id="f1">
                     <legend>Provide Valid Information</legend>
                     <label for="name">New Full Name:</label><br>
                     <input type="text" name="name" id="name"><br>
@@ -43,9 +42,9 @@ include("../JavaScript Files/update_info_js.php");
                     <input type="email" name="email" id="phone"><br>
                     <label for="address">New Address:</label><br>
                     <input type="text" name="address" id="address"><br>
-                    <input type="submit" value="Update" id="sub">
+                    <input type="submit" value="Update" id="sub" onclick=updateajax()>
                 </fieldset>
-            </form>
         </center>
+        <div id="show">Status</div>
     </body>
 </html>

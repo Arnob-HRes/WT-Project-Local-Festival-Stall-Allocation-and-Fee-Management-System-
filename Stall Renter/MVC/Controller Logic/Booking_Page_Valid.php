@@ -9,7 +9,7 @@ $data=json_decode($_POST['BookingINFO'],true);
 $con=connectsql();
 $result=getBook($con,$_SESSION["username"]);
 if($data['username']=="" && $data['phonenumber']=="" && $data['email']=="" && $data['stallcetagory']=="" && $data['location']=="" && $data['paymentmethod']==""){
-    json_encode(['error' => 'Need Every Box']);
+    echo json_encode(['error' => 'Need Every Box']);
 }
 else if($data['username']==""){
     echo json_encode(['error' => 'Need to Fill username']);

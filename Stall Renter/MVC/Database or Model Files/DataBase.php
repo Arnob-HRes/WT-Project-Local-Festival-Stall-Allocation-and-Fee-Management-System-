@@ -43,4 +43,9 @@ function getPay($C,$user){
     $sql="SELECT * FROM payment WHERE Username='".$user."'";
     return $C->query($sql);
 }
+
+function updateuser($C,$user,$name){
+    $sql="UPDATE user SET FullName='".$user["fullname"]."', ContactNumber='".$user["phone"]."',Email='".$user["email"]."',Address='".$user["address"]."' WHERE Username='".$name."'";
+    return $C->query($sql);
+}
 ?>

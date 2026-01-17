@@ -24,6 +24,18 @@
         color: white;
         cursor: pointer;
     }
+    #show{
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        border: 2px solid white;
+        background-color: transparent;
+        color: green;
+        width: auto;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+    }
     #pp:hover{
         background-color: white;
         color: black;
@@ -54,15 +66,13 @@
     .in{
         margin: 5px;
     }
-    #f1{
+    fieldset{
         position: absolute;
         top: 250px;
         left: 530px;
         color: white;
         text-align: left;
-        width: 460px;
-    }
-    fieldset{
+        width: 440px;
         padding: 20px;
         border-radius: 20px;
     }
