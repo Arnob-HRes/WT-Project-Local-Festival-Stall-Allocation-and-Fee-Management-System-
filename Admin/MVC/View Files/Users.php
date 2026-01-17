@@ -118,8 +118,6 @@
                         </tbody>
                     </table>
                 </div>
-
-                 </div>
             </div>
 
             <!-- User details / edit form -->

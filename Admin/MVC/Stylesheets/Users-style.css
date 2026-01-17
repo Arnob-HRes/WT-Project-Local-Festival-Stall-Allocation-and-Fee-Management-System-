@@ -109,9 +109,10 @@ body {
 
 .layout {
     display: grid;
-    grid-template-columns: 2fr 0fr;
-    gap: 20px;
-    transition: grid-template-columns 0.3s ease;
+    grid-template-columns: 1fr 0fr; /* শুরুতে ফর্মের জন্য জায়গা ০ */
+    gap: 0; 
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
 }
 
 /* Panels */
@@ -286,11 +287,11 @@ tbody tr:hover {
 /* Form */
 
 .panel-form {
-  overflow: hidden;
-  transform: translateX(100%);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    width: 0; /* জায়গা দখল করবে না */
 }
 
 .form {
@@ -391,7 +392,7 @@ textarea {
     background: #eff6ff;
 }
 
-/* Responsive */
+
 
 @media (max-width: 1000px) {
     body {
@@ -434,11 +435,17 @@ textarea {
 }
 
 .layout.form-open {
-  grid-template-columns: 1.3fr 1.2fr; /* table + form visible */
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 20px;
 }
 
 .layout.form-open .panel-form {
-  transform: translateX(0);
-  opacity: 1;
-  pointer-events: auto;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    width: auto; 
+}
+
+.panel-table {
+    min-width: 0; 
 }
