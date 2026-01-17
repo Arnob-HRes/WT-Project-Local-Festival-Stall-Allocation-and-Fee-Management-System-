@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+a<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,7 +57,7 @@
             </div>
 
             <button type="submit" id="registerBtn">
-                <span class="btn-text">Register</span>
+                <span class="btn-text"><a href="Dashboard.php">Register</a></span>
                 <span class="loading" style="display:none;">Creating Account...</span>
             </button>
 

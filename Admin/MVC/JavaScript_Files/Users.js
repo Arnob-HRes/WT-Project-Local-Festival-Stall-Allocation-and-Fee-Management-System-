@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const layout = document.getElementById('usersLayout');
     const userForm = document.getElementById('addUserForm');
 
+
     // Form toggle
     if (addUserBtn && layout) {
         addUserBtn.addEventListener('click', () => {
@@ -11,13 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
     // Form submit
     if (userForm) {
         userForm.addEventListener('submit', function (e) {
             e.preventDefault();
             console.log("Submitting form via AJAX...");
 
+
             const formData = new FormData(this);
+
 
             fetch('../Controller/UserController.php?action=save', {  
                 method: 'POST',
@@ -30,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 if (data.success) {
                     alert('User added successfully!');
-                    location.reload(); 
+                    location.reload();
                 } else {
                     alert('Error: ' + (data.error || data.message));
                 }
@@ -41,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
 
     // Cancel button
     const cancelBtn = document.getElementById('cancelBtn');

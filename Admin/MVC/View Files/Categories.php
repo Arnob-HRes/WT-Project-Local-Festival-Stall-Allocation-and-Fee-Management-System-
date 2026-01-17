@@ -20,6 +20,7 @@
         </nav>
     </aside>
 
+
     <div class="main">
         <header class="topbar">
             <h1>Categories</h1>
@@ -28,6 +29,7 @@
                 <div class="user-badge">Admin</div>
             </div>
         </header>
+
 
         <section class="layout">
             <!-- Category list -->
@@ -38,6 +40,7 @@
                         <p class="subtext">Manage stall categories used in bookings and stalls.</p>
                     </div>
                 </div>
+
 
                 <div class="table-wrapper">
                     <table>
@@ -58,6 +61,7 @@
                 </div>
             </div>
 
+
             <!-- Add new category form -->
             <div class="panel panel-form">
                 <div class="panel-header">
@@ -67,6 +71,7 @@
                     </div>
                 </div>
 
+
                 <form class="form" id="cat-form">
                     <div class="form-group">
                         <label for="cat-name">Category Name</label>
@@ -74,17 +79,20 @@
                         <small class="error" id="err-name"></small>
                     </div>
 
+
                     <div class="form-group">
                         <label for="cat-slug">Slug (optional)</label>
                         <input type="text" id="cat-slug" name="slug" placeholder="e.g., electronics" />
                         <span class="help-text">If empty, slug will be generated from name.</span>
                     </div>
 
+
                     <div class="form-group">
                         <label for="cat-description">Description</label>
                         <textarea id="cat-description" name="description" rows="3"
                             placeholder="Short description of this category."></textarea>
                     </div>
+
 
                     <div class="form-row">
                         <div class="form-group">
@@ -101,6 +109,7 @@
                     </div>
 
 
+
                     <div class="form-actions">
                         <button type="button" class="btn-secondary" id="btn-clear">Clear</button>
                         <button type="submit" class="btn-primary">Save Category</button>
@@ -109,6 +118,7 @@
             </div>
         </section>
     </div>
+
 
     <script src="../JavaScript_Files/Categories.js"></script>
 </body>
