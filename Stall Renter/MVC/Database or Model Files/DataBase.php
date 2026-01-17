@@ -24,6 +24,21 @@ function getBook($C,$user){
     return $C->query($sql);
 }
 
+function inBookingandPayment($C,$detail){
+    date_default_timezone_set('Asia/Dhaka');
+    $current_date = date('Y-m-d');
+    $num=0;
+    $sql="INSERT INTO booking(Username,amount,phonenumber,email,location,stall,date) VALUES('".$detail['username']."',1000,'".$detail['phonenumber']."','".$detail['email']."','".$detail['location']."','".$detail['stallcetagory']."','".$detail['bookfor']."')";
+    $sql2="INSERT INTO payment(Username,amount,status,date) VALUES('".$detail['username']."',1000,'Pending','".$current_date."')";
+    if($C->query($sql)){
+        $num += 1;
+    }
+    if($C->query($sql2)){
+        $num += 1;
+    }
+    return $num;
+}
+
 function getPay($C,$user){
     $sql="SELECT * FROM payment WHERE Username='".$user."'";
     return $C->query($sql);

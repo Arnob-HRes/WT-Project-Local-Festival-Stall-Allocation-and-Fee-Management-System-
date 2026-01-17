@@ -8,6 +8,8 @@
         let date=document.getElementById("I6").value;
         let payment=document.getElementById("I7").value;
         let status=document.getElementById("InfoS");
+        let com=document.getElementById("Info");
+        const today = new Date();
 
         let booking={
             'username': user,
@@ -30,6 +32,18 @@
                 let BData = JSON.parse(this.responseText);
                 if(BData.error){
                     status.innerHTML=`Your status: <br> ${BData.error}`;
+                }
+                else if(BData.successful){
+                    status.innerHTML=`Your status: <br> Pending`
+                    com.innerHTML=`${BData.successful} <br>
+                                   You Entered: <br> 
+                                   Phone Number: ${number} <br> 
+                                   Email: ${email} <br> 
+                                   Stall Cetagory: ${cetagory} <br>
+                                   Stall Location: ${location} <br>
+                                   Booking Date: ${today.toDateString()} <br>
+                                   Book For: ${date} <br>
+                                   Payment Method: ${payment}`;
                 }
             }
         }

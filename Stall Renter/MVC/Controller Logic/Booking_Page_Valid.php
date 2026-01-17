@@ -32,10 +32,16 @@ else if($data['bookfor']<=$current_date){
 else if($data['paymentmethod']==""){
     echo json_encode(['error' => 'Choose a valid Payment Method']);
 }
-if($data['username']===$_SESSION["username"]){
+if($data['username']!=$_SESSION["username"]){
     echo json_encode(['error' => 'Invalid Username']);
 }
 else{
-
+    $R=inBookingandPayment($con,$data);
+    if($R != 2){
+        echo json_encode(['error' => 'Database Error']);
+    }
+    else{
+        echo json_encode(['successful' => '<b>Your Booking is Succesfull <br> (You can check your status in your profile)<\b>']);
+    }
 }
 ?>
