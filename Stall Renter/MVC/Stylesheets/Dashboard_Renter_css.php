@@ -142,19 +142,21 @@
   }
 }
 #stiky1{
-    position: absolute;
+    position: fixed;
     top:600px;
     left: 350px;
+    z-index: 1;
 }
 #d1{
     padding: 20px;
-    position: sticky;
-    top:0px;
     width: 790px;
     height: 65px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     box-shadow: 10px 10px 16px black;
+}
+#d1:hover{
+    box-shadow: 0 0 43px rgba(255, 0, 255, 1);
 }
 #ST{
     padding: 0px 0px 0px 20px;
@@ -176,6 +178,12 @@
     color: white;
     border-radius: 20px;
     border: 1px solid white;
+    cursor: pointer;
+}
+#Submi:hover{
+    border: 2px solid red;
+    background-color: transparent;
+    color: black;
 }
 #Submi2{
     position: absolute;
@@ -187,6 +195,11 @@
     color: black;
     border-radius: 20px;
     border: 1px solid white;
+    cursor: pointer;
+}
+#Submi2:hover{
+    border: 2px solid gold;
+    background-color: transparent;
 }
 #f1{
     position: absolute;

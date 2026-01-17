@@ -1,6 +1,6 @@
 <?php
-include("../Controller Logic/Dashboard_Renter_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
+include("../Controller Logic/Dashboard_Renter_Valid.php");
 include("../Stylesheets/Dashboard_Renter_css.php");
 include("../JavaScript Files/Dashboard_Renter_js.php");
 ?>
