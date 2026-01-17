@@ -32,7 +32,7 @@ include("../JavaScript Files/Profile_Page_js.php");
         <button id="dash" onclick="window.location.href='Dashboard_Renter.php'">Dashboard</button>
         <a href="../Controller Logic/Logout.php" id="log">Logout</a>
         <a href="HOME_PAGE.php" id="Hom">Home</a>
-        <button onclick="window.location.href=''" id="change">Update Information</button>
+        <button onclick="window.location.href='update_info.php'" id="change">Update Information</button>
         <button onclick="window.location.href='Profile_Page.php'" id="refresh">Refresh</button>
         <h2 id="Book">Booking Details</h2>
         <table border="2px" id="table1">
