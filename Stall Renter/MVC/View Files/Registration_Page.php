@@ -12,18 +12,9 @@ include('../JavaScript Files/Registration_Page_js.php');
     <body>
         <div class="c1">
             <h2>Create Account</h2>
-            <p class="c2"> Register as Admin or stall Renter</p>
+            <p class="c2"> Register as a stall Renter</p>
 
-            <form action="REGISTRATION.PHP" method="POST"> 
-
-                <div class="c3">
-                    <label> Register as </label>
-                    <select name="User_type" id="userType" required>
-                        <option value="">-- Select User type --</option>
-                        <option value="admin">Admin</option>
-                        <option value="renter">Stall Renter</option>
-                    </select>
-                </div>
+            <form action="REGISTRATION.PHP" method="POST">
  
                 <div class="c3">
                     <label> Full Name </label>
