@@ -22,7 +22,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     else{
         $conn=connectsql();
         $result=getuser($conn,$user,$pass);
+        $result2=getadmin($conn,$user,$pass);
         $row=$result->num_rows;
+        $row2=$result2->num_rows;
         if($row==1){
             $cookie_name="username";
             $cookie_value=$user;
@@ -37,6 +39,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             }
             header("Location:Dashboard_Renter.php");
             exit();
+        }
+        else if($row2==1){
+            header("Location: .../Admin/View Files/Dashboard.php");
         }
         else{
          $error="Invalide Username or Password !";

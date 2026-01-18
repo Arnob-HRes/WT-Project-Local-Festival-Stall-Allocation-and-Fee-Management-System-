@@ -19,6 +19,11 @@ function getuser($C,$user,$pass){
     return $C->query($sql);
 }
 
+function getadmin($C,$user,$pass){
+    $sql="SELECT * FROM admin WHERE username='".$user."' AND pass='".$pass."'";
+    return $C->query($sql);
+}
+
 function getBook($C,$user){
     $sql="SELECT * FROM booking WHERE Username='".$user."'";
     return $C->query($sql);

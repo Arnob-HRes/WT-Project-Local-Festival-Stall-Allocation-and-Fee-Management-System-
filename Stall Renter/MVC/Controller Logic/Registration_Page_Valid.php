@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $r5=rand(0,9);
         $str1=substr($fullname,0,$r1);
         $str2=substr($fullname,1,$r2);
-        $username=trim($str1.$str2.(string)($r3.$r4.$r5));
+        $username=str_replace(" ", "", $str1.$str2.$r3.$r4.$r5);
         $data=['fullname'=>$fullname,
                'address'=>$address,
                'number'=>$number,
@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $con=connectsql();
         $result=register($con,$data);
         if($result){
-            $error="Succesfully Registered.<br> Your username is: <br><b>".$username."<\b>";
+            $error="Succesfully Registered.<br> Your username is: <br><b>".$username."</b>";
             move_uploaded_file($temp_name,$folder);
         }
         else{

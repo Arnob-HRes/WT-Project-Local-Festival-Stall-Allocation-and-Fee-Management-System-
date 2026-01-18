@@ -25,7 +25,6 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
         <p id="wu"><b>Welcome, <?php if(isset($_SESSION["fullname"])){echo $_SESSION["fullname"];}?></b></p>
         <a href="#h3" id="inf">Information</a>
         <a href="#h1" id="cat">Catagories</a>
-        <a href="" id="sett">Settings</a>
         <button id="home" onclick="window.location.href='HOME_PAGE.php'">Go to Home Page</button>
         <a href="Profile_Page.php"><img src="../Upload/<?php echo $_SESSION["photo"]?>" alt="Profile" id="PP"></a>
         <a href="../Controller Logic/Logout.php" id="logout">

@@ -27,21 +27,14 @@
 #inf{
     position: absolute;
     top: 30px;
-    left: 550px;
+    left: 620px;
     color: white;
     text-decoration: none;
 }
 #cat{
     position: absolute;
     top: 30px;
-    left: 650px;
-    color: white;
-    text-decoration: none;
-}
-#sett{
-    position: absolute;
-    top: 30px;
-    left: 750px;
+    left: 720px;
     color: white;
     text-decoration: none;
 }
