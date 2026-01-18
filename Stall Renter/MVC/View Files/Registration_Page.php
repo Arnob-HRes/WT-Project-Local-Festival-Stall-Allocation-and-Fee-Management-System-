@@ -14,42 +14,42 @@ include('../JavaScript Files/Registration_Page_js.php');
             <h2>Create Account</h2>
             <p class="c2"> Register as a stall Renter</p>
 
-            <form action="REGISTRATION.PHP" method="POST">
+            <form method="POST" enctype="multipart/form-data">
  
                 <div class="c3">
                     <label> Full Name </label>
-                    <input type="text" name="fullname" placeholder="Enter Full Name" required>
+                    <input type="text" name="fullname" placeholder="Enter Full Name">
                 </div>
 
                 <div class="c3">
                     <label> Address </label>
-                    <input type="text" name="address" placeholder="Enter Present Address" required>
+                    <input type="text" name="address" placeholder="Enter Present Address">
                 </div>
 
                 <div class="c3">
                     <label> Contact Number</label>
-                    <input type="number" name="number" placeholder="Enter Valid number" required>
+                    <input type="number" name="number" placeholder="Enter Valid number">
                 </div>
                 
                     <div class="c3">
                     <label> Email Address</label>
-                    <input type="email" name="email" placeholder="Enter Valid Email" required>
+                    <input type="email" name="email" placeholder="Enter Valid Email">
                 </div>
 
                 <div class="c3">
                     <label> Upload Your Photo </label>
-                    <input type="file" name="file" placeholder="" required>
+                    <input type="file" name="file" placeholder="">
                 </div>
 
                 <div class="c3">
                     <label> Password </label>
-                    <input type="password" name="password" placeholder="Create Password" required>
+                    <input type="password" name="password" placeholder="Create Password">
                 </div>
 
                 
                 <div class="c3">
                     <label> Confirm Password </label>
-                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                    <input type="password" name="confirm_password" placeholder="Confirm Password">
                 </div>
 
                 <button type="submit"> Register </button>
@@ -59,5 +59,9 @@ include('../JavaScript Files/Registration_Page_js.php');
                 </p>
             </form>
         </div>
+        <div id="show">
+                Status: <br>
+                <?php if(isset($error)){echo $error;}?>
+            </div>
     </body>
 </html>

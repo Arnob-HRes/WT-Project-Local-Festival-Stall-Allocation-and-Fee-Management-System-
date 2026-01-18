@@ -20,7 +20,7 @@ include("../JavaScript Files/update_info_js.php");
     <body>
         <center>
             <p id="HT">UPDATE INFORMATION</p>
-            <img src="" alt="Profile" id="Profile">
+            <img src="../Upload/<?php echo $_SESSION["photo"]?>" alt="Profile" id="Profile">
         </center>
         <div id="InfoDiv">
             <p class="in"><?php echo $_SESSION["fullname"] ?></p><br>

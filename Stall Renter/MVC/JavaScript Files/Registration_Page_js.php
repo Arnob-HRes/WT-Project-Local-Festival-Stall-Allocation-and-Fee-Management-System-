@@ -1,1 +1,1 @@
-<script>alert("Welcom to the Registration Page of Local Festival Stall Allocation & Fee Management System")</script>
+<script>//alert("Welcom to the Registration Page of Local Festival Stall Allocation & Fee Management System")</script>

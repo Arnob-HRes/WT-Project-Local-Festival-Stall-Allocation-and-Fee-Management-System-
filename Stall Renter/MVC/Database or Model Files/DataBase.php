@@ -48,4 +48,9 @@ function updateuser($C,$user,$name){
     $sql="UPDATE user SET FullName='".$user["fullname"]."', ContactNumber='".$user["phone"]."',Email='".$user["email"]."',Address='".$user["address"]."' WHERE Username='".$name."'";
     return $C->query($sql);
 }
+
+function register($C,$user){
+    $sql="INSERT INTO user(Username, FullName, ContactNumber, Email, Password, Address, ProfilePicture) VALUES('".$user["username"]."', '".$user["fullname"]."','".$user["number"]."','".$user["email"]."','".$user["cpass"]."','".$user["address"]."','".$user["image"]."')";
+    return $C->query($sql);
+}
 ?>

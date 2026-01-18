@@ -22,7 +22,7 @@ include("../JavaScript Files/Profile_Page_js.php");
         <img src="../Images/Profile_Page.gif" alt="Profile Page" id="PPMIMG">
         <div id="PD">
             <center>
-            <img src="" alt="Profile Picture" id="PPP">
+            <img src="../Upload/<?php echo $_SESSION["photo"]?>" alt="Profile Picture" id="PPP">
             <p class="pt"><?php echo $_SESSION["fullname"]?></p>
             <p class="pt"><?php echo $_SESSION["number"]?></p>
             <p class="pt"><?php echo $_SESSION["email"]?></p>

@@ -33,6 +33,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $_SESSION["number"]=$R["ContactNumber"];
             $_SESSION["email"]=$R["Email"];
             $_SESSION["address"]=$R["Address"];
+            $_SESSION["photo"]=$R["ProfilePicture"];
             }
             header("Location:Dashboard_Renter.php");
             exit();

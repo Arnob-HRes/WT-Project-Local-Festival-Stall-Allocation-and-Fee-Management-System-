@@ -27,7 +27,7 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
         <a href="#h1" id="cat">Catagories</a>
         <a href="" id="sett">Settings</a>
         <button id="home" onclick="window.location.href='HOME_PAGE.php'">Go to Home Page</button>
-        <a href="Profile_Page.php"><img src="" alt="Profile" id="PP"></a>
+        <a href="Profile_Page.php"><img src="../Upload/<?php echo $_SESSION["photo"]?>" alt="Profile" id="PP"></a>
         <a href="../Controller Logic/Logout.php" id="logout">
                 Logout
         </a>

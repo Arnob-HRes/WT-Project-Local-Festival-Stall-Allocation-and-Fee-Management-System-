@@ -36,7 +36,18 @@ body{
     text-shadow: 0 2px 4px rgba(0,0,0,0.5) ;
     font-weight: 700 ;
 }
-
+#show{
+    position: absolute;
+    top: 300px;
+    left: 1300px;
+    padding: 10px;
+    color: white;
+    font-family: 'Baloo 2', cursive ;
+    border: 2px solid white;
+    background-color: transparent;
+    z-index: 1;
+    border-radius: 10px;
+}
 .c2{
     text-align: center;
     font-size: 14px;
