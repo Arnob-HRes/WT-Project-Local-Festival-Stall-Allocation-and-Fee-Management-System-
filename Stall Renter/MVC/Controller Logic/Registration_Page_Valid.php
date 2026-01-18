@@ -83,6 +83,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $error="Succesfully Registered.<br> Your username is: <br><b>".$username."<\b>";
             move_uploaded_file($temp_name,$folder);
         }
+        else{
+            $error="Try Again";
+        }
     }
     
 }
