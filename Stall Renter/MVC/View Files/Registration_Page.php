@@ -1,9 +1,13 @@
+<?php
+include('../Controller Logic/Registration_Page_Valid.php');
+include('../Stylesheets/Registration_Page_css.php');
+include('../JavaScript Files/Registration_Page_js.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
        <title> User Registration</title> 
-       <link rel="stylesheet" href="../Stylesheets/Registration_Page.css">
     </head>
     <body>
         <div class="c1">
@@ -27,6 +31,11 @@
                 </div>
 
                 <div class="c3">
+                    <label> Address </label>
+                    <input type="text" name="address" placeholder="Enter Present Address" required>
+                </div>
+
+                <div class="c3">
                     <label> Contact Number</label>
                     <input type="number" name="number" placeholder="Enter Valid number" required>
                 </div>
@@ -34,6 +43,11 @@
                     <div class="c3">
                     <label> Email Address</label>
                     <input type="email" name="email" placeholder="Enter Valid Email" required>
+                </div>
+
+                <div class="c3">
+                    <label> Upload Your Photo </label>
+                    <input type="file" name="file" placeholder="" required>
                 </div>
 
                 <div class="c3">
@@ -54,6 +68,5 @@
                 </p>
             </form>
         </div>
-        <script src="Registration_Page.php"></script>
     </body>
 </html>
