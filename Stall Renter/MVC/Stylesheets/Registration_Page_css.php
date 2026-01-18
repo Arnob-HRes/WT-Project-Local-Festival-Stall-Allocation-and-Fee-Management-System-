@@ -114,7 +114,9 @@ button {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
+#b1{
+    width: 452px;
+}
 button:hover {
     background: linear-gradient(135deg, #353d9c, #d94f7e);
     transform: translateY(-2px);

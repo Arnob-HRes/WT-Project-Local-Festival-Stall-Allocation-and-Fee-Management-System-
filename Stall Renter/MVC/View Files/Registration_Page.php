@@ -52,7 +52,7 @@ include('../JavaScript Files/Registration_Page_js.php');
                     <input type="password" name="confirm_password" placeholder="Confirm Password">
                 </div>
 
-                <button type="submit"> Register </button>
+                <button type="submit" id="b1"> Register </button>
 
                 <p class="c4"> 
                     Already have an account? <a href="LOGIN_PAGE.php">Login</a>
