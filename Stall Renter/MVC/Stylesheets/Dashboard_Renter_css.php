@@ -66,8 +66,8 @@
     position: absolute;
     top:25px;
     left: 1330px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50px;
 }
 #logout{
@@ -142,7 +142,7 @@
   }
 }
 #stiky1{
-    position: fixed;
+    position: absolute;
     top:600px;
     left: 350px;
     z-index: 1;

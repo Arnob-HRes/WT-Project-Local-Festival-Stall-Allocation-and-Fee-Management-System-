@@ -7,7 +7,7 @@ include('../JavaScript Files/Registration_Page_js.php');
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-       <title> User Registration</title> 
+       <title>Registration</title> 
     </head>
     <body>
         <div class="c1">

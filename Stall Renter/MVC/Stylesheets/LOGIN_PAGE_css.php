@@ -15,7 +15,9 @@
     height: auto;
     background-color: transparent;
     backdrop-filter: blur(14px);
+    border: 2px solid rgba(255,255,255,0.6);;
     border-radius: 20px;
+    
 }
 #I1{
     padding-left: 10px;

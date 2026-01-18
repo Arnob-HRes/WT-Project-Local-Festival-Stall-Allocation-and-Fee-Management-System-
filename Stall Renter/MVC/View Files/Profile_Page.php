@@ -10,7 +10,7 @@ include("../JavaScript Files/Profile_Page_js.php");
 <html>
     <head>
         <title>
-            Ranter Dashboard
+            Profile Page
         </title>
         <meta name="description" content="This is a Web site for Local Festival Stall Allocation & Fee Management System" >
         <meta name="author" content="Arnob Sarker Supta and Hridrita Saha Moon">
