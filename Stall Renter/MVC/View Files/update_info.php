@@ -18,8 +18,8 @@ include("../JavaScript Files/update_info_js.php");
         <meta http-equiv="refresh" content="1800">
     </head>
     <body>
+        <img src="../Images/Profile_Page.gif" alt="update" id="update">
         <center>
-            <p id="HT">UPDATE INFORMATION</p>
             <img src="../Upload/<?php echo $_SESSION["photo"]?>" alt="Profile" id="Profile">
         </center>
         <div id="InfoDiv">
@@ -35,16 +35,16 @@ include("../JavaScript Files/update_info_js.php");
                 <fieldset id="f1">
                     <legend>Provide Valid Information</legend>
                     <label for="name">New Full Name:</label><br>
-                    <input type="text" name="name" id="name"><br>
+                    <input type="text" name="name" id="name" placeholder="Input New Name"><br>
                     <label for="phone">New Phone Number:</label><br>
-                    <input type="text" name="phone" id="phone"><br>
+                    <input type="text" name="phone" id="phone" placeholder="Input New Phone Number"><br>
                     <label for="email">New Email:</label><br>
-                    <input type="email" name="email" id="email"><br>
+                    <input type="email" name="email" id="email" placeholder="Input New Email"><br>
                     <label for="address">New Address:</label><br>
-                    <input type="text" name="address" id="address"><br>
+                    <input type="text" name="address" id="address" placeholder="Input New Address"><br>
                     <input type="submit" value="Update" id="sub" onclick=updateajax()>
                 </fieldset>
         </center>
-        <div id="show">Status</div>
+        <div id="show">Status [Information You can not Change Profile Picture and Username]</div>
     </body>
 </html>
