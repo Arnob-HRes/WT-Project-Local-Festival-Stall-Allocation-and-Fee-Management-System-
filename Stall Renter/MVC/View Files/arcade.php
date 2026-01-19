@@ -23,7 +23,7 @@ include("../JavaScript Files/arcade_js.php");
         <img src="../Images/LOGO.png" alt="Logo" id="logo">
         <p id="wu"><b>Welcome, <?php if(isset($_SESSION["fullname"])){echo $_SESSION["fullname"];}?></b></p>
         <button id="home" onclick="window.location.href='Dashboard_Renter.php'">Go to Dashboard</button>
-        <img src="" alt="Profile" id="PP">
+        <a href="Profile_Page.php"><img src="../Upload/<?php echo $_SESSION["photo"]?>" alt="Profile" id="PP">
         <a href="../Controller Logic/Logout.php" id="logout">
                 Logout
         </a>
