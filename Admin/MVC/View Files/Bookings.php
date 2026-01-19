@@ -58,7 +58,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'approve' && isset($_GET['id'])
             <div class="panel-header">
                 <div>
                     <h2>Pending & Recent Requests</h2>
-                    <p class="subtext">Manage stall booking requests directly from database.</p>
+                    <p class="subtext">Manage stall booking requests</p>
                 </div>
             </div>
 
@@ -79,7 +79,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'approve' && isset($_GET['id'])
                     </thead>
                     <tbody>
                         <?php
-                        // ডাটাবেস থেকে তথ্য তুলে আনা
+                        
                         $fetchQuery = "SELECT * FROM booking ORDER BY BookingID DESC";
                         $result = mysqli_query($conn, $fetchQuery);
 
