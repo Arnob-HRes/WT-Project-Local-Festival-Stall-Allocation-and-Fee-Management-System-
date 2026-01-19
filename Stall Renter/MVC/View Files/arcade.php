@@ -1,5 +1,4 @@
 <?php
-include("../Controller Logic/arcade_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
 include("../Stylesheets/arcade_css.php");
 include("../JavaScript Files/arcade_js.php");

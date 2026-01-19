@@ -1,5 +1,4 @@
 <?php
-include("../Controller Logic/food_stall_information_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
 include("../Stylesheets/food_stall_information_css.php");
 include("../JavaScript Files/food_stall_information_js.php");

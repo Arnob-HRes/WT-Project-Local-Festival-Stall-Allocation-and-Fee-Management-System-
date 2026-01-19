@@ -1,5 +1,4 @@
 <?php
-include("../Controller Logic/toys_accessories_page_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
 include("../Stylesheets/toys_accessories_page_css.php");
 include("../JavaScript Files/toys_accessories_page_js.php");

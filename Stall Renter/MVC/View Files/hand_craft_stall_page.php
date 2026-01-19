@@ -1,5 +1,4 @@
 <?php
-include("../Controller Logic/hand_craft_stall_page_Valid.php");
 include("../Controller Logic/session_and_cookie_check.php");
 include("../Stylesheets/hand_craft_stall_page_css.php");
 include("../JavaScript Files/hand_craft_stall_page_js.php");
