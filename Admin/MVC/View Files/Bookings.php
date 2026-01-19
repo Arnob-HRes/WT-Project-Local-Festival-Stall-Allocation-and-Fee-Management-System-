@@ -25,7 +25,6 @@ require_once('../Database_or_Model_Files/Database.php');
             <a href="Bookings.php" class="active">Bookings</a>
             <a href="Stalls.php">Stalls</a>
             <a href="Categories.php">Categories</a>
-            <a href="Payments.php">Payments</a>
             <a href="Users.php">Users</a>
            
         </nav>

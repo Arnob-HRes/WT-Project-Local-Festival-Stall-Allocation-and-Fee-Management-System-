@@ -19,7 +19,6 @@ require_once '../Controller/StallsController.php';
             <a href="Bookings.php">Bookings</a>
             <a href="Stalls.php" class="active">Stalls</a>
             <a href="Categories.php">Categories</a>
-            <a href="Payments.php">Payments</a>
             <a href="Users.php">Users</a>
             
         </nav>

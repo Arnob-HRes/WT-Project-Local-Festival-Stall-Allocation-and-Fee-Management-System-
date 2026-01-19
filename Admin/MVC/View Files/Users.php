@@ -25,7 +25,6 @@ $result = $conn->query($sql);
             <a href="Bookings.php">Bookings</a>
             <a href="Stalls.php">Stalls</a>
             <a href="Categories.php">Categories</a>
-            <a href="Payments.php">Payments</a>
             <a href="Users.php" class="active">Users</a>
         </nav>
     </aside>
