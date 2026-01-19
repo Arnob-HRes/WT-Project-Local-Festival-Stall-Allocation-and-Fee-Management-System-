@@ -19,6 +19,16 @@ function getuser($C,$user,$pass){
     return $C->query($sql);
 }
 
+function getusername($C,$user){
+    $sql="SELECT * FROM user WHERE Username='".$user."'";
+    return $C->query($sql);
+}
+
+function updatepass($C,$user,$pass){
+    $sql="UPDATE user SET Password='".$pass."' WHERE Username='".$user."'";
+    return $C->query($sql);
+}
+
 function getadmin($C,$user,$pass){
     $sql="SELECT * FROM admin WHERE username='".$user."' AND pass='".$pass."'";
     return $C->query($sql);
