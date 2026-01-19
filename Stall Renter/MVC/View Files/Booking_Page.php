@@ -20,7 +20,7 @@ include("../JavaScript Files/Booking_Page_js.php");
     <body>
         <img src="../Images/BookingSide.gif" alt="Booking" id="IMG1">
         <img src="../Images/booking.gif" alt="BookingTop" id=IMG2>
-        <img src="" alt="profile" id="profilepic">
+        <img src="../Upload/<?php echo $_SESSION["photo"]?>" alt="profile" id="profilepic">
         <h2 id="t1">You are Booking as</h2>
         <p id="bookingT">BOOKING PAGE</p>
         <h3 id="n1"><?php echo $_SESSION["fullname"]?></h3>

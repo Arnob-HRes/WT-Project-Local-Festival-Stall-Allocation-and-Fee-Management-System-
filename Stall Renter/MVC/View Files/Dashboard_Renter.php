@@ -98,7 +98,7 @@ include("../JavaScript Files/Dashboard_Renter_js.php");
         <hr id="h4">
         <p id="deel1" class="detail1">1. You have to choose the stall Categories (Food, Art, Toys, Accessories, Hand Craft, Arcade)</p>
         <p id="deel2" class="detail1">2. You need to Choose the Location</p>
-        <p id="deel3" class="detail1">3. You need to Choose the Time and Date</p>
+        <p id="deel3" class="detail1">3. You need to Choose the Date</p>
         <p id="deel4" class="detail1">4. You need to Choose the Payment Method (Bkash, Nagad, Bank, Card)</p>
         <a href="#mainimg" id="top">TOP</a>
         <footer id="footer">
