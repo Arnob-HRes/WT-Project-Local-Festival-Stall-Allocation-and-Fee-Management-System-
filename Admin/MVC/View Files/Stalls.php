@@ -147,21 +147,9 @@ require_once '../Controller/StallsController.php';
                             <option value="Maintenance">Maintenance</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="priority">Priority / Visibility</label>
-                        <select id="priority" name="priority">
-                            <option value="Normal">Normal</option>
-                            <option value="Featured">Featured</option>
-                            <option value="Hidden">Hidden</option>
-                        </select>
-                    </div>
+                    
                 </div>
 
-                <div class="form-group">
-                    <label for="description">Description / Notes</label>
-                    <textarea id="description" name="description" rows="3"
-                        placeholder="Near gate, corner stall, electricity, water, etc."></textarea>
-                </div>
 
                 <div class="form-actions">
                     <button type="submit" class="btn-primary">Add Stall</button> 
