@@ -15,12 +15,12 @@
     <button id="B1" onclick="window.location.href='HOME_PAGE.php'">< Home Page</button>
     
     <?php
-    // SESSION + LOGIN LOGIC (নতুন যোগ করা)
+    
     session_start();
     $error = '';
     
     if (isset($_POST['loginButton'])) {
-        require_once('Admin/Database_or_Model_Files/Database.php'); // তোমার exact path
+        require_once('Admin/Database_or_Model_Files/Database.php'); 
         
         $username = trim($_POST['username']);
         $password = trim($_POST['password']);
@@ -37,7 +37,7 @@
                 
                 // Role based redirect
                 if ($_SESSION['role'] === 'admin') {
-                    header('Location: Admin/Dashboard.php');
+                    header('Location: Admin/MVC/View/Dashboard.php.php');
                 } else {
                     header('Location: renter_dashboard.php');
                 }
