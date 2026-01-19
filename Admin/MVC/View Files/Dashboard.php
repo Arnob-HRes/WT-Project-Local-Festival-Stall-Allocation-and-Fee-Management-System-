@@ -2,26 +2,25 @@
 require_once('../Database_or_Model_Files/Database.php'); 
 $conn = connectsql();
 
-// ১. Total Bookings (সব বুকিং এর সংখ্যা)
+
 $total_bookings_res = mysqli_query($conn, "SELECT COUNT(*) as total FROM booking");
 $total_bookings = mysqli_fetch_assoc($total_bookings_res)['total'];
 
-// ২. Pending Requests (যদি আপনার টেবিলে status কলাম থাকে, তবেই এটি কাজ করবে)
-// যদি status কলাম না থাকে, তবে আপাতত সব বুকিংই পেন্ডিং হিসেবে গণ্য হবে।
+
 $pending_res = mysqli_query($conn, "SELECT COUNT(*) as total FROM booking WHERE LOWER(status) = 'pending'");
 if ($pending_res) {
     $row = mysqli_fetch_assoc($pending_res);
     $pending_requests = $row['total'];
 } else {
-    // যদি status কলামে সমস্যা থাকে তবে সব বুকিংকে কাউন্ট করবে
+    //if there is any problem in status colomn, then it will count from total booking colomn
     $pending_requests = $total_bookings; 
 }
-// ৩. Available Stalls (আপনার 'stalls' টেবিল থেকে মোট স্টল - বুকড স্টল)
+
 $total_stalls_res = mysqli_query($conn, "SELECT COUNT(*) as total FROM stalls");
 $total_stalls = mysqli_fetch_assoc($total_stalls_res)['total'];
 $available_stalls = $total_stalls - $total_bookings;
 
-// ৪. Today's Revenue (আজকের মোট আয়)
+
 $today = date('Y-m-d');
 $revenue_res = mysqli_query($conn, "SELECT SUM(amount) as total FROM booking WHERE date = '$today'");
 $today_revenue = mysqli_fetch_assoc($revenue_res)['total'] ?? 0;

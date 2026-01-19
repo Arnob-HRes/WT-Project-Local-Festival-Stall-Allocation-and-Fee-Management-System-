@@ -291,7 +291,7 @@ tbody tr:hover {
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease;
-    width: 0; /* জায়গা দখল করবে না */
+    width: 0; /* for this ,form will not get place*/
 }
 
 .form {
