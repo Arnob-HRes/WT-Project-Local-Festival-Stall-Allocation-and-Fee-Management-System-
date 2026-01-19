@@ -1,9 +1,29 @@
-
 <?php
 require_once('../Database_or_Model_Files/Database.php'); 
 
-?>
 
+$conn = connectsql(); 
+
+
+if (isset($_GET['action']) && $_GET['action'] == 'reject' && isset($_GET['id'])) {
+    $id = $_GET['id'];
+    
+    $deleteQuery = "DELETE FROM booking WHERE BookingID = '$id'";
+    if(mysqli_query($conn, $deleteQuery)) {
+        header("Location: Bookings.php?msg=Deleted");
+        exit();
+    }
+}
+
+
+if (isset($_GET['action']) && $_GET['action'] == 'approve' && isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $updateQuery = "UPDATE booking SET status = 'Approved' WHERE BookingID = '$id'";
+    mysqli_query($conn, $updateQuery);
+    header("Location: Bookings.php?msg=Approved");
+    exit();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +43,6 @@ require_once('../Database_or_Model_Files/Database.php');
             <a href="Stalls.php">Stalls</a>
             <a href="Categories.php">Categories</a>
             <a href="Users.php">Users</a>
-           
         </nav>
     </aside>
 
@@ -31,13 +50,6 @@ require_once('../Database_or_Model_Files/Database.php');
         <header class="topbar">
             <h1>Booking Requests</h1>
             <div class="topbar-right">
-                <select>
-                    <option value="all">All Status</option>
-                    <option value="pending">Pending</option>
-                    <option value="approved">Approved</option>
-                    <option value="rejected">Rejected</option>
-                </select>
-                <input type="text" placeholder="Search renter or stall..." />
                 <div class="user-badge">Admin</div>
             </div>
         </header>
@@ -46,91 +58,63 @@ require_once('../Database_or_Model_Files/Database.php');
             <div class="panel-header">
                 <div>
                     <h2>Pending & Recent Requests</h2>
-                    <p class="subtext">Approve or reject stall booking requests.</p>
+                    <p class="subtext">Manage stall booking requests directly from database.</p>
                 </div>
-                <button class="btn-outline">Export CSV</button>
             </div>
 
             <div class="table-wrapper">
                 <table>
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Renter Name</th>
+                            <th>ID</th>
+                            <th>Username</th>
                             <th>Phone</th>
-                            <th>Stall Request</th>
-                            <th>Category</th>
+                            <th>Email</th>
+                            <th>Location</th>
+                            <th>Stall Type</th>
                             <th>Date</th>
-                            <th>Time</th>
-                            <th>Fee</th>
-                            <th>Status</th>
+                            <th>Amount</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>BK-1023</td>
-                            <td>Rahim Store</td>
-                            <td>01711-000000</td>
-                            <td>A-12 (Zone A)</td>
-                            <td>Food</td>
-                            <td>2026-01-05</td>
-                            <td>10:00 - 16:00</td>
-                            <td>৳ 2,500</td>
-                            <td><span class="badge badge-pending">Pending</span></td>
-                            <td class="actions">
-                                <button class="btn-sm btn-approve">Approve</button>
-                                <button class="btn-sm btn-reject">Reject</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>BK-1022</td>
-                            <td>Nishi Crafts</td>
-                            <td>01822-111111</td>
-                            <td>B-03 (Zone B)</td>
-                            <td>Hand Craft</td>
-                            <td>2026-01-06</td>
-                            <td>16:00 - 22:00</td>
-                            <td>৳ 3,000</td>
-                            <td><span class="badge badge-approved">Approved</span></td>
-                            <td class="actions">
-                                <button class="btn-sm btn-neutral">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>BK-1021</td>
-                            <td>FunLand</td>
-                            <td>01933-222222</td>
-                            <td>C-07 (Zone C)</td>
-                            <td>Arcade</td>
-                            <td>2026-01-07</td>
-                            <td>10:00 - 22:00</td>
-                            <td>৳ 5,000</td>
-                            <td><span class="badge badge-rejected">Rejected</span></td>
-                            <td class="actions">
-                                <button class="btn-sm btn-neutral">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>BK-1020</td>
-                            <td>Street Bites</td>
-                            <td>01644-333333</td>
-                            <td>A-05 (Zone A)</td>
-                            <td>Food</td>
-                            <td>2026-01-05</td>
-                            <td>16:00 - 22:00</td>
-                            <td>৳ 2,800</td>
-                            <td><span class="badge badge-pending">Pending</span></td>
-                            <td class="actions">
-                                <button class="btn-sm btn-approve">Approve</button>
-                                <button class="btn-sm btn-reject">Reject</button>
-                            </td>
-                        </tr>
+                        <?php
+                        // ডাটাবেস থেকে তথ্য তুলে আনা
+                        $fetchQuery = "SELECT * FROM booking ORDER BY BookingID DESC";
+                        $result = mysqli_query($conn, $fetchQuery);
+
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                ?>
+                                <tr>
+                                    <td><?php echo $row['BookingID']; ?></td>
+                                    <td><?php echo htmlspecialchars($row['Username']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['phonenumber']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['email']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['location']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['stall']); ?></td>
+                                    <td><?php echo $row['date']; ?></td>
+                                    <td>৳ <?php echo number_format($row['amount']); ?></td>
+                                    <td class="actions">
+                                        <button class="btn-sm btn-approve" onclick="alert('Booking Approved!')">Approve</button>
+                                        
+                                        <a href="Bookings.php?action=reject&id=<?php echo $row['BookingID']; ?>" 
+                                           class="btn-sm btn-reject" 
+                                           style="text-decoration: none;"
+                                           onclick="return confirm('Are you sure you want to reject and delete this booking?')">
+                                           Reject
+                                        </a>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                        } else {
+                            echo "<tr><td colspan='9' style='text-align:center;'>No bookings found in database.</td></tr>";
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
-
-            
         </section>
     </div>
 </body>
