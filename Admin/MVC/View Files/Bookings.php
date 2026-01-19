@@ -77,7 +77,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'approve' && isset($_GET['id'])
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
+                      <tbody>
                         <?php
                         
                         $fetchQuery = "SELECT * FROM booking ORDER BY BookingID DESC";
@@ -117,5 +117,6 @@ if (isset($_GET['action']) && $_GET['action'] == 'approve' && isset($_GET['id'])
             </div>
         </section>
     </div>
+    
 </body>
 </html>
