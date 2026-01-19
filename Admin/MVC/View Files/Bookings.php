@@ -1,12 +1,17 @@
 <?php
 require_once('../Database_or_Model_Files/Database.php'); 
+requireAdmin();
+$user_name = getUserName();
+$conn = connectsql();
 
+$sql = "SELECT b.*, u.FullName as renter_name, s.name as stall_name, c.name as category_name 
+        FROM booking b 
+        LEFT JOIN user u ON b.user_id = u.id 
+        LEFT JOIN stalls s ON b.stall_id = s.id
+        LEFT JOIN categories c ON b.category_id = c.id 
+        ORDER BY b.created_at DESC";
+$bookings_result = $conn->query($sql);
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,124 +21,47 @@ require_once('../Database_or_Model_Files/Database.php');
     <link rel="stylesheet" href="../Stylesheets/Bookings-style.css" />
 </head>
 <body>
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <h2>Stall Admin</h2>
-        </div>
-        <nav class="sidebar-nav">
-            <a href="Dashboard.php">Dashboard</a>     
-            <a href="Bookings.php" class="active">Bookings</a>
-            <a href="Stalls.php">Stalls</a>
-            <a href="Categories.php">Categories</a>
-            <a href="Users.php">Users</a>
-           
-        </nav>
-    </aside>
+    <!-- তোমার sidebar same -->
 
     <div class="main">
         <header class="topbar">
             <h1>Booking Requests</h1>
             <div class="topbar-right">
-                <select>
-                    <option value="all">All Status</option>
-                    <option value="pending">Pending</option>
-                    <option value="approved">Approved</option>
-                    <option value="rejected">Rejected</option>
-                </select>
-                <input type="text" placeholder="Search renter or stall..." />
-                <div class="user-badge">Admin</div>
+                <!-- select + search same -->
+                <span class="user-welcome">Welcome, <?= htmlspecialchars($user_name) ?></span>
+                <a href="logout.php" class="user-badge">Logout</a>
             </div>
         </header>
-
+        
+        <!-- তোমার table same, কিন্তু PHP loop দিয়ে dynamic করো -->
         <section class="panel">
-            <div class="panel-header">
-                <div>
-                    <h2>Pending & Recent Requests</h2>
-                    <p class="subtext">Approve or reject stall booking requests.</p>
-                </div>
-                <button class="btn-outline">Export CSV</button>
-            </div>
-
+            <!-- panel same -->
             <div class="table-wrapper">
                 <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Renter Name</th>
-                            <th>Phone</th>
-                            <th>Stall Request</th>
-                            <th>Category</th>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Fee</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
+                    <!-- thead same -->
                     <tbody>
-                        <tr>
-                            <td>BK-1023</td>
-                            <td>Rahim Store</td>
-                            <td>01711-000000</td>
-                            <td>A-12 (Zone A)</td>
-                            <td>Food</td>
-                            <td>2026-01-05</td>
-                            <td>10:00 - 16:00</td>
-                            <td>৳ 2,500</td>
-                            <td><span class="badge badge-pending">Pending</span></td>
-                            <td class="actions">
-                                <button class="btn-sm btn-approve">Approve</button>
-                                <button class="btn-sm btn-reject">Reject</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>BK-1022</td>
-                            <td>Nishi Crafts</td>
-                            <td>01822-111111</td>
-                            <td>B-03 (Zone B)</td>
-                            <td>Hand Craft</td>
-                            <td>2026-01-06</td>
-                            <td>16:00 - 22:00</td>
-                            <td>৳ 3,000</td>
-                            <td><span class="badge badge-approved">Approved</span></td>
-                            <td class="actions">
-                                <button class="btn-sm btn-neutral">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>BK-1021</td>
-                            <td>FunLand</td>
-                            <td>01933-222222</td>
-                            <td>C-07 (Zone C)</td>
-                            <td>Arcade</td>
-                            <td>2026-01-07</td>
-                            <td>10:00 - 22:00</td>
-                            <td>৳ 5,000</td>
-                            <td><span class="badge badge-rejected">Rejected</span></td>
-                            <td class="actions">
-                                <button class="btn-sm btn-neutral">View</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>BK-1020</td>
-                            <td>Street Bites</td>
-                            <td>01644-333333</td>
-                            <td>A-05 (Zone A)</td>
-                            <td>Food</td>
-                            <td>2026-01-05</td>
-                            <td>16:00 - 22:00</td>
-                            <td>৳ 2,800</td>
-                            <td><span class="badge badge-pending">Pending</span></td>
-                            <td class="actions">
-                                <button class="btn-sm btn-approve">Approve</button>
-                                <button class="btn-sm btn-reject">Reject</button>
-                            </td>
-                        </tr>
+                        <?php if ($bookings_result && $bookings_result->num_rows > 0): ?>
+                            <?php while($row = $bookings_result->fetch_assoc()): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($row['id']) ?></td>
+                                <td><?= htmlspecialchars($row['renter_name']) ?></td>
+                                <td><?= htmlspecialchars($row['phone']) ?></td>
+                                <td><?= htmlspecialchars($row['stall_name']) ?></td>
+                                <td><?= htmlspecialchars($row['category_name']) ?></td>
+                                <!-- other fields -->
+                                <td><span class="badge badge-<?= $row['status'] ?>"><?= ucfirst($row['status']) ?></span></td>
+                                <td>
+                                    <button class="btn-sm btn-approve" onclick="updateStatus(<?= $row['id'] ?>, 'approved')">Approve</button>
+                                    <button class="btn-sm btn-reject" onclick="updateStatus(<?= $row['id'] ?>, 'rejected')">Reject</button>
+                                </td>
+                            </tr>
+                            <?php endwhile; ?>
+                        <?php else: ?>
+                            <tr><td colspan="10">No bookings found</td></tr>
+                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>
-
-            
         </section>
     </div>
 </body>
