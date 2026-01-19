@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="../Stylesheets/Forgot_Password_Page.css"> <!-- একই glassmorphism css ব্যবহার -->
+    <link rel="stylesheet" href="../Stylesheets/Forgot_Password_Page.css"> 
     
 </head>
 <body>
     <img src="Images/LOGIN_PAGE_BACKGROUND.jpg" alt="BG" id="Background">
 
-    <div class="login-card"><!-- ধরে নিচ্ছি তোমার LOGIN_PAGE.css এ এই container আছে -->
+    <div class="login-card">
         <h2 class="card-title">Reset Password</h2>
 
         <?php if ($error): ?>
