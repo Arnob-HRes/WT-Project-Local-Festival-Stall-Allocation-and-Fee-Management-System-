@@ -1,13 +1,18 @@
+
+<?php
+require_once '../Controller/Forgot_Password_Valid.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="../Stylesheets/Forgot_Password_Page.css"> 
-    
+    <link rel="stylesheet" href="../Stylesheets/Forgot_Password_Page_css.css" />
 </head>
 <body>
-    <img src="Images/LOGIN_PAGE_BACKGROUND.jpg" alt="BG" id="Background">
+    <img src="../Images/LOGIN_PAGE_BACKGROUND.jpg" alt="BG" id="Background">
 
     <div class="login-card">
         <h2 class="card-title">Reset Password</h2>
@@ -42,6 +47,6 @@
         </p>
     </div>
 
-    <script src="JavaScript_Files/forgot_password.js"></script>
+    <script src="../JavaScript_Files/Forgot_Password_Page.js"></script>
 </body>
 </html>

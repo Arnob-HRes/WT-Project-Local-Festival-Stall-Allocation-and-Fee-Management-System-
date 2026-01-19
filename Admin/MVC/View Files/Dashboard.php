@@ -1,6 +1,30 @@
 <?php
 require_once('../Database_or_Model_Files/Database.php'); 
+$conn = connectsql();
 
+// ১. Total Bookings (সব বুকিং এর সংখ্যা)
+$total_bookings_res = mysqli_query($conn, "SELECT COUNT(*) as total FROM booking");
+$total_bookings = mysqli_fetch_assoc($total_bookings_res)['total'];
+
+// ২. Pending Requests (যদি আপনার টেবিলে status কলাম থাকে, তবেই এটি কাজ করবে)
+// যদি status কলাম না থাকে, তবে আপাতত সব বুকিংই পেন্ডিং হিসেবে গণ্য হবে।
+$pending_res = mysqli_query($conn, "SELECT COUNT(*) as total FROM booking WHERE LOWER(status) = 'pending'");
+if ($pending_res) {
+    $row = mysqli_fetch_assoc($pending_res);
+    $pending_requests = $row['total'];
+} else {
+    // যদি status কলামে সমস্যা থাকে তবে সব বুকিংকে কাউন্ট করবে
+    $pending_requests = $total_bookings; 
+}
+// ৩. Available Stalls (আপনার 'stalls' টেবিল থেকে মোট স্টল - বুকড স্টল)
+$total_stalls_res = mysqli_query($conn, "SELECT COUNT(*) as total FROM stalls");
+$total_stalls = mysqli_fetch_assoc($total_stalls_res)['total'];
+$available_stalls = $total_stalls - $total_bookings;
+
+// ৪. Today's Revenue (আজকের মোট আয়)
+$today = date('Y-m-d');
+$revenue_res = mysqli_query($conn, "SELECT SUM(amount) as total FROM booking WHERE date = '$today'");
+$today_revenue = mysqli_fetch_assoc($revenue_res)['total'] ?? 0;
 ?>
 
 
@@ -39,31 +63,30 @@ require_once('../Database_or_Model_Files/Database.php');
         
         <header class="topbar">
             <h1>Dashboard</h1>
-            <div class="topbar-right">
-                <input type="text" placeholder="Search..." />
+            
                 <div class="user-badge">Admin</div>
-            </div>
+            
         </header>
 
         <!-- Overview cards -->
         <section class="cards">
-            <div class="card">
-                <h3>Total Bookings</h3>
-                <p>128</p>
-            </div>
-            <div class="card">
-                <h3>Pending Requests</h3>
-                <p>12</p>
-            </div>
-            <div class="card">
-                <h3>Available Stalls</h3>
-                <p>34</p>
-            </div>
-            <div class="card">
-                <h3>Today’s Revenue</h3>
-                <p>৳ 25,000</p>
-            </div>
-        </section>
+    <div class="card">
+        <h3>Total Bookings</h3>
+        <p><?php echo $total_bookings; ?></p>
+    </div>
+    <div class="card">
+        <h3>Pending Requests</h3>
+        <p><?php echo $pending_requests; ?></p>
+    </div>
+    <div class="card">
+        <h3>Available Stalls</h3>
+        <p><?php echo ($available_stalls > 0) ? $available_stalls : 0; ?></p>
+    </div>
+    <div class="card">
+        <h3>Today’s Revenue</h3>
+        <p>৳ <?php echo number_format($today_revenue); ?></p>
+    </div>
+</section>
 
         <!-- Table area -->
         <section class="panel">
@@ -85,34 +108,22 @@ require_once('../Database_or_Model_Files/Database.php');
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Rahim Store</td>
-                            <td>A-12</td>
-                            <td>Food</td>
-                            <td>2026-01-05</td>
-                            <td>10:00 - 16:00</td>
-                            <td>৳ 2,500</td>
-                            <td><span class="badge badge-pending">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>Nishi Crafts</td>
-                            <td>B-03</td>
-                            <td>Hand Craft</td>
-                            <td>2026-01-06</td>
-                            <td>16:00 - 22:00</td>
-                            <td>৳ 3,000</td>
-                            <td><span class="badge badge-approved">Approved</span></td>
-                        </tr>
-                        <tr>
-                            <td>FunLand</td>
-                            <td>C-07</td>
-                            <td>Arcade</td>
-                            <td>2026-01-07</td>
-                            <td>10:00 - 22:00</td>
-                            <td>৳ 5,000</td>
-                            <td><span class="badge badge-rejected">Rejected</span></td>
-                        </tr>
-                    </tbody>
+    <?php
+    $recent_res = mysqli_query($conn, "SELECT * FROM booking ORDER BY BookingID DESC LIMIT 5");
+    while($row = mysqli_fetch_assoc($recent_res)) {
+    ?>
+    <tr>
+        <td><?php echo htmlspecialchars($row['Username']); ?></td>
+        <td><?php echo htmlspecialchars($row['stall']); ?></td>
+        <td>Food</td> <td><?php echo $row['date']; ?></td>
+        <td>10:00 - 22:00</td> 
+        <td>৳ <?php echo number_format($row['amount']); ?></td>
+        <td>
+            <span class="badge badge-pending">Pending</span>
+        </td>
+    </tr>
+    <?php } ?>
+</tbody>
                 </table>
             </div>
         </section>
