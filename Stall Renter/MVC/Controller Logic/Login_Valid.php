@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         if($row==1){
             $cookie_name="username";
             $cookie_value=$user;
-            setcookie($cookie_name,$cookie_value,time()+1800,"/");
+            setcookie($cookie_name,$cookie_value,time()+3600,"/");
             foreach($result as $R){
             $_SESSION["username"]=$R["Username"];
             $_SESSION["fullname"]=$R["FullName"];
